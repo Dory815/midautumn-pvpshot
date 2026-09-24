@@ -9,7 +9,7 @@
 | 端口 | **25566** | 刻意避开默认 25565，避免与其它服务冲突 |
 | 正版验证 | `online-mode=true` + `enforce-secure-profile=true` | 只允许正版/认证客户端进入 |
 | 人数上限 | 12 | 与线上一致 |
-| 视距 / 模拟距离 | 8 / 6 | 与线上一致，便于横向对比 |
+| 视距 / 模拟距离 | **10 / 8** | 作者要求（测试用，比线上的 8 / 6 更高） |
 | 其它 | `sync-chunk-writes=false`、`max-tick-time=60000` | 降低磁盘等待，贴近线上表现 |
 
 ## 装的模组（`mods/`）
@@ -34,7 +34,7 @@
 
 ## 启动
 
-1. 先把 `eula.txt` 里的 `eula=false` 改成 `eula=true`（EULA 由使用者自行确认）；
+1. `eula.txt` 已由作者明确指示置为 `true`；
 2. 双击 `start.bat`，或执行：
 
 ```powershell
@@ -43,6 +43,17 @@ cd D:\MC\MidAutumnMiniGame\server
 ```
 
 客户端连接：`localhost:25566`。
+
+> 若要从其它设备连接，需要放行防火墙（需管理员权限的 PowerShell）：
+> ```powershell
+> New-NetFirewallRule -DisplayName "PVP Shot Test Server 25566" -Direction Inbound `
+>   -Protocol TCP -LocalPort 25566 -Action Allow -Profile Any
+> ```
+
+## OP
+
+`ops.json` 里已加入作者账号 **Dory815**（level 4），进服即可使用 `/pvpshot` 系列命令。
+白名单当前关闭，其它正版账号也能进入。
 
 ## 启动后值得先看的东西
 
