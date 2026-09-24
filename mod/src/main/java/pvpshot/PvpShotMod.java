@@ -34,6 +34,26 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
     public static final String MOD_ID = "pvpshot";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+    /**
+     * 详细日志开关，**默认关闭**。
+     *
+     * <p>打开后会播报高频事件：点位归属变化 / 信标玻璃换色 / 部署物消耗与退还 /
+     * 每 100 tick 的 MSPT 采样。平时关掉是为了让服务端终端与日志安静，
+     * 压测或排查时用 {@code /pvpshot log on} 临时打开。
+     */
+    private static volatile boolean verboseLog;
+
+    public static boolean verboseLog() {
+        return verboseLog;
+    }
+
+    /** 只在详细日志打开时输出（高频/逐事件播报走这里）。 */
+    public static void logVerbose(String format, Object... args) {
+        if (verboseLog) {
+            LOGGER.info(format, args);
+        }
+    }
+
     @Override
     public void onInitializeServer() {
         LOGGER.info("[pvpshot] 模组初始化：Minecraft 26.2 服务端专用（M1 骨架）");
@@ -145,6 +165,23 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
                                 reply(context, "已开始逐 tick 采样 " + count + " tick", true);
                                 return 1;
                             })));
+            // /pvpshot log on|off|status：高频播报开关（默认关闭，压测时再开）
+            LiteralArgumentBuilder<CommandSourceStack> logCommand = Commands.literal("log")
+                    .executes(context -> {
+                        reply(context, "详细日志：" + (verboseLog ? "开" : "关（默认）"), false);
+                        return 1;
+                    });
+            logCommand.then(Commands.literal("on").executes(context -> {
+                verboseLog = true;
+                reply(context, "已开启详细日志：点位归属变化 / 信标换色 / 部署物账目 / 每 100 tick MSPT", true);
+                return 1;
+            }));
+            logCommand.then(Commands.literal("off").executes(context -> {
+                verboseLog = false;
+                reply(context, "已关闭详细日志（终端与日志恢复安静）", true);
+                return 1;
+            }));
+            root.then(logCommand);
             root.then(matchCommand());
             dispatcher.register(root);
         });

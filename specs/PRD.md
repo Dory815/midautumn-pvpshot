@@ -368,6 +368,20 @@
 > 处理：启动参数由 G1 换成 **ZGC**，并用 `jcmd VM.flags` 复核（`-XX:+UseZGC` 生效）；
 > 崩溃文件今后统一写到 `logs/hs_err_pid<PID>.log`。完整记录见
 > `docs/崩溃记录-2026-09-25-G1内部错误.md`；线上（OpenJDK 25.0.4.1）建议确认补丁版本或同样改用 ZGC。
+>
+> **日志降噪（2026-09-25，作者要求）**：模组新增 **`/pvpshot log on|off|status`**，
+> **默认关闭**高频播报（每 100 tick 的 MSPT 摘要、点位归属变化、信标玻璃换色、部署物消耗与退还），
+> 需要压测或排查时再临时打开；`/pvpshot tickrecord <tick 数>` 不受此开关影响，随时可用。
+> 启动时的一次性信息（区域载入、点位扫描、复原开始/结束等）保持输出。
+>
+> **第三方模组对照（2026-09-25，作者要求）**：测试服装上朋友写的
+> **Entity Collision Optimizer**（`entity_collision_optimizer-1.0.0-mc26.2-alpha.7.jar`，
+> Fabric 服务端模组，用 FFM 原生后端加速原版实体碰撞）。jar 取自其 GitHub release，
+> SHA-256 与官方 `SHA256SUMS.txt` 核对一致；自带三平台原生库，无需联网下载。
+> 启动验证：`Loading 47 mods` 含 `entity_collision_optimizer 1.0.0-mc26.2-alpha.7`，
+> 日志出现 `Extracted FFM native library ... windows-x64 ...` 与 `FFM collision backend initialized`，
+> `/eco check` 返回 `FFM initialized=true`。它只影响碰撞计算，不改变玩法规则；
+> 它属于**对照用的第三方组件**，是否随线上一起部署由作者决定（见 `server/README.md`）。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|

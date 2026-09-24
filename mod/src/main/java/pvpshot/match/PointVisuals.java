@@ -423,7 +423,7 @@ public final class PointVisuals {
             // 所以换边后必须重建一次连接，否则字母会一直停在旧颜色 —— 作者反馈的
             // "点位被占领后字母不变色"就是这个原因。
             refreshWaypointConnection(level, marker);
-            PvpShotMod.LOGGER.info("[pvpshot] 点位 {} 归属变化为 {}，已重建航点连接（定位条字母换色）",
+            PvpShotMod.logVerbose("[pvpshot] 点位 {} 归属变化为 {}，已重建航点连接（定位条字母换色）",
                     point.id(), color.getSerializedName());
         }
     }
@@ -523,7 +523,7 @@ public final class PointVisuals {
                 } finally {
                     ProtectionRegions.setBypass(false);
                 }
-                PvpShotMod.LOGGER.info("[pvpshot] 点位 {} 的信标玻璃换成 {}（光柱颜色随之改变）",
+                PvpShotMod.logVerbose("[pvpshot] 点位 {} 的信标玻璃换成 {}（光柱颜色随之改变）",
                         point.id(), wanted.getBlock().getName().getString());
             }
             return;

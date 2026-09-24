@@ -66,7 +66,8 @@ public final class TickStats {
         if (windowTicks >= REPORT_INTERVAL_TICKS) {
             double avgMs = windowTotalNanos / 1_000_000.0 / windowTicks;
             double worstMs = worstNanos / 1_000_000.0;
-            PvpShotMod.LOGGER.info(String.format(
+            // 每 100 tick 的 MSPT 摘要属于高频播报，默认关闭（/pvpshot log on 可开）
+            PvpShotMod.logVerbose(String.format(
                     "[pvpshot] tick 采样：最近 %d tick 平均 %.2f ms，最差 %.2f ms，累计 %d tick",
                     windowTicks, avgMs, worstMs, ticks));
             windowTicks = 0;

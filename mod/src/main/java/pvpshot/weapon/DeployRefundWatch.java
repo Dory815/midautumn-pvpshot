@@ -52,7 +52,7 @@ public final class DeployRefundWatch {
         Integer previous = LAST_COUNT.put(player.getUUID(), count);
         if (previous != null && previous != count) {
             int delta = count - previous;
-            PvpShotMod.LOGGER.info("[pvpshot] 玩家 {}（{}）的部署物 {}{} 件：{} @ {} {} {}",
+            PvpShotMod.logVerbose("[pvpshot] 玩家 {}（{}）的部署物 {}{} 件：{} @ {} {} {}",
                     player.getName().getString(), modeName(player), delta > 0 ? "+" : "", delta,
                     delta > 0 ? "收到退还（部署判定为失败）" : "被消耗（部署判定为成功）",
                     (int) player.getX(), (int) player.getY(), (int) player.getZ());
@@ -105,7 +105,7 @@ public final class DeployRefundWatch {
             ItemStack stack = inventory.getItem(i);
             if (!stack.isEmpty() && kind.equals(WeaponIds.deployOf(stack))) {
                 stack.shrink(1);
-                PvpShotMod.LOGGER.info("[pvpshot] 玩家 {} 在创造模式下部署，补扣 1 件部署物（{}），与生存模式一致",
+                PvpShotMod.logVerbose("[pvpshot] 玩家 {} 在创造模式下部署，补扣 1 件部署物（{}），与生存模式一致",
                         player.getName().getString(), kind);
                 return;
             }

@@ -26,6 +26,10 @@
 | `fabric-api-0.161.0+26.2.jar` | Fabric API（模组依赖） |
 | `fabric-carpet-26.2+v260616.jar` | Carpet：`/tick` 冻结与步进、性能相关诊断 |
 | `spark-1.10.187-fabric.jar` | spark：火焰图、tick 统计、内存与 GC 诊断（`/spark` 命令） |
+| `entity_collision_optimizer-1.0.0-mc26.2-alpha.7.jar` | 朋友写的**实体碰撞优化**模组（作者 water2004，MIT，[仓库](https://github.com/water2004/EntityCollisionOptimizer)）：用 FFM 原生后端加速原版实体碰撞，jar 里自带 windows-x64 / linux-x64 / macos-x64 三个平台的库，不需要额外下载。装好后用 `/eco check` 看 `FFM initialized=true`。 |
+
+> 说明：ECO 是**第三方模组**，本项目只是把它装到测试服上做性能对照；它的 jar 与 release 校验和
+> （`SHA256SUMS.txt`）都来自官方仓库的 release 页，下载后已核对 SHA-256 一致。
 
 > 下载踩坑记录：Modrinth CDN 与 GitHub 用 PowerShell 的 `Invoke-WebRequest` 会被中断，
 > 改用系统自带的 `curl.exe` 才成功。以后下载模组遇到同样情况可以照这个办法。
