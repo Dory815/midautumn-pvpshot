@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "PVP Shot 压测工具：批量召唤投射物/实体，用于观察服务器负载",
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": 107
+  }
+}
