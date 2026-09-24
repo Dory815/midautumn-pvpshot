@@ -32,8 +32,10 @@ import net.minecraft.world.scores.ScoreHolder;
 import net.minecraft.world.scores.Scoreboard;
 import net.minecraft.world.scores.Team;
 import net.minecraft.world.scores.TeamColor;
+import net.minecraft.world.waypoints.WaypointTransmitter;
 
 import pvpshot.PvpShotMod;
+import pvpshot.protect.ProtectionRegions;
 
 /**
  * 占领点的可视化：范围边框 + 发光标记实体。
@@ -108,6 +110,16 @@ public final class PointVisuals {
      */
     private static final Map<String, Slime> BEACONS = new HashMap<>();
 
+    /**
+     * 数据包把"这个点归谁"写在**点位 marker 实体**身上的这个记分项里
+     * （{@code scoreboard players set @s pvpshot.owner 1}，见 {@code pvpshot:point/tick_one}）。
+     * 模组比赛引擎没接管时，可视化必须读这个值，不能只看引擎自己的状态。
+     */
+    private static final String OWNER_OBJECTIVE = "pvpshot.owner";
+
+    /** 点位 marker 实体缓存（读归属用，避免每 tick 扫实体）。 */
+    private static final Map<String, Entity> POINT_MARKERS = new HashMap<>();
+
     private static boolean enabled = true;
     private static int clock;
 
@@ -175,13 +187,14 @@ public final class PointVisuals {
         for (int i = 0; i < points.size(); i++) {
             CapturePoint point = points.get(i);
             boolean active = point.activeIn(mode);
-            TeamColor color = active ? colorFor(point.owner()) : TeamColor.GRAY;
+            // 归属：引擎接管时听引擎的，否则读数据包写在 marker 上的记分项
+            int owner = active ? resolveOwner(level, point) : 0;
+            TeamColor color = active ? colorFor(owner) : TeamColor.GRAY;
             // 航点实体：埋在地下、基岩包裹、发光轮廓跟随归属（作者方案）
             ensureWaypoint(level, point, color, active);
             // 信标光柱：换掉信标上方的染色玻璃，光柱颜色就跟着队伍走（原版机制）
-            if (active) {
-                updateBeaconBeam(level, point, point.owner());
-            }
+            // （未启用的点位（三点模式下的 D/E）也写回白色，避免残留上一局的颜色）
+            updateBeaconBeam(level, point, owner);
             if (active && drawParticles && hasPlayerNearby(level, point)) {
                 drawRangeRings(level, point, color);
             }
@@ -377,16 +390,19 @@ public final class PointVisuals {
         Scoreboard board = level.getScoreboard();
         String teamName = TEAM_PREFIX + point.id();
         PlayerTeam team = board.getPlayerTeam(teamName);
+        boolean changed = false;
         if (team == null) {
             team = board.addPlayerTeam(teamName);
             team.setNameTagVisibility(Team.Visibility.NEVER);
             team.setColor(Optional.of(color));
             board.onTeamChanged(team);
+            changed = true;
         } else {
             TeamColor previous = LAST_COLORS.get(point.id());
             if (previous != color) {
                 team.setColor(Optional.of(color));
                 board.onTeamChanged(team);
+                changed = true;
             }
         }
         LAST_COLORS.put(point.id(), color);
@@ -394,7 +410,30 @@ public final class PointVisuals {
         String entry = marker.getScoreboardName();
         if (board.getPlayersTeam(entry) != team) {
             board.addPlayerToTeam(entry, team);
+            changed = true;
         }
+        if (changed) {
+            // 定位条图标（A~E 字母）的颜色**不是**实时读队伍，而是"建立航点连接时"
+            // 从队伍颜色复制的一份快照（原版 Waypoint.Icon#cloneAndAssignStyle）。
+            // 所以换边后必须重建一次连接，否则字母会一直停在旧颜色 —— 作者反馈的
+            // "点位被占领后字母不变色"就是这个原因。
+            refreshWaypointConnection(level, marker);
+            PvpShotMod.LOGGER.info("[pvpshot] 点位 {} 归属变化为 {}，已重建航点连接（定位条字母换色）",
+                    point.id(), color.getSerializedName());
+        }
+    }
+
+    /** 重建航点连接，让所有客户端拿到带新颜色的图标（原版 /waypoint modify 也是这么做的）。 */
+    private static void refreshWaypointConnection(ServerLevel level, Entity marker) {
+        if (!(marker instanceof WaypointTransmitter transmitter)) {
+            return;
+        }
+        var manager = level.getWaypointManager();
+        if (manager == null) {
+            return;
+        }
+        manager.untrackWaypoint(transmitter);
+        manager.trackWaypoint(transmitter);
     }
 
     private static TeamColor colorFor(int owner) {
@@ -403,6 +442,50 @@ public final class PointVisuals {
             case 2 -> TeamColor.BLUE;
             default -> TeamColor.WHITE;
         };
+    }
+
+    /**
+     * 点位当前归属：0 = 中立，1 = 红队，2 = 蓝队。
+     *
+     * <p>模组比赛引擎接管时用引擎状态；**未接管（默认）时读数据包**写在点位 marker 实体上的
+     * {@code pvpshot.owner} 记分项。这一点很关键：在此之前可视化一直只看引擎状态，
+     * 而引擎默认是关的，于是归属永远是"中立"，发光轮廓、信标玻璃、定位条字母都不变色
+     * （作者反馈的"染色玻璃没有被放置"就是它）。
+     */
+    private static int resolveOwner(ServerLevel level, CapturePoint point) {
+        if (MatchEngine.isEnabled()) {
+            return point.owner();
+        }
+        Scoreboard board = level.getScoreboard();
+        Objective objective = board.getObjective(OWNER_OBJECTIVE);
+        if (objective == null) {
+            return 0;
+        }
+        Entity marker = pointMarker(level, point);
+        if (marker == null) {
+            return 0;
+        }
+        ReadOnlyScoreInfo info = board.getPlayerScoreInfo(marker, objective);
+        return info == null ? 0 : info.value();
+    }
+
+    /** 按 tag 找回点位 marker 实体（只在缓存失效时扫一次）。 */
+    private static Entity pointMarker(ServerLevel level, CapturePoint point) {
+        Entity cached = POINT_MARKERS.get(point.id());
+        if (cached != null && !cached.isRemoved()) {
+            return cached;
+        }
+        // 与航点同样的理由：getEntities 只返回已加载区块里的实体，
+        // 不先同步加载会把"远处点位的 marker 没加载"误判成"不存在"。
+        BlockPos anchor = BlockPos.containing(point.x(), point.y(), point.z());
+        level.getChunk(anchor.getX() >> 4, anchor.getZ() >> 4);
+        String tag = "ustc.point." + point.id();
+        for (Entity candidate : level.getEntities(EntityTypes.MARKER,
+                entity -> entity.entityTags().contains(tag))) {
+            POINT_MARKERS.put(point.id(), candidate);
+            return candidate;
+        }
+        return null;
     }
 
     /**
@@ -427,7 +510,16 @@ public final class PointVisuals {
             }
             BlockPos glassPos = beaconPos.above();
             if (level.getBlockState(glassPos) != wanted) {
-                level.setBlock(glassPos, wanted, Block.UPDATE_CLIENTS);
+                // 信标本身就在受保护的点位核心区域内，这里必须临时关掉保护，
+                // 否则模组自己的方块写入会被自己的保护逻辑拒绝（染色玻璃放不上去）
+                ProtectionRegions.setBypass(true);
+                try {
+                    level.setBlock(glassPos, wanted, Block.UPDATE_CLIENTS);
+                } finally {
+                    ProtectionRegions.setBypass(false);
+                }
+                PvpShotMod.LOGGER.info("[pvpshot] 点位 {} 的信标玻璃换成 {}（光柱颜色随之改变）",
+                        point.id(), wanted.getBlock().getName().getString());
             }
             return;
         }
