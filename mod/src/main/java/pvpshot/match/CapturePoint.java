@@ -55,6 +55,18 @@ public final class CapturePoint {
         return id;
     }
 
+    public double x() {
+        return x;
+    }
+
+    public double y() {
+        return y;
+    }
+
+    public double z() {
+        return z;
+    }
+
     public int owner() {
         return owner;
     }

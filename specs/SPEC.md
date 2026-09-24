@@ -437,6 +437,27 @@ record VirtualProjectile(
 
 ---
 
+### 5.11 点位可视化（M3 附加功能，已实现）
+
+`pvpshot.match.PointVisuals`。两项都在"纯服务端 + 原版客户端"的约束内实现：
+
+| 功能 | 实现 | 为什么这样做 |
+|---|---|---|
+| 占领**范围边框** | 原版 `dust` 粒子（`DustParticleOptions(color, scale)`）在 `y ± POINT_HEIGHT` 两个高度各画一个半径 `POINT_RADIUS` 的圆环，颜色跟随归属，每 10 tick 重画 | 不动地图方块、不注册自定义粒子；粒子是原版客户端唯一能画"临时几何图形"的手段 |
+| 点位**发光标记** | 每个点位一个隐形 `ArmorStand`（不可见、无重力、静音、无敌）+ `Entity#setGlowingTag(true)`；发光轮廓颜色由**队伍颜色**决定，故为每个点位建立专属显示队伍 `pvpshot.mark.<id>`，按归属切换 `TeamColor.RED/BLUE/WHITE` | 原版发光颜色只能来自队伍；`setGlowingTag` 不需要状态效果，隐形实体的轮廓仍会渲染 |
+
+关键行为（对应作者要求）：
+
+- 点位在当前模式下**不启用**时不发光（`setGlowingTag(false)`），队伍颜色置灰；
+- 可视化**独立于比赛引擎**：引擎未接管时，模式从数据包写在记分板 `ustc.clock` 上的
+  `#preset` 读取（3 = 三点、5 = 五点、1 = 死斗）；
+- 性能约束：仅当点位 64 格内有玩家才画粒子；队伍颜色仅在变化时更新并 `onTeamChanged`；
+  点位扫描失败时以 100 tick 为间隔重试，不每 tick 空转。
+
+命令：`/pvpshot match visualize on|off|status`。
+
+---
+
 ## 6. 性能目标与测量方法
 
 ### 6.1 目标

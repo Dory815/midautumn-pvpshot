@@ -6,6 +6,9 @@ import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.context.CommandContext;
+import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.permissions.Permissions;
@@ -14,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import pvpshot.protect.ProtectionRegions;
 import pvpshot.match.MatchEngine;
+import pvpshot.match.PointVisuals;
 import pvpshot.restore.ArenaRestore;
 
 /**
@@ -51,65 +55,85 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
     }
 
     private static void registerCommands() {
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-                dispatcher.register(Commands.literal("pvpshot")
-                        .requires(source -> source.permissions()
-                                .hasPermission(Permissions.COMMANDS_GAMEMASTER))
-                        .then(Commands.literal("restore").executes(context -> {
-                            String message = ArenaRestore.start(context.getSource().getServer());
-                            context.getSource().sendSuccess(() -> Component.literal(message), true);
-                            return 1;
-                        }))
-                        .then(Commands.literal("restorestatus").executes(context -> {
-                            context.getSource().sendSuccess(
-                                    () -> Component.literal(ArenaRestore.progressText()), false);
-                            return 1;
-                        }))
-                        .then(Commands.literal("protect").executes(context -> {
-                            context.getSource().sendSuccess(() -> Component.literal(
-                                    "设施保护：已载入 " + ProtectionRegions.regionCount() + " 个区域"), false);
-                            return 1;
-                        }))
-                        .then(Commands.literal("match")
-                                .then(Commands.literal("on").executes(context -> {
-                                    String message = MatchEngine.setEnabled(true, context.getSource().getServer());
-                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                    return 1;
-                                }))
-                                .then(Commands.literal("off").executes(context -> {
-                                    String message = MatchEngine.setEnabled(false, context.getSource().getServer());
-                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                    return 1;
-                                }))
-                                .then(Commands.literal("status").executes(context -> {
-                                    context.getSource().sendSuccess(
-                                            () -> Component.literal(MatchEngine.statusText()), false);
-                                    return 1;
-                                }))
-                                .then(Commands.literal("restart").executes(context -> {
-                                    String message = MatchEngine.restart();
-                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                    return 1;
-                                }))
-                                .then(Commands.literal("mode")
-                                        .then(Commands.literal("three").executes(context -> {
-                                            String message = MatchEngine.setMode(MatchEngine.Mode.THREE_POINT);
-                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                            return 1;
-                                        }))
-                                        .then(Commands.literal("five").executes(context -> {
-                                            String message = MatchEngine.setMode(MatchEngine.Mode.FIVE_POINT);
-                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                            return 1;
-                                        }))
-                                        .then(Commands.literal("tdm").executes(context -> {
-                                            String message = MatchEngine.setMode(MatchEngine.Mode.DEATHMATCH);
-                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
-                                            return 1;
-                                        }))     // 关闭 executes 与 tdm 的 then
-                                )               // 关闭 mode 的 then
-                        )                       // 关闭 match 的 then
-                ));                             // 关闭 dispatcher.register 与事件注册
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+            LiteralArgumentBuilder<CommandSourceStack> root = Commands.literal("pvpshot")
+                    .requires(source -> source.permissions()
+                            .hasPermission(Permissions.COMMANDS_GAMEMASTER));
+            root.then(Commands.literal("restore").executes(context -> {
+                reply(context, ArenaRestore.start(context.getSource().getServer()), true);
+                return 1;
+            }));
+            root.then(Commands.literal("restorestatus").executes(context -> {
+                reply(context, ArenaRestore.progressText(), false);
+                return 1;
+            }));
+            root.then(Commands.literal("protect").executes(context -> {
+                reply(context, "设施保护：已载入 " + ProtectionRegions.regionCount() + " 个区域", false);
+                return 1;
+            }));
+            root.then(matchCommand());
+            dispatcher.register(root);
+        });
+    }
+
+    /** /pvpshot match ... 子命令。 */
+    private static LiteralArgumentBuilder<CommandSourceStack> matchCommand() {
+        LiteralArgumentBuilder<CommandSourceStack> match = Commands.literal("match");
+        match.then(Commands.literal("on").executes(context -> {
+            reply(context, MatchEngine.setEnabled(true, context.getSource().getServer()), true);
+            return 1;
+        }));
+        match.then(Commands.literal("off").executes(context -> {
+            reply(context, MatchEngine.setEnabled(false, context.getSource().getServer()), true);
+            return 1;
+        }));
+        match.then(Commands.literal("status").executes(context -> {
+            reply(context, MatchEngine.statusText(), false);
+            return 1;
+        }));
+        match.then(Commands.literal("restart").executes(context -> {
+            reply(context, MatchEngine.restart(), true);
+            return 1;
+        }));
+
+        LiteralArgumentBuilder<CommandSourceStack> mode = Commands.literal("mode");
+        mode.then(Commands.literal("three").executes(context -> {
+            reply(context, MatchEngine.setMode(MatchEngine.Mode.THREE_POINT), true);
+            return 1;
+        }));
+        mode.then(Commands.literal("five").executes(context -> {
+            reply(context, MatchEngine.setMode(MatchEngine.Mode.FIVE_POINT), true);
+            return 1;
+        }));
+        mode.then(Commands.literal("tdm").executes(context -> {
+            reply(context, MatchEngine.setMode(MatchEngine.Mode.DEATHMATCH), true);
+            return 1;
+        }));
+        match.then(mode);
+
+        LiteralArgumentBuilder<CommandSourceStack> visualize = Commands.literal("visualize");
+        visualize.then(Commands.literal("on").executes(context -> {
+            reply(context, PointVisuals.setEnabled(true, context.getSource().getServer().overworld()),
+                    true);
+            return 1;
+        }));
+        visualize.then(Commands.literal("off").executes(context -> {
+            reply(context, PointVisuals.setEnabled(false, context.getSource().getServer().overworld()),
+                    true);
+            return 1;
+        }));
+        visualize.then(Commands.literal("status").executes(context -> {
+            reply(context, PointVisuals.statusText(context.getSource().getServer()), false);
+            return 1;
+        }));
+        match.then(visualize);
+        return match;
+    }
+
+    /** 统一的命令回显。 */
+    private static void reply(CommandContext<CommandSourceStack> context, String message,
+                              boolean broadcast) {
+        context.getSource().sendSuccess(() -> Component.literal(message), broadcast);
     }
 
     /** 从模组内置资源读入 181 个保护区域。 */

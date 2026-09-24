@@ -60,6 +60,8 @@ public final class MatchEngine {
     private static int blueScore;
     private static boolean finished;
     private static int scoreClock;
+    /** 点位扫描失败（世界里还没放 marker）时的重试节流。 */
+    private static int rescanCooldown;
 
     private MatchEngine() {
     }
@@ -155,15 +157,18 @@ public final class MatchEngine {
     // ------------------------------------------------------------------- 主循环
 
     public static void tick(MinecraftServer server) {
-        if (!enabled) {
-            return;
-        }
         ServerLevel overworld = server.overworld();
+        // 点位扫描与可视化都独立于比赛引擎：即使引擎没接管，也要能显示范围与标记
         if (POINTS.isEmpty()) {
-            rescanPoints(overworld);
-            if (POINTS.isEmpty()) {
-                return;
+            if (--rescanCooldown <= 0) {
+                rescanPoints(overworld);
+                rescanCooldown = 100;   // 仍然没找到就 5 秒后再试
             }
+        }
+        PointVisuals.tick(server);
+
+        if (!enabled || POINTS.isEmpty()) {
+            return;
         }
 
         if (finished) {
