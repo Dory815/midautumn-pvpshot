@@ -48,6 +48,15 @@ Copy-One (Join-Path $root 'mod\README.md') (Join-Path $out '文档\模组README.
 Copy-One (Join-Path $root 'server\README.md') (Join-Path $out '文档\服务端README.md')
 Copy-One (Join-Path $root 'tools\release\安装说明.md') (Join-Path $out '安装说明.md')
 
+# 3b. 压测工具（脚本 + 生成的函数）
+Copy-One (Join-Path $root 'tools\stress\make_stress_pack.py') (Join-Path $out '压测工具\make_stress_pack.py')
+$stressFn = Join-Path $root 'server\world\datapacks\pvpshot-stress\data\pvpshot_stress\function'
+foreach ($f in 'all', 'clear', 'place_kit', 'place_selftest') {
+    Copy-One (Join-Path $stressFn "$f.mcfunction") (Join-Path $out "压测工具\pvpshot_stress\$f.mcfunction")
+}
+Copy-One (Join-Path $root 'server\world\datapacks\pvpshot-stress\pack.mcmeta') `
+         (Join-Path $out '压测工具\pvpshot_stress\pack.mcmeta')
+
 # 4. 打包成 zip
 if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
 Compress-Archive -Path (Join-Path $out '*') -DestinationPath $zip -Force
