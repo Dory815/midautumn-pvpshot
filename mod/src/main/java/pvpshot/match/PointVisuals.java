@@ -166,8 +166,12 @@ public final class PointVisuals {
             ensureWaypoint(level, point, active);
         }
 
-        // 玩家的 waypoint_receive_range 默认也是 0，需要放开才能收到定位条指示
+        // 玩家之间也要能互相看到（团队死斗尤其依赖这个）：收发范围默认都是 0，需要放开
         for (ServerPlayer player : server.getPlayerList().getPlayers()) {
+            AttributeInstance transmit = player.getAttribute(Attributes.WAYPOINT_TRANSMIT_RANGE);
+            if (transmit != null && transmit.getBaseValue() != WAYPOINT_RANGE) {
+                transmit.setBaseValue(WAYPOINT_RANGE);
+            }
             AttributeInstance receive = player.getAttribute(Attributes.WAYPOINT_RECEIVE_RANGE);
             if (receive != null && receive.getBaseValue() != WAYPOINT_RANGE) {
                 receive.setBaseValue(WAYPOINT_RANGE);
@@ -214,6 +218,34 @@ public final class PointVisuals {
         double wanted = active ? WAYPOINT_RANGE : 0.0;
         if (transmit != null && transmit.getBaseValue() != wanted) {
             transmit.setBaseValue(wanted);
+        }
+        if (active) {
+            applyWaypointStyle(level, tag, point);
+        }
+    }
+
+    /** 已经设置过样式的航点，避免每 tick 重复执行命令。 */
+    private static final java.util.Set<String> STYLED = new java.util.HashSet<>();
+
+    /**
+     * 给航点指定样式（A/B/C/D/E 字母图标）。
+     *
+     * <p>样式对应的贴图来自资源包（{@code assets/pvpshot/waypoint_style/*.json}）。
+     * 客户端没装资源包时会显示成缺失贴图，所以这一条只负责"声明用哪个样式"。
+     */
+    private static void applyWaypointStyle(ServerLevel level, String tag, CapturePoint point) {
+        if (!STYLED.add(point.id())) {
+            return;
+        }
+        String styleId = "pvpshot:" + point.id().toLowerCase(java.util.Locale.ROOT);
+        String command = "waypoint modify @e[tag=" + tag + ",limit=1] style set " + styleId;
+        try {
+            var server = level.getServer();
+            server.getCommands().performPrefixedCommand(
+                    server.createCommandSourceStack().withSuppressedOutput(), command);
+            PvpShotMod.LOGGER.info("[pvpshot] 点位 {} 的航点样式设为 {}", point.id(), styleId);
+        } catch (Exception failure) {
+            PvpShotMod.LOGGER.warn("[pvpshot] 设置点位 {} 航点样式失败：{}", point.id(), failure.toString());
         }
     }
 

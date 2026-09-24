@@ -58,6 +58,7 @@ server/logs/
 server/crash-reports/
 server/.fabric/
 server/.mixin.out/
+server/*.zip
 server/*.jar
 server/eula.txt
 server/banned-*.json

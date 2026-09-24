@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "PVP Shot 点位图标（A~E）",
+    "min_format": [
+      88,
+      0
+    ],
+    "max_format": 88
+  }
+}
