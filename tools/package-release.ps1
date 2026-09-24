@@ -50,12 +50,22 @@ Copy-One (Join-Path $root 'tools\release\安装说明.md') (Join-Path $out '安�
 
 # 3b. 压测工具（脚本 + 生成的函数）
 Copy-One (Join-Path $root 'tools\stress\make_stress_pack.py') (Join-Path $out '压测工具\make_stress_pack.py')
+Copy-One (Join-Path $root 'tools\stress\extract-mspt.py') (Join-Path $out '压测工具\extract-mspt.py')
+Copy-One (Join-Path $root 'tools\stress\plot-mspt.ps1') (Join-Path $out '压测工具\plot-mspt.ps1')
 $stressFn = Join-Path $root 'server\world\datapacks\pvpshot-stress\data\pvpshot_stress\function'
 foreach ($f in 'all', 'clear', 'place_kit', 'place_selftest') {
     Copy-One (Join-Path $stressFn "$f.mcfunction") (Join-Path $out "压测工具\pvpshot_stress\$f.mcfunction")
 }
 Copy-One (Join-Path $root 'server\world\datapacks\pvpshot-stress\pack.mcmeta') `
          (Join-Path $out '压测工具\pvpshot_stress\pack.mcmeta')
+
+# 3c. 已完成的压测报告与曲线（有就带，没有就跳过）
+$perfDir = Join-Path $root 'docs\压测'
+if (Test-Path -LiteralPath $perfDir) {
+    foreach ($f in Get-ChildItem -LiteralPath $perfDir -File) {
+        Copy-One $f.FullName (Join-Path $out ('压测报告\' + $f.Name))
+    }
+}
 
 # 4. 打包成 zip
 if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
