@@ -53,6 +53,9 @@ public final class ProtectionRegions {
      */
     private static volatile boolean active;
 
+    /** 复原等内部批处理期间的临时让路开关。 */
+    private static volatile boolean bypass;
+
     private ProtectionRegions() {
     }
 
@@ -132,7 +135,7 @@ public final class ProtectionRegions {
 
     /** 该坐标是否落在受保护区域内（且当前处于保护生效状态）。 */
     public static boolean protectedAt(Level level, BlockPos pos) {
-        if (!active || !level.dimension().equals(Level.OVERWORLD)) {
+        if (bypass || !active || !level.dimension().equals(Level.OVERWORLD)) {
             return false;
         }
         List<Region> nearby = CHUNKS.get(chunkKey(pos.getX(), pos.getZ()));
@@ -163,5 +166,13 @@ public final class ProtectionRegions {
         }
         BlockState current = level.getBlockState(pos);
         return current.getBlock() != replacement.getBlock();
+    }
+
+    /**
+     * 临时让保护失效。整场复原期间必须打开，否则模组自己写回去的方块
+     * 会被自己的保护逻辑拦下来（复原是"规则内的整体替换"，不该受保护限制）。
+     */
+    public static void setBypass(boolean value) {
+        bypass = value;
     }
 }

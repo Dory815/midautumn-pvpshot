@@ -80,6 +80,30 @@
 本项目已把它解压到 `D:\Programs\.tmp\mmg\mcsrc`，可以直接用文本搜索查原版实现
 （例如投射物运动、碰撞检测、指令复制方块的实现）。
 
+## M2b 整场复原（已实现，待运行时验证）
+
+`pvpshot.restore.ArenaRestore`：把数据包那 2808 条 `clone` 命令换成模组驱动。
+
+- **粒度与数据包完全一致**：`16×72×16` 柱段，共 `36×39×2 = 2808` 段
+  （与数据包 2808 条 `clone` 命令一一对应）；范围 X=-2144…-1569、Z=-1776…-1153、Y=-16…127。
+- **搬运复用原版 `StructureTemplate`**：`fillFromWorld` 读、`placeInWorld` 写，
+  箱子内容等方块实体由原版一并还原，不用自己处理 NBT。
+- `ignoreBlocks` 传空列表 → 连空气一起复制，目标区域多出来的方块才会被覆盖掉。
+- 写入标志用 `Block.UPDATE_CLIENTS`（原版 `/clone` 非 strict 模式的值）。
+- 每 tick 限时 5 ms，服务器全程保持响应；上层先做、下层后做。
+- 复原期间自动打开保护的 bypass（否则自己写回的方块会被自己的保护拦下）。
+
+命令（需管理员权限）：
+
+```
+/pvpshot restore          开始复原
+/pvpshot restorestatus    查看进度
+/pvpshot protect          查看已载入的保护区域数量
+```
+
+**尚未接管**（属于比赛状态管理，M3 一起做）：实体清理、点位 marker 重建
+（数据包里的 `anchors`/`build`）、模式预设与箱子补充（`apply_preset`/`refill`）。
+
 ## 设计约束（务必遵守）
 
 - **`environment: server`**：模组只装在服务端，玩家端零安装（原版客户端可直接连）。
