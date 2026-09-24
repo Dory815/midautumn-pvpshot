@@ -14,13 +14,14 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityTypes;
-import net.minecraft.world.entity.Display;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.cubemob.Slime;
-import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.scores.Objective;
 import net.minecraft.world.scores.PlayerTeam;
@@ -82,11 +83,28 @@ public final class PointVisuals {
     /** 承载航点的隐形实体 tag 前缀（与可见标记分开，便于各自维护）。 */
     private static final String BEACON_TAG_PREFIX = "pvpshot.wp.";
 
+    /** 航点埋在多深（相对点位中心，格）。 */
+    private static final double BEACON_DEPTH = 2.0;
+
+    /** 多久检查一次基岩外壳（整场复原会把它覆盖掉，需要补回来）。 */
+    private static final int SHELL_CHECK_INTERVAL = 100;
+
+    private static int shellClock;
+
     /** 玩家离点位多远之内才需要画粒子（避免远处白刷）。 */
     private static final double PARTICLE_NEARBY_RANGE = 64.0;
 
-    private static final Map<String, Entity> MARKERS = new HashMap<>();
     private static final Map<String, TeamColor> LAST_COLORS = new HashMap<>();
+
+    /**
+     * 航点载体缓存。
+     *
+     * <p>**不要**用 {@code level.getEntities} 来判断"航点是否已存在"：
+     * 那个方法只返回**已加载区块**里的实体，点位离玩家远时区块没加载，
+     * 于是每 tick 都会误判为"不存在"并新建一个 —— 之前的 bug 就是这样
+     * 在几分钟里堆出了 1000 多个隐形史莱姆，定位条被图标糊满。
+     */
+    private static final Map<String, Slime> BEACONS = new HashMap<>();
 
     private static boolean enabled = true;
     private static int clock;
@@ -101,12 +119,12 @@ public final class PointVisuals {
     public static String setEnabled(boolean value, ServerLevel level) {
         enabled = value;
         if (!value) {
-            for (Entity marker : MARKERS.values()) {
-                if (marker.isAlive()) {
-                    marker.setGlowingTag(false);
+            for (Slime beacon : BEACONS.values()) {
+                if (beacon.isAlive()) {
+                    beacon.setGlowingTag(false);
                 }
             }
-            return "点位可视化已关闭（标记实体保留，但不再发光、不再画范围）";
+            return "点位可视化已关闭（航点实体保留，但不再发光、不再画范围）";
         }
         return "点位可视化已开启";
     }
@@ -151,19 +169,12 @@ public final class PointVisuals {
         for (int i = 0; i < points.size(); i++) {
             CapturePoint point = points.get(i);
             boolean active = point.activeIn(mode);
-            Entity marker = markerFor(level, point);
-            if (marker == null) {
-                continue;
-            }
             TeamColor color = active ? colorFor(point.owner()) : TeamColor.GRAY;
-            // 不启用的点位：留在原地但不发光、也不画范围（作者要求）
-            applyAppearance(level, point, marker, color, active);
-
+            // 航点实体：埋在地下、基岩包裹、发光轮廓跟随归属（作者方案）
+            ensureWaypoint(level, point, color, active);
             if (active && drawParticles && hasPlayerNearby(level, point)) {
                 drawRangeRings(level, point, color);
             }
-            // 航点：让点位出现在原版定位条上（颜色自动取队伍颜色）
-            ensureWaypoint(level, point, active);
         }
 
         // 玩家之间也要能互相看到（团队死斗尤其依赖这个）：收发范围默认都是 0，需要放开
@@ -187,40 +198,100 @@ public final class PointVisuals {
      * 位置与可见标记重合，不开 AI、无声、无敌、不受重力，只负责让点位出现在定位条上。
      * 归属颜色不用手动设 —— 原版会读取实体所在队伍的颜色（我们每个点位都有专属队伍）。
      */
-    private static void ensureWaypoint(ServerLevel level, CapturePoint point, boolean active) {
+    private static void ensureWaypoint(ServerLevel level, CapturePoint point, TeamColor color,
+                                       boolean active) {
         String tag = BEACON_TAG_PREFIX + point.id();
-        Slime beacon = null;
-        for (Entity candidate : level.getEntities(EntityTypes.SLIME,
-                entity -> entity.entityTags().contains(tag))) {
-            if (candidate instanceof Slime slime) {
-                beacon = slime;
-                break;
+        Slime beacon = BEACONS.get(point.id());
+        if (beacon == null || !beacon.isAlive() || beacon.isRemoved()) {
+            beacon = findExistingBeacon(level, tag);
+            if (beacon == null) {
+                beacon = createBeacon(level, point, tag);
+                if (beacon == null) {
+                    return;
+                }
             }
+            BEACONS.put(point.id(), beacon);
         }
-        if (beacon == null) {
-            beacon = new Slime(EntityTypes.SLIME, level);
-            beacon.setPos(point.x(), point.y() + 1.0, point.z());
-            beacon.setSize(1, false);
-            beacon.setNoAi(true);
-            beacon.setSilent(true);
-            beacon.setInvulnerable(true);
-            beacon.setNoGravity(true);
-            beacon.setInvisible(true);
-            beacon.setPersistenceRequired();
-            beacon.addTag(tag);
-            if (!level.addFreshEntity(beacon)) {
-                return;
-            }
-            PvpShotMod.LOGGER.info("[pvpshot] 为点位 {} 创建了定位条航点（隐形史莱姆）", point.id());
+        // 发光轮廓：颜色由队伍决定，所以直接给实体打开发光即可（未启用则关掉）
+        beacon.setGlowingTag(active);
+        applyTeam(level, point, beacon, color, active);
+        // 基岩外壳有可能被整场复原覆盖掉，这里按需补回来
+        if (++shellClock % SHELL_CHECK_INTERVAL == 0) {
+            sealWithBedrock(level, beacon);
         }
         // 关键：范围必须 > 0，否则实体根本不对外广播航点
         AttributeInstance transmit = beacon.getAttribute(Attributes.WAYPOINT_TRANSMIT_RANGE);
         double wanted = active ? WAYPOINT_RANGE : 0.0;
         if (transmit != null && transmit.getBaseValue() != wanted) {
             transmit.setBaseValue(wanted);
+            // 已经建立的航点连接不会因为范围变化自动断开，需要显式通知管理器
+            if (level.getWaypointManager() != null) {
+                if (active) {
+                    level.getWaypointManager().trackWaypoint(beacon);
+                } else {
+                    level.getWaypointManager().untrackWaypoint(beacon);
+                }
+            }
         }
         if (active) {
             applyWaypointStyle(level, tag, point);
+        }
+    }
+
+    /**
+     * 只在缓存失效时（首次运行 / 重启后）扫一次世界，找回已存在的航点实体；
+     * 如果因为历史 bug 留下了多个重复实体，只保留第一个，其余就地清理。
+     */
+    private static Slime findExistingBeacon(ServerLevel level, String tag) {
+        Slime found = null;
+        int duplicates = 0;
+        for (Entity candidate : level.getEntities(EntityTypes.SLIME,
+                entity -> entity.entityTags().contains(tag))) {
+            if (candidate instanceof Slime slime) {
+                if (found == null) {
+                    found = slime;
+                } else {
+                    slime.discard();
+                    duplicates++;
+                }
+            }
+        }
+        if (duplicates > 0) {
+            PvpShotMod.LOGGER.info("[pvpshot] 清理了 {} 个重复的航点实体（标签 {}）", duplicates, tag);
+        }
+        return found;
+    }
+
+    private static Slime createBeacon(ServerLevel level, CapturePoint point, String tag) {
+        Slime beacon = new Slime(EntityTypes.SLIME, level);
+        // 埋在地面以下（作者方案）：完全看不见，只靠发光轮廓和定位条指示
+        beacon.setPos(point.x(), point.y() - BEACON_DEPTH, point.z());
+        beacon.setSize(1, false);
+        beacon.setNoAi(true);
+        beacon.setSilent(true);
+        beacon.setInvulnerable(true);
+        beacon.setNoGravity(true);
+        beacon.setInvisible(true);
+        beacon.setPersistenceRequired();
+        beacon.addTag(tag);
+        // 抗性提升 V（amplifier 4 = 等级 5），双保险防止任何伤害把它弄死
+        beacon.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, -1, 4, false, false, false));
+        if (!level.addFreshEntity(beacon)) {
+            return null;
+        }
+        sealWithBedrock(level, beacon);
+        PvpShotMod.LOGGER.info("[pvpshot] 为点位 {} 创建了定位条航点（隐形史莱姆）", point.id());
+        return beacon;
+    }
+
+    /** 用 3×3×3 基岩把航点实体包起来：玩家挖不动，也炸不坏。 */
+    private static void sealWithBedrock(ServerLevel level, Slime beacon) {
+        BlockPos center = beacon.blockPosition();
+        for (BlockPos pos : BlockPos.betweenClosed(center.offset(-1, -1, -1),
+                center.offset(1, 1, 1))) {
+            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) {
+                level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), Block.UPDATE_CLIENTS);
+            }
         }
     }
 
@@ -247,68 +318,6 @@ public final class PointVisuals {
         } catch (Exception failure) {
             PvpShotMod.LOGGER.warn("[pvpshot] 设置点位 {} 航点样式失败：{}", point.id(), failure.toString());
         }
-    }
-
-    /**
-     * 找一个点位的标记实体（方块显示实体）。
-     *
-     * <p>早期版本用的是隐形盔甲架，只有一层很细的人形轮廓，非常不显眼（作者反馈）。
-     * 现在改成展示一个**方块**：方块本身的颜色就跟随归属（红/蓝/白混凝土），
-     * 再叠加一层同样颜色的发光轮廓，远近都能看清。
-     * 第一次扫描时会把旧的盔甲架标记清掉，不需要手动清理存档。
-     */
-    private static Entity markerFor(ServerLevel level, CapturePoint point) {
-        Entity cached = MARKERS.get(point.id());
-        if (cached != null && cached.isAlive() && !cached.isRemoved()
-                && cached instanceof Display.BlockDisplay) {
-            return cached;
-        }
-        String tag = TAG_PREFIX + point.id();
-        // 清理早期版本留下的隐形盔甲架
-        for (Entity old : level.getEntities(EntityTypes.ARMOR_STAND,
-                candidate -> candidate.entityTags().contains(tag))) {
-            old.discard();
-        }
-        for (Entity existing : level.getEntities(EntityTypes.BLOCK_DISPLAY,
-                candidate -> candidate.entityTags().contains(tag))) {
-            MARKERS.put(point.id(), existing);
-            return existing;
-        }
-        Display.BlockDisplay display = new Display.BlockDisplay(EntityTypes.BLOCK_DISPLAY, level);
-        display.setPos(point.x(), point.y() + 0.5, point.z());
-        display.setBlockState(Blocks.CONCRETE.pick(DyeColor.WHITE).defaultBlockState());
-        display.setInvulnerable(true);
-        display.setNoGravity(true);
-        display.addTag(tag);
-        if (!level.addFreshEntity(display)) {
-            return null;
-        }
-        MARKERS.put(point.id(), display);
-        PvpShotMod.LOGGER.info("[pvpshot] 为点位 {} 创建了方块标记实体", point.id());
-        return display;
-    }
-
-    /** 更新标记的外观：方块颜色 + 发光轮廓都跟随归属；未启用则不发光、方块置灰。 */
-    private static void applyAppearance(ServerLevel level, CapturePoint point, Entity marker,
-                                        TeamColor color, boolean active) {
-        if (marker instanceof Display.BlockDisplay display) {
-            BlockState wanted = active
-                    ? blockForOwner(point.owner())
-                    : Blocks.CONCRETE.pick(DyeColor.GRAY).defaultBlockState();
-            if (display.getBlockState() != wanted) {
-                display.setBlockState(wanted);
-            }
-        }
-        marker.setGlowingTag(active);
-        applyTeam(level, point, marker, color, active);
-    }
-
-    private static BlockState blockForOwner(int owner) {
-        return switch (owner) {
-            case 1 -> Blocks.CONCRETE.pick(DyeColor.RED).defaultBlockState();
-            case 2 -> Blocks.CONCRETE.pick(DyeColor.BLUE).defaultBlockState();
-            default -> Blocks.CONCRETE.pick(DyeColor.WHITE).defaultBlockState();
-        };
     }
 
     /** 把标记实体放进一个点位专属的队伍，并让队伍颜色等于归属颜色（发光轮廓取队伍颜色）。 */
@@ -396,7 +405,7 @@ public final class PointVisuals {
         StringBuilder builder = new StringBuilder();
         builder.append("点位可视化：").append(enabled ? "开启" : "关闭");
         builder.append("；当前模式 ").append(mode.label());
-        builder.append("；标记实体 ").append(MARKERS.size()).append(" 个。点位状态：");
+        builder.append("；航点实体 ").append(BEACONS.size()).append(" 个。点位状态：");
         for (CapturePoint point : MatchEngine.points()) {
             builder.append(' ').append(point.id())
                     .append(point.activeIn(mode) ? "(启用," : "(未启用,")
