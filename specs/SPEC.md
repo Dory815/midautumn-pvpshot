@@ -482,6 +482,40 @@ record VirtualProjectile(
 
 ---
 
+### 5.12 部署物扣账（2026-09-25 修复）
+
+部署物（TNT 炮 / 炮塔 / 掩体）是"吃下就部署"的道具：物品带
+`minecraft:consumable`（`consume_seconds: 0.05` = 1 tick）+
+`minecraft:use_cooldown`（炮 5 s / 炮塔 3 s，带 `cooldown_group`），
+原版进度 `pvpshot:use_cannon`（`consume_item` 触发器）的奖励函数就是
+`pvpshot:deploy/cannon`，失败时数据包用 `loot give` 退还一件。
+
+**原版扣物品的顺序（关键）**：`Consumable#onConsume` 里
+
+1. 先 `CriteriaTriggers.CONSUME_ITEM.trigger(...)` —— 数据包在这里部署/退还；
+2. 再 `ItemStack#consume(1, user)` —— **而这一步对"无限材料"玩家（创造模式）不扣**。
+
+所以账目在两种模式下不一样：
+
+| 模式 | 部署成功 | 部署失败 | 作者看到的现象 |
+|---|---|---|---|
+| 生存 | 净 -1（正常） | 净 0（退还一件，正常） | — |
+| 创造 | 净 0（**看起来像退还**） | 净 +1（**净赚一件**） | "成功退一个、失败退两个" |
+
+**修复**：新增 `pvpshot.weapon.DeployRefundWatch`，
+
+- 用部署物的 `use_cooldown` **冷却从"无"变"有"**作为"刚完成一次部署"的可靠信号
+  （`UseCooldown#apply` 由 `Consumable#onConsume` 里的 `ConsumableListener` 调用，
+  两种模式都会打上冷却）；
+- **只在创造模式下补扣一件**（就地 `stack.shrink(1)`），让创造模式与生存模式账目一致：
+  成功 -1、失败 0；
+- 同时把每次"消耗 / 退还"写进服务器日志（玩家名、模式、坐标、数量变化），
+  作为常驻的低成本可观测手段（每 tick 只读 41 个背包槽位）。
+
+生存模式路径不做任何干预，行为与原版 + 数据包完全一致。
+
+---
+
 ## 6. 性能目标与测量方法
 
 ### 6.1 目标
@@ -560,6 +594,9 @@ record VirtualProjectile(
 ---
 
 ## 10. 变更记录
+
+> 注：2026-09-25 的 **v0.6** 条目为"部署物扣账修复"（创造模式与生存模式账目对齐 +
+> 部署物消耗/退还日志），技术细节见 **5.12 节**，需求侧说明见 PRD 的 **11.1 节**。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|

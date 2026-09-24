@@ -71,6 +71,8 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         var players = server.getPlayerList().getPlayers();
         for (int i = 0; i < players.size(); i++) {
             var player = players.get(i);
+            // 部署物消耗/退还观测（只写日志，不改玩法）：用来确认"每次部署都退还"到底发生在哪一步
+            pvpshot.weapon.DeployRefundWatch.tick(player);
             // 物品栏同步：原版只在玩家点击/捡物品时同步，而数据包用 loot give 返还部署物品
             // 走不到那些路径，客户端就会看到"东西没回来"。broadcastChanges() 只在真有变化时才发包，
             // 所以每 tick 调用是安全的（作者要求"返还后同步一次"）。
@@ -110,6 +112,7 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         try {
             EquipmentSystems.onLogout(player);
             WeaponSystems.forget(player);
+            pvpshot.weapon.DeployRefundWatch.forget(player);
         } catch (Exception failure) {
             LOGGER.warn("[pvpshot] 玩家离开时的清理失败：{}", failure.toString());
         }
