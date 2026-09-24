@@ -1,0 +1,12 @@
+setblock -2010 2 -1570 minecraft:bricks
+setblock -2010 3 -1570 minecraft:bricks
+setblock -2009 2 -1570 minecraft:bricks
+setblock -2009 3 -1570 minecraft:bricks
+setblock -2008 2 -1570 minecraft:bricks
+setblock -2008 3 -1570 minecraft:bricks
+setblock -2007 2 -1570 minecraft:bricks
+setblock -2007 3 -1570 minecraft:bricks
+setblock -2006 2 -1570 minecraft:bricks
+setblock -2006 2 -1569 minecraft:bricks
+setblock -2006 3 -1570 minecraft:bricks
+setblock -2006 3 -1569 minecraft:bricks

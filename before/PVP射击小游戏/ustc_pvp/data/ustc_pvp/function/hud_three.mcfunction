@@ -1,0 +1,1 @@
+$bossbar set ustc_pvp:points name [{"text":"三点  |  ","color":"white"},{"text":"A   ","color":"$(a)"},{"text":"B   ","color":"$(b)"},{"text":"C   ","color":"$(c)"},{"text":"灰：中立 · 红/蓝：所属队伍","color":"gray"}]

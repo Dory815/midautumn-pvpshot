@@ -1,0 +1,25 @@
+execute if entity @s[type=player,name=!<ssh用户>,tag=!pvp.staff] run return run function pvpshot:debug/deny
+summon tnt -1904 250 -1504 {Fuse:15,Tags:["pvp.stress"]}
+summon tnt -1902 250 -1504 {Fuse:15,Tags:["pvp.stress"]}
+summon tnt -1900 250 -1504 {Fuse:15,Tags:["pvp.stress"]}
+summon tnt -1898 250 -1504 {Fuse:15,Tags:["pvp.stress"]}
+summon tnt -1896 250 -1504 {Fuse:15,Tags:["pvp.stress"]}
+summon tnt -1904 250 -1502 {Fuse:20,Tags:["pvp.stress"]}
+summon tnt -1902 250 -1502 {Fuse:20,Tags:["pvp.stress"]}
+summon tnt -1900 250 -1502 {Fuse:20,Tags:["pvp.stress"]}
+summon tnt -1898 250 -1502 {Fuse:20,Tags:["pvp.stress"]}
+summon tnt -1896 250 -1502 {Fuse:20,Tags:["pvp.stress"]}
+summon tnt -1904 250 -1500 {Fuse:25,Tags:["pvp.stress"]}
+summon tnt -1902 250 -1500 {Fuse:25,Tags:["pvp.stress"]}
+summon tnt -1900 250 -1500 {Fuse:25,Tags:["pvp.stress"]}
+summon tnt -1898 250 -1500 {Fuse:25,Tags:["pvp.stress"]}
+summon tnt -1896 250 -1500 {Fuse:25,Tags:["pvp.stress"]}
+summon tnt -1904 250 -1498 {Fuse:30,Tags:["pvp.stress"]}
+summon tnt -1902 250 -1498 {Fuse:30,Tags:["pvp.stress"]}
+summon tnt -1900 250 -1498 {Fuse:30,Tags:["pvp.stress"]}
+summon tnt -1898 250 -1498 {Fuse:30,Tags:["pvp.stress"]}
+summon tnt -1896 250 -1498 {Fuse:30,Tags:["pvp.stress"]}
+summon tnt -1903 251 -1501 {Fuse:35,Tags:["pvp.stress"]}
+summon tnt -1901 251 -1501 {Fuse:35,Tags:["pvp.stress"]}
+summon tnt -1899 251 -1499 {Fuse:35,Tags:["pvp.stress"]}
+summon tnt -1897 251 -1499 {Fuse:35,Tags:["pvp.stress"]}

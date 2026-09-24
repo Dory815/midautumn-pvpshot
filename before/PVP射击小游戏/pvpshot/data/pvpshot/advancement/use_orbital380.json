@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:echo_shard",
+          "predicates": {
+            "minecraft:custom_data": {
+              "pvpshot": {
+                "weapon": "orbital380"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:v7/use_orbital380"
+  }
+}

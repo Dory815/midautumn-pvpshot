@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 24
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "plane_gun"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "战斗机机炮",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "爆炸弹 · 可破坏地形 · 限 24 发",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:fire_charge",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 0.25,
+                  "cooldown_group": "pvpshot:plane_gun"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

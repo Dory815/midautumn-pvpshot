@@ -1,0 +1,649 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-field-audit/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[11:52:39] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-field-audit', universe path '/private/tmp/pvpshot-field-audit/generated-world'
+[11:52:40] [main/INFO]: Included folder pack pvpshot
+[11:52:40] [main/INFO]: Included folder pack pvptest
+[11:52:41] [main/INFO]: Loaded 1585 recipes
+[11:52:41] [main/INFO]: Loaded 1698 advancements
+[11:52:41] [Server thread/INFO]: Selecting global world spawn...
+[11:52:41] [Server thread/INFO]: Loading 0 persistent chunks...
+[11:52:41] [Server thread/INFO]: Preparing spawn area: 100%
+[11:52:41] [Server thread/INFO]: Time elapsed: 273 ms
+[11:52:41] [Server thread/INFO]: Each test that matches pvptest:* will be run 1 times (total: 1)
+[11:52:41] [Server thread/INFO]: Started game test server
+[11:52:41] [Server thread/INFO]: 1 tests are now running at position -7735307, -59, -8555378!
+[11:52:41] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[11:52:41] [Server thread/INFO]: Running function pvpshot:load
+[11:52:41] [Server thread/INFO]: Set [pvpshot.cfg] for #regen.enabled to 0
+[11:52:41] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[11:52:42] [Server thread/INFO]: FieldRed[embedded] logged in with entity id 1 at (0.0, 0.0, 0.0)
+[11:52:42] [Server thread/INFO]: FieldRed joined the game
+[11:52:42] [Server thread/INFO]: Set [pvpshot.init] for FieldRed to 1
+[11:52:42] [Server thread/INFO]: Set [pvpshot.deaths] for FieldRed to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.deaths_old] for FieldRed to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.kills] for FieldRed to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.kills_old] for FieldRed to 0
+[11:52:42] [Server thread/INFO]: FieldBlue[embedded] logged in with entity id 2 at (0.0, 0.0, 0.0)
+[11:52:42] [Server thread/INFO]: FieldBlue joined the game
+[11:52:42] [Server thread/INFO]: Set [pvpshot.init] for FieldBlue to 1
+[11:52:42] [Server thread/INFO]: Set [pvpshot.deaths] for FieldBlue to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.deaths_old] for FieldBlue to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.kills] for FieldBlue to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.kills_old] for FieldBlue to 0
+[11:52:42] [Server thread/INFO]: Added FieldRed to team [pvpshot.red]
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: [_]
+[11:52:42] [Server thread/INFO]: [_]
+[11:52:42] [Server thread/INFO]: [_]
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:player/kit
+[11:52:42] [Server thread/INFO]: FieldRed has made the advancement [Isn't It Iron Pick]
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn supports snowball with intended quantity
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn excludes bow/crossbow and retains two rockets
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:player/kit
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn supports egg with intended quantity
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn excludes bow/crossbow and retains two rockets
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:player/kit
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn supports trident with intended quantity
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spawn excludes bow/crossbow and retains two rockets
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS crate retains bow in its two weapon rolls
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 0
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 20
+[11:52:42] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS crate retains crossbow in its two weapon rolls
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.snowball to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.egg to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.trident to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.bow to 20
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #w.crossbow to 20
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: Removed 86 item(s) from player FieldRed
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldRed
+[11:52:42] [Server thread/INFO]: Dropped 4 [霜蚀雪球]
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS actual native snowball use consumes one of four
+[11:52:42] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS sweep does not alter native velocity or create an airborne field
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS native drag and gravity match a plain snowball
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: Removed 3 item(s) from player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Dropped 4 [霜蚀雪球]
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS native downward snowball creates one field on floor impact
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS impact leaves terrain intact
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: Removed 4 item(s) from player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Replaced a slot on FieldRed with [Snowball]
+[11:52:42] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS direct snowball hit produces one area pulse, not old six damage health=19.0
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS impact creates one field with Slowness II
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS enemy area damage marks target without knockback
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS no second pulse before one second health=19.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS next pulse at twenty ticks health=18.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS five pulses total over a full field lifetime health=15.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS field expires at five seconds without a sixth pulse
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS slow expires within one second after area disappears
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: Removed 1 item(s) from player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS overlapping areas do not double initial damage health=19.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS overlapping areas share a one-second damage limit health=18.0
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS overlap does not amplify slow
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS leaving area stops further damage immediately health=19.0
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS leaving area releases slow within one second
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS rapid reentry cannot bypass pulse cooldown health=19.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS reentry resumes next scheduled damage pulse health=18.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS three-block horizontal radius includes its boundary health=19.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS outside three-block radius is unaffected health=20.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS separate upper floor is not affected health=20.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS complete wall blocks area damage health=20.0
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS complete wall also blocks slow
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.red]
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS area damages teammates and its own thrower
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS area slows teammates and its own thrower
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS friendly and self pulses do not mark
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldRed
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.red]
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #friendlyfire to 0
+[11:52:42] [Server thread/INFO]: Disabled friendly fire for team [pvpshot.red]
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS optional friendly-fire-off configuration protects teammate from field
+[11:52:42] [Server thread/INFO]: Set [pvpshot.cfg] for #friendlyfire to 1
+[11:52:42] [Server thread/INFO]: Enabled friendly fire for team [pvpshot.red]
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Applied effect Resistance to FieldBlue
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS native resistance protects against field damage health=20.0
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: FieldBlue has made the advancement [Cover Me with Diamonds]
+[11:52:42] [Server thread/INFO]: Replaced a slot on FieldBlue with [Diamond Chestplate]
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS native armor reduces one-HP field pulse
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: Removed 1 item(s) from player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS creative observer is excluded
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS spectator is excluded
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/tick
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS elapsed lifetime is not paused when a field stops being processed
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:match/restart
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS new round clears active areas
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/clear
+[11:52:42] [Server thread/INFO]: No entity was found
+[11:52:42] [Server thread/INFO]: Reset [pvpshot.field_next] for 2 entities
+[11:52:42] [Server thread/INFO]: Removed every effect from FieldBlue
+[11:52:42] [Server thread/INFO]: No items were found on player FieldBlue
+[11:52:42] [Server thread/INFO]: Added FieldBlue to team [pvpshot.blue]
+[11:52:42] [Server thread/INFO]: No items were found on player FieldRed
+[11:52:42] [Server thread/INFO]: Target has no effects to remove
+[11:52:42] [Server thread/INFO]: Added tag 'pvpshot.damage_source' to FieldRed
+[11:52:42] [Server thread/INFO]: Running function pvpshot:field/create
+[11:52:42] [Server thread/INFO]: FieldBlue was killed by FieldRed using magic
+[11:52:42] [Server thread/INFO]: Removed tag 'pvpshot.damage_source' from FieldRed
+[11:52:42] [Server thread/INFO]: [STDOUT]: PASS lethal field pulse credits its original thrower
+[11:52:42] [Server thread/INFO]: [+]
+[11:52:42] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 1.427 s ======================
+[11:52:42] [Server thread/INFO]: All 1 required tests passed :)
+[11:52:42] [Server thread/INFO]: ====================================================
+[11:52:42] [Server thread/INFO]: Stopping server
+[11:52:42] [Server thread/INFO]: Saving players
+[11:52:42] [Server thread/INFO]: FieldRed lost connection: Server closed
+[11:52:42] [Server thread/INFO]: FieldRed left the game
+[11:52:42] [Server thread/INFO]: Saving worlds
+[11:52:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[11:52:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[11:52:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[11:52:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[11:52:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[11:52:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[11:52:43] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[11:52:43] [Server thread/INFO]: Game test server shutting down

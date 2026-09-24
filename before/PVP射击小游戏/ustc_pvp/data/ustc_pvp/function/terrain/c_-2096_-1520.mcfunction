@@ -1,0 +1,14 @@
+setblock -2094 2 -1514 minecraft:light_gray_concrete
+setblock -2094 3 -1514 minecraft:light_gray_concrete
+setblock -2093 2 -1514 minecraft:light_gray_concrete
+setblock -2093 3 -1514 minecraft:light_gray_concrete
+setblock -2092 2 -1514 minecraft:light_gray_concrete
+setblock -2092 3 -1514 minecraft:light_gray_concrete
+setblock -2091 2 -1514 minecraft:light_gray_concrete
+setblock -2091 3 -1514 minecraft:light_gray_concrete
+setblock -2090 2 -1514 minecraft:light_gray_concrete
+setblock -2090 2 -1513 minecraft:light_gray_concrete
+setblock -2090 2 -1512 minecraft:light_gray_concrete
+setblock -2090 3 -1514 minecraft:light_gray_concrete
+setblock -2090 3 -1513 minecraft:light_gray_concrete
+setblock -2090 3 -1512 minecraft:light_gray_concrete

@@ -1,0 +1,1 @@
+item replace entity @s armor.head with minecraft:leather_helmet[minecraft:dyed_color=3949738,minecraft:enchantments={"minecraft:binding_curse":1},minecraft:enchantment_glint_override=false,minecraft:unbreakable={}]

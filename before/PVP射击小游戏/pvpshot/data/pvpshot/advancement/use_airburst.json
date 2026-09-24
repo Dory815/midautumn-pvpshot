@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:prismarine_shard",
+          "predicates": {
+            "minecraft:custom_data": {
+              "pvpshot": {
+                "weapon": "airburst"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:v7/use_airburst"
+  }
+}

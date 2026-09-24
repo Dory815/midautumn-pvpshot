@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_brick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 12
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "shotgun"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "霰弹枪",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "10 弹丸 × 3 HP · 8 格后衰减 · 射程 24 格 · 间隔 1.2 秒",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:netherite_hoe",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 1.2,
+                  "cooldown_group": "pvpshot:shotgun"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

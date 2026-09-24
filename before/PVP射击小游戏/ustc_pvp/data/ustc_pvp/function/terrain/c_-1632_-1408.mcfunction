@@ -1,0 +1,9 @@
+setblock -1617 2 -1403 minecraft:stone_bricks
+setblock -1617 2 -1402 minecraft:stone_bricks
+setblock -1617 2 -1401 minecraft:stone_bricks
+setblock -1617 3 -1403 minecraft:stone_bricks
+setblock -1617 3 -1402 minecraft:stone_bricks
+setblock -1617 3 -1401 minecraft:stone_bricks
+setblock -1617 4 -1403 minecraft:stone_bricks
+setblock -1617 4 -1402 minecraft:stone_bricks
+setblock -1617 4 -1401 minecraft:stone_bricks

@@ -1,0 +1,408 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-rifle-regression/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[10:08:58] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-rifle-regression', universe path '/private/tmp/pvpshot-rifle-regression/generated-world'
+[10:08:58] [main/INFO]: Included folder pack pvpshot
+[10:08:58] [main/INFO]: Included folder pack pvptest
+[10:08:59] [main/INFO]: Loaded 1585 recipes
+[10:08:59] [main/INFO]: Loaded 1696 advancements
+[10:08:59] [Server thread/INFO]: Selecting global world spawn...
+[10:08:59] [Server thread/INFO]: Loading 0 persistent chunks...
+[10:08:59] [Server thread/INFO]: Preparing spawn area: 100%
+[10:08:59] [Server thread/INFO]: Time elapsed: 189 ms
+[10:08:59] [Server thread/INFO]: Each test that matches pvptest:* will be run 1 times (total: 1)
+[10:08:59] [Server thread/INFO]: Started game test server
+[10:08:59] [Server thread/INFO]: 1 tests are now running at position 2404530, -59, -1928679!
+[10:09:00] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[10:09:00] [Server thread/INFO]: Running function pvpshot:load
+[10:09:00] [Server thread/INFO]: Set [pvpshot.cfg] for #mode to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.cfg] for #regen.enabled to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[10:09:00] [Server thread/INFO]: PvpTestRed[embedded] logged in with entity id 1 at (0.0, 0.0, 0.0)
+[10:09:00] [Server thread/INFO]: PvpTestRed joined the game
+[10:09:00] [Server thread/INFO]: Set [pvpshot.init] for PvpTestRed to 1
+[10:09:00] [Server thread/INFO]: Set [pvpshot.deaths] for PvpTestRed to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpTestRed to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.kills] for PvpTestRed to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpTestRed to 0
+[10:09:00] [Server thread/INFO]: PvpTestBlue[embedded] logged in with entity id 2 at (0.0, 0.0, 0.0)
+[10:09:00] [Server thread/INFO]: PvpTestBlue joined the game
+[10:09:00] [Server thread/INFO]: Set [pvpshot.init] for PvpTestBlue to 1
+[10:09:00] [Server thread/INFO]: Set [pvpshot.deaths] for PvpTestBlue to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpTestBlue to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.kills] for PvpTestBlue to 0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpTestBlue to 0
+[10:09:00] [Server thread/INFO]: Added PvpTestRed to team [pvpshot.red]
+[10:09:00] [Server thread/INFO]: Added PvpTestBlue to team [pvpshot.blue]
+[10:09:00] [Server thread/INFO]: [_]
+[10:09:00] [Server thread/INFO]: [_]
+[10:09:00] [Server thread/INFO]: [_]
+[10:09:00] [Server thread/INFO]: The base value for attribute Max Health for entity PvpTestBlue set to 10.0
+[10:09:00] [Server thread/INFO]: Reset [pvpshot.hp_set] for PvpTestBlue
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS existing player health migrates to 20 HP
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestRed
+[10:09:00] [Server thread/INFO]: Dropped 2 items
+[10:09:00] [Server thread/INFO]: Dropped 2 items
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS bow/crossbow enchantments and native 0.5 second charge
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS snowball 6 swept head hit health=14.0
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Egg]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS egg 3 swept head hit health=17.0
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Egg]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS successive hits are not eaten by hurt cooldown health=14.0
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS vanilla snowball unchanged health=20.0
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Egg]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS vanilla egg unchanged health=20.0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.cfg] for #dmg.snowball to 7
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS configured damage 7 health=13.0
+[10:09:00] [Server thread/INFO]: Set [pvpshot.cfg] for #dmg.snowball to 6
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Added PvpTestBlue to team [pvpshot.red]
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS friendly fire enabled health=14.0
+[10:09:00] [Server thread/INFO]: Disabled friendly fire for team [pvpshot.red]
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS optional friendly-fire protection health=20.0
+[10:09:00] [Server thread/INFO]: Enabled friendly fire for team [pvpshot.red]
+[10:09:00] [Server thread/INFO]: Added PvpTestBlue to team [pvpshot.blue]
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Applied effect Resistance to PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS spawn resistance health=20.0
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: PvpTestBlue has made the advancement [Cover Me with Diamonds]
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestBlue with [Diamond Chestplate]
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS armor health=15.344
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: Removed 1 item(s) from player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Dropped 16 [雪球（用途待定）]
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS point-blank snowball spawn hook health=14.0
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Dropped 16 [破片鸡蛋]
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS point-blank egg spawn hook health=17.0
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS shot above swimming player misses health=20.0
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS swimming hitbox health=14.0
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Dropped 16 [雪球（用途待定）]
+[10:09:00] [Server thread/INFO]: [_]
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS moving projectile ticks hit exactly once health=14.0
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS snowball frost slow
+[10:09:00] [Server thread/INFO]: Removed every effect from PvpTestBlue
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestBlue with [Shield]
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: PvpTestBlue has made the advancement [Not Today, Thank You]
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS shield blocks projectile health=20.0
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: Removed 1 item(s) from player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS projectile wall occlusion health=20.0
+[10:09:00] [Server thread/INFO]: Target has no effects to remove
+[10:09:00] [Server thread/INFO]: No items were found on player PvpTestBlue
+[10:09:00] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:00] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:00] [Server thread/INFO]: PvpTestBlue was pummeled by PvpTestRed
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS lethal projectile health=0.0
+[10:09:00] [Server thread/INFO]: [STDOUT]: PASS kill attributed to thrower
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[10:09:01] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[10:09:01] [Server thread/INFO]: [STDOUT]: PASS four orientations, loaded structures, allowed overlap and immutable-floor refund
+[10:09:01] [Server thread/INFO]: PvpTestBlue has made the advancement [Isn't It Iron Pick]
+[10:09:01] [Server thread/INFO]: [STDOUT]: PASS actual respawn has 20 HP and equipment
+[10:09:01] [Server thread/INFO]: [_]
+[10:09:01] [Server thread/INFO]: [STDOUT]: PASS symmetric three-arrow fans in all four orientations
+[10:09:01] [Server thread/INFO]: PvpTestTarget[embedded] logged in with entity id 53 at (0.0, 0.0, 0.0)
+[10:09:01] [Server thread/INFO]: PvpTestTarget joined the game
+[10:09:01] [Server thread/INFO]: Set [pvpshot.init] for PvpTestTarget to 1
+[10:09:01] [Server thread/INFO]: Set [pvpshot.deaths] for PvpTestTarget to 0
+[10:09:01] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpTestTarget to 0
+[10:09:01] [Server thread/INFO]: Set [pvpshot.kills] for PvpTestTarget to 0
+[10:09:01] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpTestTarget to 0
+[10:09:01] [Server thread/INFO]: Added PvpTestTarget to team [pvpshot.blue]
+[10:09:01] [Server thread/INFO]: Target has no effects to remove
+[10:09:01] [Server thread/INFO]: No items were found on player PvpTestTarget
+[10:09:01] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:01] [Server thread/INFO]: PvpTestRed has made the advancement [Take Aim]
+[10:09:01] [Server thread/INFO]: [STDOUT]: PASS actual turret arrow base damage 4 health=16.0
+[10:09:01] [Server thread/INFO]: [STDOUT]: PASS native dispenser firing, four launch vectors, four turrets and owners
+[10:09:01] [Server thread/INFO]: [_]
+[10:09:01] [Server thread/INFO]: [_]
+[10:09:01] [Server thread/INFO]: [_]
+[10:09:01] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS finite ammunition and cleanup
+[10:09:02] [Server thread/INFO]: PvpSelfTest[embedded] logged in with entity id 134 at (0.0, 0.0, 0.0)
+[10:09:02] [Server thread/INFO]: PvpSelfTest joined the game
+[10:09:02] [Server thread/INFO]: Set [pvpshot.init] for PvpSelfTest to 1
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths] for PvpSelfTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpSelfTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills] for PvpSelfTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpSelfTest to 0
+[10:09:02] [Server thread/INFO]: Added PvpSelfTest to team [pvpshot.blue]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Removed every effect from PvpSelfTest
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Added tag 'pvpshot.turret_arrow' to Arrow
+[10:09:02] [Server thread/INFO]: Modified entity data of Arrow
+[10:09:02] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS own turret arrow deals 4 health=16.0
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Dropped 16 [雪球（用途待定）]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS fresh snowball does not hit its launcher immediately health=20.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS snowball flies upward and falls back onto its owner for 6 health=14.0
+[10:09:02] [Server thread/INFO]: Removed every effect from PvpSelfTest
+[10:09:02] [Server thread/INFO]: Removed 16 item(s) from player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Dropped 16 [破片鸡蛋]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS fresh egg does not hit its launcher immediately health=20.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS egg flies upward and falls back onto its owner for 3 health=17.0
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: Removed 16 item(s) from player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Removed 31 item(s) from player PvpTestRed
+[10:09:02] [Server thread/INFO]: Removed every effect from PvpTestRed
+[10:09:02] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Egg]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS egg direct victim is not double hit by fragments health=17.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS egg splash self damage 2 and no double direct damage
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Set [pvpshot.cfg] for #egg.splash_radius to 3
+[10:09:02] [Server thread/INFO]: Dropped 16 [破片鸡蛋]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS egg fragments cannot pass through cover health=20.0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.cfg] for #egg.splash_radius to 2
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS actual rifle consumption and projectile creation
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS rifle direct hit is six HP without explosion health=14.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS rifle direct impact and no burning
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSelfTest set to 200.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS vanilla TNT damage=15.435196 and native terrain destruction
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSelfTest set to 200.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS native TNT self damage and owner attribution retained
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSelfTest set to 200.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS full cover native damage=1.0
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSelfTest set to 200.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS partial cover native damage=4.9369507
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpSelfTest
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSelfTest set to 200.0
+[10:09:02] [Server thread/INFO]: PvpSelfTest was blown up by PvpTestRed
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS native TNT kill credited to owner
+[10:09:02] [Server thread/INFO]: PvpFriendTest[embedded] logged in with entity id 157 at (0.0, 0.0, 0.0)
+[10:09:02] [Server thread/INFO]: PvpFriendTest joined the game
+[10:09:02] [Server thread/INFO]: Set [pvpshot.init] for PvpFriendTest to 1
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths] for PvpFriendTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpFriendTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills] for PvpFriendTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpFriendTest to 0
+[10:09:02] [Server thread/INFO]: Added PvpFriendTest to team [pvpshot.red]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: No items were found on player PvpFriendTest
+[10:09:02] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:02] [Server thread/INFO]: PvpFriendTest was pummeled by PvpTestRed
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS friendly fire can be lethal health=0.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS enemy kills score, friendly kills retain attribution without score reward
+[10:09:02] [Server thread/INFO]: PvpSystemsTest[embedded] logged in with entity id 159 at (0.0, 0.0, 0.0)
+[10:09:02] [Server thread/INFO]: PvpSystemsTest joined the game
+[10:09:02] [Server thread/INFO]: Set [pvpshot.init] for PvpSystemsTest to 1
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths] for PvpSystemsTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.deaths_old] for PvpSystemsTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills] for PvpSystemsTest to 0
+[10:09:02] [Server thread/INFO]: Set [pvpshot.kills_old] for PvpSystemsTest to 0
+[10:09:02] [Server thread/INFO]: Added PvpSystemsTest to team [pvpshot.blue]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: PvpTestRed has made the advancement [Isn't It Iron Pick]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: PvpTestRed has made the advancement [Suit Up]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: PvpTestRed has made the advancement [Cover Me with Diamonds]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS twenty randomized kits include base gear and 64 red terracotta
+[10:09:02] [Server thread/INFO]: Running function pvpshot:player/kit
+[10:09:02] [Server thread/INFO]: PvpSystemsTest has made the advancement [Isn't It Iron Pick]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS blue kit includes 64 blue terracotta
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Removed 98 item(s) from player PvpTestRed
+[10:09:02] [Server thread/INFO]: Removed every effect from PvpTestRed
+[10:09:02] [Server thread/INFO]: Dropped 1 [手雷]
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSystemsTest set to 200.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS actual grenade use, count, fuse, launch and native owner
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS thrown grenade detonates with native damage=15.435196
+[10:09:02] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 1
+[10:09:02] [Server thread/INFO]: No items were found on player PvpTestRed
+[10:09:02] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:ammo/reset
+[10:09:02] [Server thread/INFO]: Killed 16 entities
+[10:09:02] [Server thread/INFO]: Running function pvpshot:ammo/player
+[10:09:02] [Server thread/INFO]: Function pvpshot:ammo/player returned 0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Killed 16 entities
+[10:09:02] [Server thread/INFO]: Running function pvpshot:ammo/player
+[10:09:02] [Server thread/INFO]: Function pvpshot:ammo/player returned 0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Triggered [pvp_reload]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS two real 16-shot magazines, timed empty interval and infinite resupply
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Removed 16 item(s) from player PvpTestRed
+[10:09:02] [Server thread/INFO]: Running function pvpshot:ammo/reset
+[10:09:02] [Server thread/INFO]: Running function pvpshot:ammo/player
+[10:09:02] [Server thread/INFO]: Function pvpshot:ammo/player returned 0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS manual reload completes with infinite reserve
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS full-inventory reload safely waits and recovers
+[10:09:02] [Server thread/INFO]: The base value for attribute Max Health for entity PvpSystemsTest set to 20.0
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: Removed 97 item(s) from player PvpSystemsTest
+[10:09:02] [Server thread/INFO]: Removed 2256 item(s) from player PvpTestRed
+[10:09:02] [Server thread/INFO]: Target has no effects to remove
+[10:09:02] [Server thread/INFO]: Set [pvpshot.cfg] for #regen.enabled to 1
+[10:09:02] [Server thread/INFO]: Running function pvpshot:regen/in_combat
+[10:09:02] [Server thread/INFO]: Running function pvpshot:regen/in_combat
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS no regeneration during five-second combat delay health=1.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS delayed recovery has started health=5.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: Replaced a slot on PvpTestRed with [Snowball]
+[10:09:02] [Server thread/INFO]: Running function pvpshot:combat/proj_tick
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS damage dealt and received immediately interrupt recovery
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS recovery stays off during renewed combat delay health=4.0
+[10:09:02] [Server thread/INFO]: Applied 1.0 damage to PvpSystemsTest
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS environmental damage also postpones recovery five seconds health=3.0
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [_]
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS fast recovery reaches full health within three seconds after delay health=20.0
+[10:09:02] [Server thread/INFO]: [STDOUT]: PASS automatic recovery reaches 20 HP and respects environmental damage
+[10:09:02] [Server thread/INFO]: [+]
+[10:09:02] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 2.957 s ======================
+[10:09:02] [Server thread/INFO]: All 1 required tests passed :)
+[10:09:02] [Server thread/INFO]: ====================================================
+[10:09:02] [Server thread/INFO]: Stopping server
+[10:09:02] [Server thread/INFO]: Saving players
+[10:09:02] [Server thread/INFO]: PvpTestRed lost connection: Server closed
+[10:09:02] [Server thread/INFO]: PvpTestRed left the game
+[10:09:02] [Server thread/INFO]: Saving worlds
+[10:09:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[10:09:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[10:09:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[10:09:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:09:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:09:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:09:03] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:09:03] [Server thread/INFO]: Game test server shutting down

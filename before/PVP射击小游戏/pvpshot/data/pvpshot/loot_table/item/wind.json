@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wind_charge",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "wind"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "风暴弹",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "8 格冲击范围 · 强击退 · 直击仅 0.1 HP · 不破坏地形",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:enchantments": {
+                  "pvpshot:wind": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

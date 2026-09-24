@@ -1,0 +1,9 @@
+setblock -1729 2 -1571 minecraft:stone_bricks
+setblock -1729 2 -1570 minecraft:stone_bricks
+setblock -1729 2 -1569 minecraft:stone_bricks
+setblock -1729 3 -1571 minecraft:stone_bricks
+setblock -1729 3 -1570 minecraft:stone_bricks
+setblock -1729 3 -1569 minecraft:stone_bricks
+setblock -1729 4 -1571 minecraft:stone_bricks
+setblock -1729 4 -1570 minecraft:stone_bricks
+setblock -1729 4 -1569 minecraft:stone_bricks

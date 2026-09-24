@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mace",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "mace"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "风爆 IV 重锤",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "替换三叉戟 · 风爆 IV · 不可损坏 · 所有箱子 25%",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "minecraft:wind_burst": 4
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

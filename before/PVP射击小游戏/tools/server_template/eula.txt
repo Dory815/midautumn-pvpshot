@@ -1,0 +1,2 @@
+# Read https://aka.ms/MinecraftEULA and set true yourself only if you agree.
+eula=false

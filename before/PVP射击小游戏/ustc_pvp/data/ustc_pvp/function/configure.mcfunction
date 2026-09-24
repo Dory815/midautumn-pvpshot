@@ -1,0 +1,10 @@
+scoreboard players set #discover.enabled pvpshot.cfg 0
+scoreboard players set #arena.auto pvpshot.cfg 0
+scoreboard players set #point.radius pvpshot.cfg 9
+scoreboard players set #point.height pvpshot.cfg 3
+scoreboard players set #chest.interval pvpshot.cfg 1200
+scoreboard players set #tdm.max pvpshot.cfg 60
+scoreboard players set #cap.max pvpshot.cfg 1000
+scoreboard players set #test.controls pvpshot.cfg 1
+scoreboard players set #mobility.speed pvpshot.cfg 0
+scoreboard players set #mobility.jump pvpshot.cfg 0

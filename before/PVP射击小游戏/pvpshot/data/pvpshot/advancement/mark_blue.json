@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "minecraft:team": "pvpshot.blue"
+        },
+        "damage": {
+          "taken": {
+            "min": 0.001
+          },
+          "blocked": false,
+          "source_entity": {
+            "minecraft:entity_type": "minecraft:player",
+            "minecraft:team": "pvpshot.red"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:mark/hit"
+  }
+}

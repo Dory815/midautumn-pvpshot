@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:magma_cream",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "plane_bomb"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "战斗机炸弹",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "向下投放原版 TNT · 落地爆炸 · 限 4 枚",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:tnt",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 1,
+                  "cooldown_group": "pvpshot:plane_bomb"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

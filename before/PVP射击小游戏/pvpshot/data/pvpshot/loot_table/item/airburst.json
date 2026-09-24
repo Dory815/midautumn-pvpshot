@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:prismarine_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "airburst"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "空爆火箭筒",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "一次性 · 12 格后近敌引爆 · 最远 90 格空爆 · 爆后溅射 6-8 枚 TNT",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:firework_rocket",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "pvpshot:airburst"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

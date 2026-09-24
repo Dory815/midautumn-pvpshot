@@ -1,0 +1,43 @@
+[19:14:37] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[19:14:37] [ServerMain/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/level/ServerPlayerGameMode (1 hooks)
+[19:14:37] [Worker-Main-1/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/commands/arguments/blocks/BlockInput (1 hooks)
+[19:14:38] [ServerMain/INFO]: Loaded 1585 recipes
+[19:14:38] [ServerMain/INFO]: Loaded 1698 advancements
+[19:14:38] [Server thread/INFO]: Starting minecraft server version 26.2
+[19:14:38] [Server thread/INFO]: Loading properties
+[19:14:38] [Server thread/INFO]: Default game type: SURVIVAL
+[19:14:38] [Server thread/INFO]: Generating keypair
+[19:14:38] [Server thread/INFO]: Starting Minecraft server on 127.0.0.1:28999
+[19:14:39] [Server thread/INFO]: Preparing level "world"
+[19:14:39] [Server thread/INFO]: Loading 0 persistent chunks...
+[19:14:39] [Server thread/INFO]: Time elapsed: 13 ms
+[19:14:39] [Server thread/INFO]: Done (0.112s)! For help, type "help"
+[19:14:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:overworld
+[19:14:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/ustc_pvp:template
+[19:14:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:the_end
+[19:14:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:the_nether
+[19:14:39] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:14:39] [Server thread/INFO]: ThreadedAnvilChunkStorage (template): All chunks are saved
+[19:14:39] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:14:39] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:14:39] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:15:31] [Server thread/INFO]: #protection.active has 1 [ustc.clock]
+[19:15:31] [Server thread/INFO]: Could not set the block
+[19:15:31] [Server thread/INFO]: Set [pvpshot.cal] for #smoke.core to 1
+[19:15:31] [Server thread/INFO]: #smoke.core has 1 [pvpshot.cal]
+[19:15:31] [Server thread/INFO]: Running function ustc_pvp:protection/repair
+[19:15:31] [Server thread/INFO]: #protection.edit has 0 [ustc.clock]
+[19:15:39] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[19:16:33] [Server thread/INFO]: Stopping the server
+[19:16:33] [Server thread/INFO]: Stopping server
+[19:16:33] [Server thread/INFO]: Saving players
+[19:16:33] [Server thread/INFO]: Saving worlds
+[19:16:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:overworld
+[19:16:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/ustc_pvp:template
+[19:16:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:the_end
+[19:16:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[科大中区 · 霜蚀雪球测试]'/minecraft:the_nether
+[19:16:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:16:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (template): All chunks are saved
+[19:16:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:16:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:16:34] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved

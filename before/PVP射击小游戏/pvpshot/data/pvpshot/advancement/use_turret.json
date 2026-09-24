@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:orange_dye",
+          "predicates": {
+            "minecraft:custom_data": {"pvpshot": {"deploy": "turret"}}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:deploy/on_turret"
+  }
+}

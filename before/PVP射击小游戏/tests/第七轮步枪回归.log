@@ -1,0 +1,498 @@
+[PVP Protection] Loaded 175 regions in 153 chunk buckets.
+[PVP Protection] Server facility protection installed (Minecraft 26.2 / Java 25).
+[PVP Protection] Patched net/minecraft/server/level/ServerPlayer (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/Level (2 hooks)
+[PVP Protection] Patched net/minecraft/server/level/ServerLevel (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/arrow/AbstractArrow (3 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/state/BlockBehaviour$BlockStateBase (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/piston/PistonBaseBlock (1 hooks)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-public-reset-20260922/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/AbstractWindCharge (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/WindCharge (1 hooks)
+[16:34:01] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-v7-tests', universe path '/private/tmp/pvpshot-v7-tests/generated-world'
+[16:34:01] [main/INFO]: Included folder pack pvpshot
+[16:34:01] [main/INFO]: Included folder pack pvptest
+[16:34:01] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/level/ServerPlayerGameMode (1 hooks)
+[16:34:01] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/players/PlayerList (1 hooks)
+[16:34:02] [Worker-Main-1/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/commands/arguments/blocks/BlockInput (1 hooks)
+[16:34:02] [main/INFO]: Loaded 1585 recipes
+[16:34:02] [main/INFO]: Loaded 1702 advancements
+[16:34:03] [Server thread/INFO]: Selecting global world spawn...
+[16:34:03] [Server thread/INFO]: Loading 0 persistent chunks...
+[16:34:03] [Server thread/INFO]: Preparing spawn area: 100%
+[16:34:03] [Server thread/INFO]: Time elapsed: 224 ms
+[16:34:03] [Server thread/INFO]: Each test that matches pvptest:* will be run 1 times (total: 1)
+[16:34:03] [Server thread/INFO]: Started game test server
+[16:34:03] [Server thread/INFO]: 1 tests are now running at position -8816390, -59, -2658621!
+[16:34:03] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[16:34:03] [Server thread/INFO]: Running function pvpshot:load
+[16:34:03] [Server thread/INFO]: Set [pvpshot.cfg] for #mode to 0
+[16:34:03] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[16:34:03] [Server thread/INFO]: Set [pvpshot.cfg] for #regen.enabled to 0
+[16:34:03] [Server thread/INFO]: RifleRed[embedded] logged in with entity id 1 at (0.0, 0.0, 0.0)
+[16:34:04] [Server thread/INFO]: RifleRed joined the game
+[16:34:04] [Server thread/INFO]: Set [pvpshot.init] for RifleRed to 1
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths] for RifleRed to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths_old] for RifleRed to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills] for RifleRed to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills_old] for RifleRed to 0
+[16:34:04] [Server thread/INFO]: RifleBlue[embedded] logged in with entity id 2 at (0.0, 0.0, 0.0)
+[16:34:04] [Server thread/INFO]: RifleBlue joined the game
+[16:34:04] [Server thread/INFO]: Set [pvpshot.init] for RifleBlue to 1
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths] for RifleBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths_old] for RifleBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills] for RifleBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills_old] for RifleBlue to 0
+[16:34:04] [Server thread/INFO]: Added RifleRed to team [pvpshot.red]
+[16:34:04] [Server thread/INFO]: Added RifleBlue to team [pvpshot.blue]
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleRed
+[16:34:04] [Server thread/INFO]: No items were found on player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle creates one harmless display carrier
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle preserves original fireball first-step speed and straight path
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS six HP direct hit health=14.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle has no knockback
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle adds no burning or negative status beyond hit mark
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS enemy rifle hit marks the victim
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: RifleBystander[embedded] logged in with entity id 6 at (0.0, 0.0, 0.0)
+[16:34:04] [Server thread/INFO]: RifleBystander joined the game
+[16:34:04] [Server thread/INFO]: Set [pvpshot.init] for RifleBystander to 1
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths] for RifleBystander to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths_old] for RifleBystander to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills] for RifleBystander to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills_old] for RifleBystander to 0
+[16:34:04] [Server thread/INFO]: Added RifleBystander to team [pvpshot.blue]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle splash does not reach outside 1.5 blocks
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS wall near-miss splashes three HP within one block health=17.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle splash has no fire or knockback
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS outer splash deals one HP inside 1.5 blocks health=19.0
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS wall blocks splash before the impact block is removed health=20.0
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Replaced a slot on RifleBlue with [Shield]
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: RifleBlue has made the advancement [Not Today, Thank You]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS shield blocks rifle health=20.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS fully shielded hit does not mark
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 1 item(s) from player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: RifleBlue has made the advancement [Cover Me with Diamonds]
+[16:34:04] [Server thread/INFO]: Replaced a slot on RifleBlue with [Diamond Chestplate]
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS armor reduces rifle damage health=15.344
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: Removed 1 item(s) from player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Added RifleBlue to team [pvpshot.red]
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle respects enabled friendly fire health=14.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS friendly fire does not mark
+[16:34:04] [Server thread/INFO]: Added RifleBlue to team [pvpshot.blue]
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle removes exactly one block from a two-layer stone wall
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rifle cannot remove bedrock
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS clicking terrain with rifle item cannot ignite it
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 16 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 2 [破拆火箭]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS demolition direct hit is capped at two HP
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS demolition has no burning or knockback
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS rocket demolishes stone wall several blocks behind impact
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS demolition does not summon a damaging native explosion
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 1 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: No items were found on player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 2 items
+[16:34:04] [Server thread/INFO]: Gave 64 [Arrow] to RifleRed
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS bow actual item launches an arrow
+[16:34:04] [Server thread/INFO]: RifleRed has made the advancement [Take Aim]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS bow close-range native arrow damage=3.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS bow native arrow triggers enemy mark
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 80 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: No items were found on player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 2 items
+[16:34:04] [Server thread/INFO]: Gave 64 [Arrow] to RifleRed
+[16:34:04] [Server thread/INFO]: RifleRed has made the advancement [Ol' Betsy]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS crossbow actual item launches an arrow
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS crossbow close-range native arrow damage=4.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS crossbow native arrow triggers enemy mark
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS turret can be deployed in midair
+[16:34:04] [Server thread/INFO]: Killed Marker
+[16:34:04] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS cannon replaces ordinary wall obstructions
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleBlue
+[16:34:04] [Server thread/INFO]: No items were found on player RifleBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 77 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Dropped 16 [基础火焰弹]
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: RifleBlue was pummeled by RifleRed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: Running function pvpshot:fire/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS lethal rifle hit retains enemy-team kill attribution
+[16:34:04] [Server thread/INFO]: MarkBlue[embedded] logged in with entity id 33 at (0.0, 0.0, 0.0)
+[16:34:04] [Server thread/INFO]: MarkBlue joined the game
+[16:34:04] [Server thread/INFO]: Set [pvpshot.init] for MarkBlue to 1
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths] for MarkBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.deaths_old] for MarkBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills] for MarkBlue to 0
+[16:34:04] [Server thread/INFO]: Set [pvpshot.kills_old] for MarkBlue to 0
+[16:34:04] [Server thread/INFO]: Added MarkBlue to team [pvpshot.blue]
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player MarkBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: Removed 15 item(s) from player RifleRed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:player/feed
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS food stays full under repeated exhaustion: food=20 saturation=19.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS full hunger does not bypass combat regeneration delay
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS environmental damage does not mark
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS self damage does not mark
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS blue attacking red also applies mark
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player MarkBlue
+[16:34:04] [Server thread/INFO]: Removed every effect from RifleRed
+[16:34:04] [Server thread/INFO]: No items were found on player RifleRed
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=0
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=1
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=2
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=3
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=4
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=5
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=6
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=7
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=8
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=9
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=10
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=11
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=12
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=13
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=14
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=15
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=16
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=17
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=18
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=19
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=20
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=21
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=22
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=23
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=24
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=25
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=26
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=27
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=28
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS ordinary supply guarantees eight rockets, two grenades and arrows roll=29
+[16:34:04] [Server thread/INFO]: Summoned new Marker
+[16:34:04] [Server thread/INFO]: Set [pvpshot.chest] for #chest.timer to 1199
+[16:34:04] [Server thread/INFO]: Set [pvpshot.cfg] for #chest.interval to 1200
+[16:34:04] [Server thread/INFO]: Running function pvpshot:chest/tick
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS periodic refill preserves rich cache extras: rockets=12 grenades=3 arrows=80
+[16:34:04] [Server thread/INFO]: Killed Marker
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: No entity was found
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player MarkBlue
+[16:34:04] [Server thread/INFO]: Target has no effects to remove
+[16:34:04] [Server thread/INFO]: No items were found on player RifleRed
+[16:34:04] [Server thread/INFO]: The base value for attribute Max Health for entity MarkBlue set to 200.0
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS native TNT enemy damage marks the victim
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS repeated enemy damage refreshes mark to two seconds
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: [_]
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS mark remains for nearly two seconds after latest hit
+[16:34:04] [Server thread/INFO]: [STDOUT]: PASS mark expires after two seconds
+[16:34:04] [Server thread/INFO]: [+]
+[16:34:05] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 1.728 s ======================
+[16:34:05] [Server thread/INFO]: All 1 required tests passed :)
+[16:34:05] [Server thread/INFO]: ====================================================
+[16:34:05] [Server thread/INFO]: Stopping server
+[16:34:05] [Server thread/INFO]: Saving players
+[16:34:05] [Server thread/INFO]: RifleRed lost connection: Server closed
+[16:34:05] [Server thread/INFO]: RifleRed left the game
+[16:34:05] [Server thread/INFO]: Saving worlds
+[16:34:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[16:34:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[16:34:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[16:34:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[16:34:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:34:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:34:05] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16:34:05] [Server thread/INFO]: Game test server shutting down

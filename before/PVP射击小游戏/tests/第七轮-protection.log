@@ -1,0 +1,1177 @@
+[PVP Protection] Loaded 175 regions in 153 chunk buckets.
+[PVP Protection] Server facility protection installed (Minecraft 26.2 / Java 25).
+[PVP Protection] Patched net/minecraft/server/level/ServerPlayer (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/Level (2 hooks)
+[PVP Protection] Patched net/minecraft/server/level/ServerLevel (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/arrow/AbstractArrow (3 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/state/BlockBehaviour$BlockStateBase (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/piston/PistonBaseBlock (1 hooks)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-public-reset-20260922/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/AbstractWindCharge (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/WindCharge (1 hooks)
+[16:36:59] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-v7-tests', universe path '/private/tmp/pvpshot-v7-tests/generated-world'
+[16:36:59] [main/INFO]: Included folder pack pvpshot
+[16:36:59] [main/INFO]: Included folder pack ustc_pvp
+[16:36:59] [main/INFO]: Included folder pack pvptest
+[16:37:00] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/level/ServerPlayerGameMode (1 hooks)
+[16:37:00] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/players/PlayerList (1 hooks)
+[16:37:00] [Worker-Main-6/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/commands/arguments/blocks/BlockInput (1 hooks)
+[16:37:01] [main/INFO]: Loaded 1585 recipes
+[16:37:01] [main/INFO]: Loaded 1702 advancements
+[16:37:01] [Server thread/INFO]: Selecting global world spawn...
+[16:37:01] [Server thread/INFO]: Loading 0 persistent chunks...
+[16:37:01] [Server thread/INFO]: Preparing spawn area: 100%
+[16:37:01] [Server thread/INFO]: Time elapsed: 237 ms
+[16:37:01] [Server thread/INFO]: Each test that matches pvptest:* will be run 1 times (total: 1)
+[16:37:01] [Server thread/INFO]: Started game test server
+[16:37:01] [Server thread/INFO]: 1 tests are now running at position 12563801, -59, -6269226!
+[16:37:01] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[16:37:01] [Server thread/INFO]: Running function pvpshot:load
+[16:37:01] [Server thread/INFO]: Running function ustc_pvp:load
+[16:37:01] [Server thread/INFO]: Function ustc_pvp:load returned 0
+[16:37:01] [Server thread/INFO]: Set [ustc.clock] for #protection.active to 1
+[16:37:01] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[16:37:02] [Server thread/INFO]: GuardRed[embedded] logged in with entity id 1 at (0.0, 0.0, 0.0)
+[16:37:02] [Server thread/INFO]: GuardRed joined the game
+[16:37:02] [Server thread/INFO]: Set [pvpshot.init] for GuardRed to 1
+[16:37:02] [Server thread/INFO]: Set [pvpshot.deaths] for GuardRed to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.deaths_old] for GuardRed to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.kills] for GuardRed to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.kills_old] for GuardRed to 0
+[16:37:02] [Server thread/INFO]: GuardBlue[embedded] logged in with entity id 2 at (0.0, 0.0, 0.0)
+[16:37:02] [Server thread/INFO]: GuardBlue joined the game
+[16:37:02] [Server thread/INFO]: Set [pvpshot.init] for GuardBlue to 1
+[16:37:02] [Server thread/INFO]: Set [pvpshot.deaths] for GuardBlue to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.deaths_old] for GuardBlue to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.kills] for GuardBlue to 0
+[16:37:02] [Server thread/INFO]: Set [pvpshot.kills_old] for GuardBlue to 0
+[16:37:02] [Server thread/INFO]: Added GuardRed to team [pvpshot.red]
+[16:37:02] [Server thread/INFO]: Added GuardBlue to team [pvpshot.blue]
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected lobby
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected lobby
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region lobby
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected base_red
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected base_red
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region base_red
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected base_blue
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected base_blue
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region base_blue
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_core
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_core
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_core
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_flag
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_flag
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_flag
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_A_ring_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_A_ring_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_A_ring_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_core
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_core
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_core
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_flag
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_flag
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_flag
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_B_ring_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_B_ring_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_B_ring_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_core
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_core
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_core
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_flag
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_flag
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_flag
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_C_ring_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_C_ring_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_C_ring_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_core
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_core
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_core
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_flag
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_flag
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_flag
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_D_ring_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_D_ring_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_D_ring_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_core
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_core
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_core
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_flag
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_flag
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_flag
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected point_E_ring_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected point_E_ring_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region point_E_ring_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_0
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_0
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_1
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_1
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_2
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_2
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_2
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_3
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_3
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_3
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_4
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_4
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_4
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_5
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_5
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_5
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_6
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_6
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_6
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_7
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_7
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_7
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_8
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_8
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_8
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_9
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_9
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_9
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_10
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_10
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_10
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_11
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_11
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_11
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_12
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_12
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_12
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_13
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_13
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_13
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_14
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_14
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_14
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_15
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_15
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_15
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_16
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_16
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_16
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_17
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_17
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_17
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_18
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_18
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_18
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_19
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_19
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_19
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_20
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_20
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_20
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_21
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_21
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_21
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_22
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_22
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_22
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:02] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_23
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_23
+[16:37:02] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:02] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_23
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_24
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_24
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_24
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_25
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_25
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_25
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_26
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_26
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_26
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_27
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_27
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_27
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_28
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_28
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_28
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_29
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_29
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_29
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_30
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_30
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_30
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_31
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_31
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_31
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_32
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_32
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_32
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_33
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_33
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_33
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_34
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_34
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_34
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_35
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_35
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_35
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_36
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_36
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_36
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_37
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_37
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_37
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_38
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_38
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_38
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_39
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_39
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_39
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_40
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_40
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_40
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_41
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_41
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_41
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_42
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_42
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_42
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_43
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_43
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_43
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_44
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_44
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_44
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_45
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_45
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_45
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_46
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_46
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_46
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_47
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_47
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_47
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_48
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_48
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_48
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_49
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_49
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_49
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_50
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_50
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_50
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_51
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_51
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_51
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_52
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_52
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_52
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_53
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_53
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_53
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_54
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_54
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_54
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_55
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_55
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_55
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_56
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_56
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_56
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_57
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_57
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_57
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_58
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_58
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_58
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_59
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_59
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_59
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_60
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_60
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_60
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_61
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_61
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_61
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_62
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_62
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_62
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_63
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_63
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_63
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_64
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_64
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_64
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_65
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_65
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_65
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_66
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_66
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_66
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_67
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_67
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_67
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_68
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_68
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_68
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_69
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_69
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_69
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_70
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_70
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_70
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_71
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_71
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_71
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_72
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_72
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_72
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_73
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_73
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_73
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_74
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_74
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_74
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_75
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_75
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_75
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_76
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_76
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_76
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_77
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_77
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_77
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_78
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_78
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_78
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected cache_79
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected cache_79
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region cache_79
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected advanced_B
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected advanced_B
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region advanced_B
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS survival mining protected advanced_E
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native destroy protected advanced_E
+[16:37:03] [Server thread/INFO]: Running function pvpshot:protection/check
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS deployment predicate matches region advanced_E
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS all 175 facility regions covered
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS capture core, spawn floor and chest reject mining
+[16:37:03] [Server thread/INFO]: Could not set the block
+[16:37:03] [Server thread/INFO]: No blocks were filled
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS setblock/fill cannot destroy or empty protected chest
+[16:37:03] [Server thread/INFO]: Set [pvpshot.cal] for #rocket to 0
+[16:37:03] [Server thread/INFO]: Running function pvpshot:shot/block
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS rifle cannot destroy capture core
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: Running function pvpshot:rocket/burst
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS demolition rocket preserves chest and contents
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS same demolition rocket still removes nearby ordinary terrain
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native TNT preserves chest and contents
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native TNT still destroys ordinary nearby terrain
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS protected explosion produces no duplicated chest contents
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS native TNT preserves capture and spawn facilities
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS pistons cannot move protected fixtures
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS normal chest looting still works
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS protected chest still opens its native inventory
+[16:37:03] [Server thread/INFO]: Running function pvpshot:chest/refill_one
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS protected chest still refills rewards
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS base button properties can change normally
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS players cannot obstruct protected chest lid clearance
+[16:37:03] [Server thread/INFO]: No entity was found
+[16:37:03] [Server thread/INFO]: Running function pvpshot:deploy/cannon
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS cannon is rejected before creating a partial structure in base
+[16:37:03] [Server thread/INFO]: Running function pvpshot:deploy/turret
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS turret is rejected before creating a partial structure in base
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: GuardRed has made the advancement [Isn't It Iron Pick]
+[16:37:03] [Server thread/INFO]: Replaced a slot on GuardRed with [Iron Pickaxe]
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS ordinary terrain remains mineable
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #reset.active to 1
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS terrain reset may modify protected blocks
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #reset.active to 0
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS protection returns immediately after reset
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS explicit map maintenance can repair fixtures
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[16:37:03] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[16:37:03] [Server thread/INFO]: [STDOUT]: PASS maintenance does not leave protection disabled
+[16:37:03] [Server thread/INFO]: [+]
+[16:37:03] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 1.788 s ======================
+[16:37:03] [Server thread/INFO]: All 1 required tests passed :)
+[16:37:03] [Server thread/INFO]: ====================================================
+[16:37:03] [Server thread/INFO]: Stopping server
+[16:37:03] [Server thread/INFO]: Saving players
+[16:37:03] [Server thread/INFO]: GuardRed lost connection: Server closed
+[16:37:03] [Server thread/INFO]: GuardRed left the game
+[16:37:03] [Server thread/INFO]: Saving worlds
+[16:37:04] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[16:37:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[16:37:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[16:37:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[16:37:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:37:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:37:05] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16:37:05] [Server thread/INFO]: Game test server shutting down

@@ -1,0 +1,68 @@
+{
+  "minecraft": "26.2",
+  "java": 25,
+  "balance_revision": 8,
+  "official_engine": true,
+  "suites": {
+    "weapons": {
+      "passed": true,
+      "pass_lines": 55,
+      "log": "tests/第八轮-weapons.log",
+      "xml": "tests/第八轮-weapons.xml"
+    },
+    "rifle": {
+      "passed": true,
+      "pass_lines": 72,
+      "log": "tests/第八轮-rifle.log",
+      "xml": "tests/第八轮-rifle.xml"
+    },
+    "field": {
+      "passed": true,
+      "pass_lines": 44,
+      "log": "tests/第八轮-field.log",
+      "xml": "tests/第八轮-field.xml"
+    },
+    "modes": {
+      "passed": true,
+      "pass_lines": 57,
+      "log": "tests/第八轮-modes.log",
+      "xml": "tests/第八轮-modes.xml"
+    },
+    "protection": {
+      "passed": true,
+      "pass_lines": 566,
+      "log": "tests/第八轮-protection.log",
+      "xml": "tests/第八轮-protection.xml"
+    },
+    "balance": {
+      "passed": true,
+      "pass_lines": 34,
+      "log": "tests/第八轮-balance.log",
+      "xml": "tests/第八轮-balance.xml"
+    },
+    "revision8": {
+      "passed": true,
+      "pass_lines": 42,
+      "log": "tests/第八轮-revision8.log",
+      "xml": "tests/第八轮-revision8.xml"
+    },
+    "中区重置专项": {
+      "passed": true,
+      "pass_lines": 261,
+      "log": "tests/第八轮中区重置专项.log",
+      "xml": "tests/第八轮中区重置专项.xml"
+    }
+  },
+  "reset_batches": 176,
+  "reset_errors": 0,
+  "protected_regions": 181,
+  "module_sha256": {
+    "pvpshot-protection-26.2.jar": "6efdc4c78504275be0a449f69d3f665b6451a22970b3a8d2404f939d1639a26b",
+    "pvpshot-protection-runtime-26.2.jar": "521403e68c1519871f59e37b8dae297ddc18542299d9bfb0a7852441ea063c55"
+  },
+  "release_manifest_files": 2202,
+  "archive_crc_passed": true,
+  "all_release_pack_copies_match": true,
+  "live_deployment_record": "部署记录/第八轮部署-2026-09-23.json",
+  "campus_port_verified": 28898
+}

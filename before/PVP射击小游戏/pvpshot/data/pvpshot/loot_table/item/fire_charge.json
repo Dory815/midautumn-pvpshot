@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "fire_charge"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "基础火焰弹",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "提速 50% · 直击 6 HP / 近炸 3–1 HP · 16 发 / 无限换弹",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 0.3,
+                  "cooldown_group": "pvpshot:fire_charge"
+                },
+                "minecraft:item_model": "minecraft:fire_charge"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

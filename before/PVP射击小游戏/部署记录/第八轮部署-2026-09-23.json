@@ -1,0 +1,22 @@
+{
+  "balance_revision": 8,
+  "deployed_at": "20260922T233718Z",
+  "backup": "/home/<ssh用户>/pvpshot-campus-26.2/backups/balance-v8-20260922T233718Z",
+  "verified_files": 866,
+  "official_bundler_smoke": true,
+  "old_world_migration_test": true,
+  "port": 28898,
+  "authentication": "LyerSkin",
+  "world_replaced": false,
+  "points": 5,
+  "launchers": 2,
+  "advanced_caches": 2,
+  "spawn_candidates": 30,
+  "campus_connection_verified": true,
+  "protocol": 776,
+  "verified_at": "2026-09-22T23:40:50.780428+00:00",
+  "source_archive_sha256": "d15900d9e584d988153421c9d0b0ec6306ac6875e7754ce98e5eb30e07fc0858",
+  "public_controls": true,
+  "drops_cleared": true,
+  "facility_protection": true
+}

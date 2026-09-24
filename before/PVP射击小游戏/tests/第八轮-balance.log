@@ -1,0 +1,291 @@
+[PVP Protection] Loaded 181 regions in 156 chunk buckets.
+[PVP Protection] Server facility protection installed (Minecraft 26.2 / Java 25).
+[PVP Protection] Patched net/minecraft/server/level/ServerPlayer (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/Level (2 hooks)
+[PVP Protection] Patched net/minecraft/server/level/ServerLevel (2 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/arrow/AbstractArrow (3 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/state/BlockBehaviour$BlockStateBase (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/piston/PistonBaseBlock (1 hooks)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-public-reset-20260922/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/AbstractWindCharge (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/WindCharge (1 hooks)
+[07:22:05] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-v7-tests', universe path '/private/tmp/pvpshot-v7-tests/generated-world'
+[07:22:05] [main/INFO]: Included folder pack pvpshot
+[07:22:05] [main/INFO]: Included folder pack pvptest
+[07:22:05] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/level/ServerPlayerGameMode (1 hooks)
+[07:22:05] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/players/PlayerList (1 hooks)
+[07:22:06] [Worker-Main-1/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/commands/arguments/blocks/BlockInput (1 hooks)
+[07:22:06] [main/INFO]: Loaded 1585 recipes
+[07:22:06] [main/INFO]: Loaded 1706 advancements
+[07:22:06] [Server thread/INFO]: Selecting global world spawn...
+[07:22:07] [Server thread/INFO]: Loading 0 persistent chunks...
+[07:22:07] [Server thread/INFO]: Preparing spawn area: 100%
+[07:22:07] [Server thread/INFO]: Time elapsed: 297 ms
+[07:22:07] [Server thread/INFO]: Each test that matches pvptest:* will be run 1 times (total: 1)
+[07:22:07] [Server thread/INFO]: Started game test server
+[07:22:07] [Server thread/INFO]: 1 tests are now running at position 2497079, -59, -3884762!
+[07:22:07] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[07:22:07] [Server thread/INFO]: Running function pvpshot:load
+[07:22:07] [Server thread/INFO]: Set [pvpshot.cfg] for #ammo.enabled to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.cfg] for #regen.enabled to 0
+[07:22:07] [Server thread/INFO]: Created new objective [ustc.clock]
+[07:22:07] [Server thread/INFO]: BalanceRed[embedded] logged in with entity id 1 at (0.0, 0.0, 0.0)
+[07:22:07] [Server thread/INFO]: BalanceRed joined the game
+[07:22:07] [Server thread/INFO]: Set [pvpshot.init] for BalanceRed to 1
+[07:22:07] [Server thread/INFO]: Set [pvpshot.deaths] for BalanceRed to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.deaths_old] for BalanceRed to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.kills] for BalanceRed to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.kills_old] for BalanceRed to 0
+[07:22:07] [Server thread/INFO]: BalanceBlue[embedded] logged in with entity id 2 at (0.0, 0.0, 0.0)
+[07:22:07] [Server thread/INFO]: BalanceBlue joined the game
+[07:22:07] [Server thread/INFO]: Set [pvpshot.init] for BalanceBlue to 1
+[07:22:07] [Server thread/INFO]: Set [pvpshot.deaths] for BalanceBlue to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.deaths_old] for BalanceBlue to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.kills] for BalanceBlue to 0
+[07:22:07] [Server thread/INFO]: Set [pvpshot.kills_old] for BalanceBlue to 0
+[07:22:07] [Server thread/INFO]: Added BalanceRed to team [pvpshot.red]
+[07:22:07] [Server thread/INFO]: Added BalanceBlue to team [pvpshot.blue]
+[07:22:07] [Server thread/INFO]: [_]
+[07:22:08] [Server thread/INFO]: [_]
+[07:22:08] [Server thread/INFO]: [_]
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceBlue
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceBlue
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceRed
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: BalanceRed has made the advancement [Ol' Betsy]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 1 crossbow genuinely takes 60 ticks to load
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 2 crossbow has no piercing
+[07:22:08] [Server thread/INFO]: BalanceRed has made the advancement [Take Aim]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS close crossbow deals four HP health=16.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceBlue
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 77 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS crossbow remains weak below twenty blocks health=16.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceBlue
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 77 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: BalanceBlue has made the advancement [Cover Me with Diamonds]
+[07:22:08] [Server thread/INFO]: Replaced a slot on BalanceBlue with [Diamond Chestplate]
+[07:22:08] [Server thread/INFO]: BalanceBlue was shot by BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 3 far crossbow kills an armored full-health player
+[07:22:08] [Server thread/INFO]: ShieldBlue[embedded] logged in with entity id 10 at (0.0, 0.0, 0.0)
+[07:22:08] [Server thread/INFO]: ShieldBlue joined the game
+[07:22:08] [Server thread/INFO]: Set [pvpshot.init] for ShieldBlue to 1
+[07:22:08] [Server thread/INFO]: Set [pvpshot.deaths] for ShieldBlue to 0
+[07:22:08] [Server thread/INFO]: Set [pvpshot.deaths_old] for ShieldBlue to 0
+[07:22:08] [Server thread/INFO]: Set [pvpshot.kills] for ShieldBlue to 0
+[07:22:08] [Server thread/INFO]: Set [pvpshot.kills_old] for ShieldBlue to 0
+[07:22:08] [Server thread/INFO]: Added ShieldBlue to team [pvpshot.blue]
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 77 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: Replaced a slot on ShieldBlue with [Shield]
+[07:22:08] [Server thread/INFO]: ShieldBlue has made the advancement [Not Today, Thank You]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS shield blocks distant lethal bolt health=20.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 1 item(s) from player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 77 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS close bow deals three HP health=17.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from ShieldBlue
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 4 far bow proximity detects swept near miss
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 5 near explosion damages only once
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from ShieldBlue
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS bow does not retain old 1.5 block proximity trigger health=20.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS bow proximity is unarmed at short range health=20.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 6 bow trajectory movement is exactly native velocity
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 7 bow keeps native drag and gravity
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 48 [鸡蛋冲锋枪]
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: Running function pvpshot:fire/tick
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS SMG direct hit is four HP health=16.0
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 8 SMG does not ignite targets
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from ShieldBlue
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 47 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 9 distant bow block impact produces splash
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from ShieldBlue
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 2 items
+[07:22:08] [Server thread/INFO]: Gave 64 [Arrow] to BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS solid wall shields bow splash health=20.0
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 80 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 4 [风暴弹]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 10 actual wind-charge item marks the custom projectile
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 11 wind direct hit has negligible damage and extreme knockback
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Removed every effect from ShieldBlue
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: Removed 3 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 1 [战斗机出动许可]
+[07:22:08] [Server thread/INFO]: BalanceRed has reached the goal [Sky's the Limit]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 12 fighter actual consumable gives bounded kit
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 13 fighter supplies initial takeoff lift
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 14 aircraft armor holder is actually a non-colliding marker
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 15 equipped fighter supports actual native elytra gliding
+[07:22:08] [Server thread/INFO]: Dropped 24 [战斗机机炮]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 16 aircraft cannon consumes one bounded round and launches explosive projectile
+[07:22:08] [Server thread/INFO]: Dropped 4 [战斗机炸弹]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 17 aircraft bomb consumes one bounded round and drops native TNT
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 18 aircraft cannon explosion destroys ordinary terrain
+[07:22:08] [Server thread/INFO]: Running function pvpshot:v7/tick
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 19 aircraft bomb detonates on landing
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 20 aircraft bomb uses native terrain-destroying TNT explosion
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 21 exhausting only the cannon does not exit aircraft
+[07:22:08] [Server thread/INFO]: Removed 7 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 22 both ammo exhausted removes elytra and grants slow falling
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceRed
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceRed
+[07:22:08] [Server thread/INFO]: BalanceRed has made the advancement [Cover Me with Diamonds]
+[07:22:08] [Server thread/INFO]: Replaced a slot on BalanceRed with [Diamond Chestplate]
+[07:22:08] [Server thread/INFO]: Dropped 1 [战斗机出动许可]
+[07:22:08] [Server thread/INFO]: Set [pvp_land] for BalanceRed to 1
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 23 manual exit restores original chest armor
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceRed
+[07:22:08] [Server thread/INFO]: Removed 1 item(s) from player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 1 [手雷]
+[07:22:08] [Server thread/INFO]: Set [pvp_cook] for BalanceRed to 1
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 24 cooking release preserves elapsed fuse and consumes once
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Killed Primed TNT
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceRed
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 1 [手雷]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 25 holding too long detonates in hand
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: No entity was found
+[07:22:08] [Server thread/INFO]: Killed Primed TNT
+[07:22:08] [Server thread/INFO]: Target has no effects to remove
+[07:22:08] [Server thread/INFO]: No items were found on player ShieldBlue
+[07:22:08] [Server thread/INFO]: Removed every effect from BalanceRed
+[07:22:08] [Server thread/INFO]: No items were found on player BalanceRed
+[07:22:08] [Server thread/INFO]: Dropped 1 [Uncraftable Potion]
+[07:22:08] [Server thread/INFO]: [STDOUT]: PASS 26 speed potion grants level five
+[07:22:08] [Server thread/INFO]: [STDOUT]: BALANCE CHECKS=26
+[07:22:08] [Server thread/INFO]: [+]
+[07:22:08] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 1.446 s ======================
+[07:22:08] [Server thread/INFO]: All 1 required tests passed :)
+[07:22:08] [Server thread/INFO]: ====================================================
+[07:22:08] [Server thread/INFO]: Stopping server
+[07:22:08] [Server thread/INFO]: Saving players
+[07:22:08] [Server thread/INFO]: BalanceRed lost connection: Server closed
+[07:22:08] [Server thread/INFO]: BalanceRed left the game
+[07:22:08] [Server thread/INFO]: Saving worlds
+[07:22:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[07:22:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[07:22:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[07:22:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[07:22:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07:22:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07:22:09] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07:22:09] [Server thread/INFO]: Game test server shutting down

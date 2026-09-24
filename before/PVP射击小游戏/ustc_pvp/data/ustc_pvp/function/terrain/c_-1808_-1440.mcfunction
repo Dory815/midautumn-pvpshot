@@ -1,0 +1,14 @@
+setblock -1800 2 -1430 minecraft:bricks
+setblock -1800 3 -1430 minecraft:bricks
+setblock -1799 2 -1430 minecraft:bricks
+setblock -1799 3 -1430 minecraft:bricks
+setblock -1798 2 -1430 minecraft:bricks
+setblock -1798 3 -1430 minecraft:bricks
+setblock -1797 2 -1430 minecraft:bricks
+setblock -1797 3 -1430 minecraft:bricks
+setblock -1796 2 -1430 minecraft:bricks
+setblock -1796 2 -1429 minecraft:bricks
+setblock -1796 2 -1428 minecraft:bricks
+setblock -1796 3 -1430 minecraft:bricks
+setblock -1796 3 -1429 minecraft:bricks
+setblock -1796 3 -1428 minecraft:bricks

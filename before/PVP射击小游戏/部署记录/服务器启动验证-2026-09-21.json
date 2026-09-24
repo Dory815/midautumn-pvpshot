@@ -1,0 +1,73 @@
+{
+  "minecraft": "26.2",
+  "balance_revision": 6,
+  "verified_original_server_files": 1255,
+  "formal_packs_verified": true,
+  "terrain_template_present": true,
+  "public_test_controls": true,
+  "port": 28898,
+  "eula_accepted": true,
+  "started": true,
+  "eula_accepted_at": "2026-09-21T07:55:15.297648+00:00",
+  "eula_authorization": "User explicitly read and accepted EULA and authorized server launch in this conversation.",
+  "checked_at": "2026-09-22T03:54:01.140981+00:00",
+  "local_status_ok": true,
+  "enabled_datapacks": [
+    "vanilla",
+    "file/pvpshot",
+    "file/ustc_pvp"
+  ],
+  "public_probe": {
+    "address": "<服务器IP>:28898",
+    "result": "Minecraft status response received after public control update; LyerSkin remains enabled",
+    "source_network": "campus",
+    "minecraft": "26.2",
+    "protocol": 776
+  },
+  "old_ssh_tunnel_required": false,
+  "server_protection": true,
+  "protected_regions": 173,
+  "protection_runtime_verified": true,
+  "protection_sha256": {
+    "protection/pvpshot-protection-26.2.jar": "c708d8081d6b6f173be134064230c0844b75ac319df9dcf25046cd24ca5b2d4c",
+    "protection/pvpshot-protection-runtime-26.2.jar": "ba34bb4c58d26b4a6a514d7b4649be503f5b880a2fdd0b4c9216f7bfec4e92e5",
+    "protection/regions.tsv": "435c4addc5cd1e973ffd7ec27cd2119d2a5e2646b8e31bb42ea2ce767f0e0900",
+    "protection/说明.md": "7092874db22c7036bcdd7f9ce76bf92ae9a66fe33854c5f21e6d305de843c33d"
+  },
+  "backup_before_protection": "backups/protection-rev6-20260921T111735Z",
+  "online_mode": true,
+  "enforce_secure_profile": true,
+  "backup_before_offline_mode": "backups/offline-mode-20260921T112756Z",
+  "authentication": {
+    "provider": "LyerSkin",
+    "api": "https://auth.lylighte.cc/skinapi",
+    "agent_version": "1.2.8",
+    "agent_sha256": "9c7f4343e6c82034958ffb48c14a2cb0c85928be7283103ce17da00c6d5a7b10",
+    "runtime_loaded": true,
+    "client_login_verified": true
+  },
+  "backup_before_lyerskin": "backups/lyerskin-20260921T114617Z",
+  "watchdog_recovery": {
+    "time_utc": "2026-09-21T11:42:51Z",
+    "evidence_backup": "backups/watchdog-20260921T114251Z",
+    "gc_diagnostics": "logs/jvm-gc.log",
+    "cause_status": "Shared host I/O and swap pressure observed; unique root cause not yet confirmed"
+  },
+  "controls_revision": 1,
+  "backup_before_public_controls": "backups/public-controls-20260922T035146Z",
+  "public_controls_verified": {
+    "configured": true,
+    "lobby_button_command_verified": true,
+    "command_blocks_enabled": true,
+    "native_checks": 230,
+    "native_reset_batches": 176,
+    "native_reset_errors": 0,
+    "patch_sha256": {
+      "world/datapacks/ustc_pvp/data/ustc_pvp/function/configure.mcfunction": "55debb9acf96a3c580e1ca649e7975f14459ea6c81ffed07e3adafcd013ac87f",
+      "world/datapacks/ustc_pvp/data/ustc_pvp/function/reset/request.mcfunction": "c1533a753299796b80490cb751b3b7c936f6cd76c12159eae63b459b51d137b6",
+      "world/datapacks/ustc_pvp/data/ustc_pvp/function/reset/start.mcfunction": "9ad21e894c6adcb260b39eca84f7aca5bc255e6ee3fc9c713924a4f98cebb82b",
+      "README-operations.md": "71e1e64073d8f7ae44d9289a5e0e5f0cba3950f9ba7d3b6a4d44f8cdf2513630",
+      "玩家安装教程-26.2.md": "aa4b62830bda5907c8fcd53c9812e393d891b1f51ef7207a8b44293b200ac49a"
+    }
+  }
+}

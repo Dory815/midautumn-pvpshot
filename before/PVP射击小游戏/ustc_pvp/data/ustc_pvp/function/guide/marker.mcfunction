@@ -1,0 +1,2 @@
+$summon block_display $(x) $(y) $(z) {Tags:["ustc.decor","ustc.guide","ustc.guide.$(tag)"],block_state:{Name:"$(block)"},Glowing:1b,brightness:{block:15,sky:15},view_range:32f,billboard:"center",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}}
+$team join $(team) @e[type=block_display,tag=ustc.guide,limit=1,sort=nearest,x=$(x),y=$(y),z=$(z)]

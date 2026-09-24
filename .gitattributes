@@ -1,0 +1,8 @@
+# 图片、NBT、数组等本身就是二进制，禁止 git 做行尾转换
+*.png binary
+*.jpg binary
+*.nbt binary
+*.npy binary
+*.zip binary
+*.jar binary
+*.mca binary

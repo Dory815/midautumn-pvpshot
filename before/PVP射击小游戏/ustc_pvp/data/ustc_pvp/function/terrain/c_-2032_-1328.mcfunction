@@ -1,0 +1,14 @@
+setblock -2024 2 -1318 minecraft:bricks
+setblock -2024 3 -1318 minecraft:bricks
+setblock -2023 2 -1318 minecraft:bricks
+setblock -2023 3 -1318 minecraft:bricks
+setblock -2022 2 -1318 minecraft:bricks
+setblock -2022 3 -1318 minecraft:bricks
+setblock -2021 2 -1318 minecraft:bricks
+setblock -2021 3 -1318 minecraft:bricks
+setblock -2020 2 -1318 minecraft:bricks
+setblock -2020 2 -1317 minecraft:bricks
+setblock -2020 2 -1316 minecraft:bricks
+setblock -2020 3 -1318 minecraft:bricks
+setblock -2020 3 -1317 minecraft:bricks
+setblock -2020 3 -1316 minecraft:bricks

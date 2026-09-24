@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {"rolls": 1, "entries": [{"type": "minecraft:item", "name": "minecraft:tnt", "functions": [{"function": "minecraft:set_count", "count": 2}]}]},
+    {"rolls": 1, "entries": [{"type": "minecraft:item", "name": "minecraft:flint_and_steel", "functions": [{"function": "minecraft:set_components", "components": {"minecraft:unbreakable": {}}}]}]}
+  ]
+}

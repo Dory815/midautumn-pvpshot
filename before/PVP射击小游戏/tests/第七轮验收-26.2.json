@@ -1,0 +1,53 @@
+{
+  "minecraft": "26.2",
+  "java": 25,
+  "results": [
+    {
+      "file": "tests/第七轮-balance.log",
+      "passed": true,
+      "checks": 36,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮-field.log",
+      "passed": true,
+      "checks": 44,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮-modes.log",
+      "passed": true,
+      "checks": 57,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮-protection.log",
+      "passed": true,
+      "checks": 548,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮-weapons.log",
+      "passed": true,
+      "checks": 55,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮中区重置专项.log",
+      "passed": true,
+      "checks": 239,
+      "errors": false
+    },
+    {
+      "file": "tests/第七轮步枪回归.log",
+      "passed": true,
+      "checks": 72,
+      "errors": false
+    }
+  ],
+  "reset_batches": 176,
+  "multiplayer_manual_test": false,
+  "checks_total": 1051,
+  "official_bundler_smoke": true,
+  "release_files_verified": 2152
+}

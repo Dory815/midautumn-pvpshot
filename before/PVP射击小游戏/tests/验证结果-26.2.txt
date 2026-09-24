@@ -1,0 +1,61 @@
+2026-09-20 · 第二轮 · 官方 Java 26.2 引擎 · Java 25
+PASS existing player health migrates to 20 HP
+PASS bow/crossbow enchantments and native 0.75 second charge
+PASS snowball 6 swept head hit health=14.0
+PASS egg 3 swept head hit health=17.0
+PASS successive hits are not eaten by hurt cooldown health=14.0
+PASS vanilla snowball unchanged health=20.0
+PASS vanilla egg unchanged health=20.0
+PASS configured damage 7 health=13.0
+PASS friendly fire enabled health=14.0
+PASS optional friendly-fire protection health=20.0
+PASS spawn resistance health=20.0
+PASS armor health=15.344
+PASS point-blank snowball spawn hook health=14.0
+PASS point-blank egg spawn hook health=17.0
+PASS shot above swimming player misses health=20.0
+PASS swimming hitbox health=14.0
+PASS moving projectile ticks hit exactly once health=14.0
+PASS snowball frost slow
+PASS shield blocks projectile health=20.0
+PASS projectile wall occlusion health=20.0
+PASS lethal projectile health=0.0
+PASS kill attributed to thrower
+PASS four orientations, loaded structures, overlap rejection and refund
+PASS actual respawn has 20 HP and equipment
+PASS symmetric three-arrow fans in all four orientations
+PASS actual turret arrow base damage 4 health=16.0
+PASS native dispenser firing, four launch vectors, four turrets and owners
+PASS finite ammunition and cleanup
+PASS own turret arrow deals 4 health=16.0
+PASS fresh snowball does not hit its launcher immediately health=20.0
+PASS snowball flies upward and falls back onto its owner for 6 health=14.0
+PASS fresh egg does not hit its launcher immediately health=20.0
+PASS egg flies upward and falls back onto its owner for 3 health=17.0
+PASS egg direct victim is not double hit by fragments health=17.0
+PASS egg splash self damage 2 and no double direct damage
+PASS egg fragments cannot pass through cover health=20.0
+PASS actual fire charge consumption, aim and owner
+PASS stronger native fireball impact damage=14.001074
+PASS vanilla TNT damage=15.435196 and native terrain destruction
+PASS native TNT self damage and owner attribution retained
+PASS full cover native damage=1.0
+PASS partial cover native damage=4.9369507
+PASS native TNT kill credited to owner
+PASS friendly fire can be lethal health=0.0
+PASS enemy kills score, friendly kills retain attribution without score reward
+PASS twenty randomized kits all include base snowballs, one grenade and iron pickaxe
+PASS actual grenade use, count, fuse, launch and native owner
+PASS thrown grenade detonates with native damage=15.435196
+PASS two real 16-shot magazines, timed empty interval and infinite resupply
+PASS manual reload completes with infinite reserve
+PASS full-inventory reload safely waits and recovers
+PASS no regeneration during five-second combat delay health=1.0
+PASS delayed recovery has started health=6.0
+PASS damage dealt and received immediately interrupt recovery
+PASS recovery stays off during renewed combat delay health=3.0
+PASS environmental damage also postpones recovery five seconds health=2.0
+PASS fast recovery reaches full health within three seconds after delay health=20.0
+PASS automatic recovery reaches 20 HP and respects environmental damage
+
+All required tests passed. No datapack parse/load errors.

@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "shield"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "轻型盾牌",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "正面减伤 50% · 96 耐久 · 举盾延迟 0.35 秒",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:max_damage": 96,
+                "minecraft:damage": 0,
+                "minecraft:blocks_attacks": {
+                  "block_delay_seconds": 0.35,
+                  "disable_cooldown_scale": 1.5,
+                  "damage_reductions": [
+                    {
+                      "horizontal_blocking_angle": 90,
+                      "base": 0,
+                      "factor": 0.5
+                    }
+                  ],
+                  "item_damage": {
+                    "threshold": 0,
+                    "base": 1,
+                    "factor": 1
+                  },
+                  "block_sound": "minecraft:item.shield.block",
+                  "disable_sound": "minecraft:item.shield.break"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

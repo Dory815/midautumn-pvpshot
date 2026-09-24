@@ -1,0 +1,1 @@
+$title @a[gamemode=!spectator,gamemode=!creative,nbt=!{Health:0.0f},distance=..$(radius)] actionbar [{text:"$(point_name)：$(owner)",color:"$(color)"},{text:" | $(side)控制 $(progress)%$(status)",color:"white"}]

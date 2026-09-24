@@ -1,0 +1,1188 @@
+[PVP Protection] Loaded 181 regions in 156 chunk buckets.
+[PVP Protection] Server facility protection installed (Minecraft 26.2 / Java 25).
+[PVP Protection] Patched net/minecraft/server/level/ServerPlayer (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/Level (2 hooks)
+[PVP Protection] Patched net/minecraft/server/level/ServerLevel (2 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/arrow/AbstractArrow (3 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/state/BlockBehaviour$BlockStateBase (1 hooks)
+[PVP Protection] Patched net/minecraft/world/level/block/piston/PistonBaseBlock (1 hooks)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/private/tmp/pvpshot-public-reset-20260922/jars/META-INF/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/AbstractWindCharge (1 hooks)
+[PVP Protection] Patched net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/WindCharge (1 hooks)
+[07:09:07] [main/INFO]: Running GameTestMain with cwd '/private/tmp/pvpshot-v7-map', universe path '/private/tmp/pvpshot-v7-map/generated-world'
+[07:09:08] [main/INFO]: Included folder pack pvpshot
+[07:09:08] [main/INFO]: Included folder pack ustc_pvp
+[07:09:08] [main/INFO]: Included folder pack campusbuild
+[07:09:08] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/level/ServerPlayerGameMode (1 hooks)
+[07:09:08] [main/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/server/players/PlayerList (1 hooks)
+[07:09:08] [Worker-Main-5/INFO]: [STDOUT]: [PVP Protection] Patched net/minecraft/commands/arguments/blocks/BlockInput (1 hooks)
+[07:09:09] [main/INFO]: Loaded 1585 recipes
+[07:09:09] [main/INFO]: Loaded 1706 advancements
+[07:09:09] [Server thread/INFO]: Selecting global world spawn...
+[07:09:09] [Server thread/INFO]: Loading 0 persistent chunks...
+[07:09:09] [Server thread/INFO]: Preparing spawn area: 100%
+[07:09:09] [Server thread/INFO]: Time elapsed: 311 ms
+[07:09:09] [Server thread/INFO]: Each test that matches campusbuild:* will be run 1 times (total: 1)
+[07:09:09] [Server thread/INFO]: Started game test server
+[07:09:09] [Server thread/INFO]: 1 tests are now running at position -14296641, -59, -12533927!
+[07:09:10] [Server thread/INFO]: Running test environment 'minecraft:default' batch 0 (1 tests)...
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [ ]
+[07:09:10] [Server thread/INFO]: [STDOUT]: PASS source and temporary output are disjoint
+[07:09:10] [Server thread/INFO]: [STDOUT]: IMPORTED CAMPUS INTO /private/tmp/pvpshot-v7-map/generated-world/gametestworld
+[07:09:10] [Server thread/INFO]: [STDOUT]: LEVELS [ResourceKey[minecraft:dimension / minecraft:overworld], ResourceKey[minecraft:dimension / ustc_pvp:template], ResourceKey[minecraft:dimension / minecraft:the_nether], ResourceKey[minecraft:dimension / minecraft:the_end]]
+[07:09:11] [Server thread/INFO]: [STDOUT]: PASS actual campus geometry imported before build
+[07:09:11] [Server thread/INFO]: Running function ustc_pvp:load
+[07:09:11] [Server thread/INFO]: Function ustc_pvp:load returned 0
+[07:09:11] [Server thread/INFO]: Running function ustc_pvp:build
+[07:09:12] [Server thread/INFO]: [_]
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS five physical points and five active scoring markers
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS both bases have three safe spawn positions
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS eight gym caches plus seventy-two field caches
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1930, y=2, z=-1310}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1930, y=2, z=-1310}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1865, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1865, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1790, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1790, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1760, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1760, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1760, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1760, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1835, y=2, z=-1180}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1835, y=2, z=-1180}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1910, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1910, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS stocked gym chest BlockPos{x=-1955, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS gym chest lid clearance BlockPos{x=-1955, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1930, y=2, z=-1310}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1930, y=2, z=-1310}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1865, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1865, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1790, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1790, y=2, z=-1300}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1760, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1760, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1760, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1760, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1835, y=2, z=-1180}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1835, y=2, z=-1180}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1910, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1910, y=2, z=-1190}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=6 at BlockPos{x=-1955, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1955, y=2, z=-1260}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2015, y=2, z=-1510}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2015, y=2, z=-1510}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1835, y=2, z=-1515}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1835, y=2, z=-1515}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1655, y=2, z=-1510}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1655, y=2, z=-1510}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1660, y=2, z=-1680}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1660, y=2, z=-1680}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2060, y=2, z=-1380}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2060, y=2, z=-1380}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1784, y=2, z=-1677}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1784, y=2, z=-1677}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1826, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1826, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1602, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1602, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1784, y=2, z=-1621}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1784, y=2, z=-1621}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1938, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1938, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1602, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1602, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1868, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1868, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1728, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1728, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1644, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1644, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1938, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1938, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1658, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1658, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1868, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1868, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1770, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1770, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2078, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2078, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1994, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1994, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1910, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1910, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1826, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1826, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1742, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1742, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1658, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1658, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2115, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2115, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2036, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2036, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1952, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1952, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1868, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1868, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1784, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1784, y=2, z=-1397}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1695, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1695, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1611, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1611, y=2, z=-1402}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1994, y=2, z=-1369}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1994, y=2, z=-1369}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2064, y=2, z=-1341}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2064, y=2, z=-1341}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1952, y=2, z=-1341}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1952, y=2, z=-1341}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2050, y=2, z=-1313}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2050, y=2, z=-1313}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2064, y=2, z=-1285}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2064, y=2, z=-1285}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1933, y=2, z=-1262}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1933, y=2, z=-1262}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1938, y=2, z=-1201}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1938, y=2, z=-1201}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1882, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1882, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1854, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1854, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1742, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1742, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1658, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1658, y=2, z=-1649}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1924, y=2, z=-1621}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1924, y=2, z=-1621}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1807, y=2, z=-1626}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1807, y=2, z=-1626}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1728, y=2, z=-1631}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1728, y=2, z=-1631}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1966, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1966, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1798, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1798, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1742, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1742, y=2, z=-1593}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2008, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2008, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1980, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1980, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1812, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1812, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1784, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1784, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1700, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1700, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1672, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1672, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1616, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1616, y=2, z=-1565}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1966, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1966, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1770, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1770, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1742, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1742, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1602, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1602, y=2, z=-1537}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2092, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2092, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1812, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1812, y=2, z=-1509}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1677, y=2, z=-1514}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1677, y=2, z=-1514}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1611, y=2, z=-1514}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1611, y=2, z=-1514}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1938, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1938, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1602, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1602, y=2, z=-1481}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2092, y=2, z=-1453}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2092, y=2, z=-1453}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2050, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2050, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-2022, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-2022, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1966, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1966, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1938, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1938, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1882, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1882, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS supply rockets=4 at BlockPos{x=-1854, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS all 80 cache lids can open BlockPos{x=-1854, y=2, z=-1425}
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS campus disables automatic structures and block discovery
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS five-point victory target 1000
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS physical flag core [-1990, 28, -1535]
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS physical flag core [-1857, 2, -1541]
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS physical flag core [-1710, 29, -1535]
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS physical flag core [-1676, 2, -1660]
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS physical flag core [-2080, 2, -1378]
+[07:09:13] [Server thread/INFO]: CampusTest[embedded] logged in with entity id 256 at (0.0, 0.0, 0.0)
+[07:09:13] [Server thread/INFO]: CampusTest joined the game
+[07:09:13] [Server thread/INFO]: Set [pvpshot.init] for CampusTest to 1
+[07:09:13] [Server thread/INFO]: Set [pvpshot.deaths] for CampusTest to 0
+[07:09:13] [Server thread/INFO]: Set [pvpshot.deaths_old] for CampusTest to 0
+[07:09:13] [Server thread/INFO]: Set [pvpshot.kills] for CampusTest to 0
+[07:09:13] [Server thread/INFO]: Set [pvpshot.kills_old] for CampusTest to 0
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS new arrival is routed to staging lobby
+[07:09:13] [Server thread/INFO]: Triggered [ustc.join] (set value to 1)
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS ordinary join trigger selects red team
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS red join places player at base
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS red spawn has player clearance
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS campus life includes clay, base weapon, grenade and one rocket
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS joining grants neither free jump nor speed
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:kit
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS test resupply provides both deployables and team blocks
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:join_blue
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS blue join recolors the building stack
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS blue spawn has player clearance
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:preset/three
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS three-point preset activates only ABC and uses 600 target
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:preset/deathmatch
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS deathmatch has no active capture points
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:preset/five
+[07:09:13] [Server thread/INFO]: [STDOUT]: PASS five-point preset restarts independently
+[07:09:13] [Server thread/INFO]: Running function ustc_pvp:preset/three
+[07:09:13] [Server thread/INFO]: Added CampusTest to team [pvpshot.red]
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:13] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS ground floor cannot capture rooftop A
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS actual roof surface captures A
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS owned roof gives clear safe respawn A
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/reset
+[07:09:14] [Server thread/INFO]: LaunchA[embedded] logged in with entity id 266 at (0.0, 0.0, 0.0)
+[07:09:14] [Server thread/INFO]: LaunchA joined the game
+[07:09:14] [Server thread/INFO]: Set [pvpshot.init] for LaunchA to 1
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths] for LaunchA to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths_old] for LaunchA to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills] for LaunchA to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills_old] for LaunchA to 0
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS native launcher sends upward impulse and safety slow falling A
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS launcher pushes toward roof after clearing the facade A
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS two-block-deep landing pool exists A
+[07:09:14] [Server thread/INFO]: Added CampusTest to team [pvpshot.red]
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS ground floor cannot capture rooftop C
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS actual roof surface captures C
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS owned roof gives clear safe respawn C
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/reset
+[07:09:14] [Server thread/INFO]: LaunchC[embedded] logged in with entity id 268 at (0.0, 0.0, 0.0)
+[07:09:14] [Server thread/INFO]: LaunchC joined the game
+[07:09:14] [Server thread/INFO]: Set [pvpshot.init] for LaunchC to 1
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths] for LaunchC to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths_old] for LaunchC to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills] for LaunchC to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills_old] for LaunchC to 0
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS native launcher sends upward impulse and safety slow falling C
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS launcher pushes toward roof after clearing the facade C
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS two-block-deep landing pool exists C
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS independent advanced crate has near-equal base distance BlockPos{x=-1858, y=2, z=-1630}
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS advanced crate is outside every capture location
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS independent advanced crate has near-equal base distance BlockPos{x=-1843, y=2, z=-1410}
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS advanced crate is outside every capture location
+[07:09:14] [Server thread/INFO]: Added CampusTest to team [pvpshot.red]
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS upstairs player cannot capture ground-level point
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: Running function pvpshot:point/tick_all
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS ground-level player captures real campus B
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS owned B offers a safe forward respawn
+[07:09:14] [Server thread/INFO]: SpawnEnemy[embedded] logged in with entity id 270 at (0.0, 0.0, 0.0)
+[07:09:14] [Server thread/INFO]: SpawnEnemy joined the game
+[07:09:14] [Server thread/INFO]: Set [pvpshot.init] for SpawnEnemy to 1
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths] for SpawnEnemy to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.deaths_old] for SpawnEnemy to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills] for SpawnEnemy to 0
+[07:09:14] [Server thread/INFO]: Set [pvpshot.kills_old] for SpawnEnemy to 0
+[07:09:14] [Server thread/INFO]: Added SpawnEnemy to team [pvpshot.blue]
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS enemy near owned point forces base fallback
+[07:09:14] [Server thread/INFO]: Set [pvpshot.owner] for Marker to 2
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS captured enemy point cannot be used to respawn
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:preset/deathmatch
+[07:09:14] [Server thread/INFO]: Running function pvpshot:player/respawn
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS deathmatch uses dispersed fixed respawns
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:preset/three
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS 30 spawn candidates and two separate advanced caches
+[07:09:14] [Server thread/INFO]: Set [ustc.clock] for #advanced.timer to 10
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:refill
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS ordinary refill does not reset advanced-cache timer
+[07:09:14] [Server thread/INFO]: Set [ustc.clock] for #advanced.timer to 299
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:advanced/second
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS advanced crates refill every 300 seconds
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS battlefield drops are rejected before entity insertion
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:hud
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS top point status bar is visible
+[07:09:14] [Server thread/INFO]: Removed 132 item(s) from player CampusTest
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:kit
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:control/five
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS public controls allow ordinary resupply and mode selection
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:control/three
+[07:09:14] [Server thread/INFO]: Set [ustc.clock] for #reset.cooldown to 5
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:reset/request
+[07:09:14] [Server thread/INFO]: Function ustc_pvp:reset/request returned 1
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS public reset respects cooldown
+[07:09:14] [Server thread/INFO]: Set [ustc.clock] for #reset.cooldown to 0
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:mobility/profile_0
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:mobility/profile_1
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS default movement leaves native running speed unchanged
+[07:09:14] [Server thread/INFO]: [STDOUT]: MOVEMENT native sprint attribute normal=0.13000000312924387 default=0.13000000312924387
+[07:09:14] [Server thread/INFO]: Dropped 1 [Uncraftable Potion]
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS reward potion grants Speed V for 45 seconds
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:mobility/apply
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS jump refresh does not remove earned speed
+[07:09:14] [Server thread/INFO]: Removed effect Speed from CampusTest
+[07:09:14] [Server thread/INFO]: Target doesn't have the requested effect
+[07:09:14] [Server thread/INFO]: [STDOUT]: MOVEMENT jump amplifier level=0 initialY=0.41999998688697815
+[07:09:14] [Server thread/INFO]: Target doesn't have the requested effect
+[07:09:14] [Server thread/INFO]: Applied effect Jump Boost to CampusTest
+[07:09:14] [Server thread/INFO]: [STDOUT]: MOVEMENT jump amplifier level=1 initialY=0.5199999809265137
+[07:09:14] [Server thread/INFO]: Removed effect Jump Boost from CampusTest
+[07:09:14] [Server thread/INFO]: Applied effect Jump Boost to CampusTest
+[07:09:14] [Server thread/INFO]: [STDOUT]: MOVEMENT jump amplifier level=2 initialY=0.6200000047683716
+[07:09:14] [Server thread/INFO]: Removed every effect from CampusTest
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS comparison controls return to standard movement
+[07:09:14] [Server thread/INFO]: Running function ustc_pvp:mobility/profile_1
+[07:09:14] [Server thread/INFO]: CampusTest was killed
+[07:09:14] [Server thread/INFO]: Killed CampusTest
+[07:09:14] [Server thread/INFO]: [STDOUT]: PASS mobility test performs real player death
+[07:09:14] [Server thread/INFO]: [_]
+[07:09:15] [Server thread/INFO]: [_]
+[07:09:15] [Server thread/INFO]: [_]
+[07:09:15] [Server thread/INFO]: [_]
+[07:09:15] [Server thread/INFO]: [STDOUT]: PASS native beacon produces visible sky beam [-1990, 28, -1535]
+[07:09:15] [Server thread/INFO]: [STDOUT]: PASS native beacon produces visible sky beam [-1857, 2, -1541]
+[07:09:15] [Server thread/INFO]: [STDOUT]: PASS native beacon produces visible sky beam [-1710, 29, -1535]
+[07:09:15] [Server thread/INFO]: [STDOUT]: PASS native beacon produces visible sky beam [-1676, 2, -1660]
+[07:09:15] [Server thread/INFO]: [STDOUT]: PASS native beacon produces visible sky beam [-2080, 2, -1378]
+[07:09:15] [Server thread/INFO]: [_]
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS actual respawn does not restore removed default jump
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS no free speed after actual respawn
+[07:09:16] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 1
+[07:09:16] [Server thread/INFO]: Changed the block at -1857, 1, -1541
+[07:09:16] [Server thread/INFO]: Changed the block at -2050, 3, -1400
+[07:09:16] [Server thread/INFO]: Changed the block at -1930, 2, -1310
+[07:09:16] [Server thread/INFO]: Set [多点占领 · 据点得分] for Red to 50
+[07:09:16] [Server thread/INFO]: Set [ustc.clock] for #protection.edit to 0
+[07:09:16] [Server thread/INFO]: Running function pvpshot:field/create
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS active frost field exists before reset
+[07:09:16] [Server thread/INFO]: Triggered [pvp_reset]
+[07:09:16] [Server thread/INFO]: [_]
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS ordinary player trigger starts restoration with public controls
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS terrain reset immediately clears frost fields
+[07:09:16] [Server thread/INFO]: Running function ustc_pvp:reset/request
+[07:09:16] [Server thread/INFO]: Function ustc_pvp:reset/request returned 1
+[07:09:16] [Server thread/INFO]: Running function ustc_pvp:reset/start
+[07:09:16] [Server thread/INFO]: Function ustc_pvp:reset/start returned 0
+[07:09:16] [Server thread/INFO]: [STDOUT]: PASS repeated reset requests preserve in-progress batch
+[07:09:17] [Server thread/INFO]: [_]
+[07:09:19] [Server thread/INFO]: [_]
+[07:09:21] [Server thread/INFO]: [_]
+[07:09:22] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 14/176 tick=200
+[07:09:23] [Server thread/INFO]: [_]
+[07:09:25] [Server thread/INFO]: [_]
+[07:09:27] [Server thread/INFO]: [_]
+[07:09:29] [Server thread/INFO]: [_]
+[07:09:31] [Server thread/INFO]: [_]
+[07:09:32] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 36/176 tick=300
+[07:09:33] [Server thread/INFO]: [_]
+[07:09:35] [Server thread/INFO]: [_]
+[07:09:36] [Server thread/INFO]: [_]
+[07:09:38] [Server thread/INFO]: [_]
+[07:09:39] [Server thread/INFO]: [_]
+[07:09:40] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 55/176 tick=400
+[07:09:41] [Server thread/INFO]: [_]
+[07:09:42] [Server thread/INFO]: [_]
+[07:09:44] [Server thread/INFO]: [_]
+[07:09:45] [Server thread/INFO]: [_]
+[07:09:47] [Server thread/INFO]: [_]
+[07:09:49] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 75/176 tick=500
+[07:09:50] [Server thread/INFO]: [_]
+[07:09:52] [Server thread/INFO]: [_]
+[07:09:53] [Server thread/INFO]: [_]
+[07:09:55] [Server thread/INFO]: [_]
+[07:09:57] [Server thread/INFO]: [_]
+[07:09:58] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 96/176 tick=600
+[07:09:59] [Server thread/INFO]: [_]
+[07:10:01] [Server thread/INFO]: [_]
+[07:10:03] [Server thread/INFO]: [_]
+[07:10:05] [Server thread/INFO]: [_]
+[07:10:06] [Server thread/INFO]: [_]
+[07:10:07] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 117/176 tick=700
+[07:10:08] [Server thread/INFO]: [_]
+[07:10:10] [Server thread/INFO]: [_]
+[07:10:12] [Server thread/INFO]: [_]
+[07:10:14] [Server thread/INFO]: [_]
+[07:10:16] [Server thread/INFO]: [_]
+[07:10:17] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 139/176 tick=800
+[07:10:18] [Server thread/INFO]: [_]
+[07:10:21] [Server thread/INFO]: [_]
+[07:10:23] [Server thread/INFO]: [_]
+[07:10:26] [Server thread/INFO]: [_]
+[07:10:28] [Server thread/INFO]: [_]
+[07:10:30] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 161/176 tick=900
+[07:10:31] [Server thread/INFO]: [_]
+[07:10:32] [Server thread/INFO]: [_]
+[07:10:34] [Server thread/INFO]: [_]
+[07:10:34] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 170/176 tick=1000
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 171/176 tick=1100
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:35] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 171/176 tick=1200
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:36] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 172/176 tick=1300
+[07:10:36] [Server thread/INFO]: [_]
+[07:10:37] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 175/176 tick=1400
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 175/176 tick=1500
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 175/176 tick=1600
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:38] [Server thread/INFO]: [_]
+[07:10:39] [Server thread/INFO]: [STDOUT]: RESET PROGRESS 176/176 tick=1700
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset lays and preserves immutable foundation under combat terrain
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS all native cross-dimension clone batches completed
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS core reset rebuilds the damaged capture core
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS core reset removes player-placed building blocks
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS core reset restores the destroyed gym cache
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset preserves chosen three-point preset without duplicate points
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset has exactly 80 supply markers, actual=80
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset restores launch pads and landing pools
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset restores forward spawns and special crates without duplicates
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset clears scores
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset returns player equipped and healed
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset reopens match scoring
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS reset preserves public control access
+[07:10:39] [Server thread/INFO]: Running function ustc_pvp:reset/request
+[07:10:39] [Server thread/INFO]: Function ustc_pvp:reset/request returned 1
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS completed reset cooldown prevents an immediate second reset
+[07:10:39] [Server thread/INFO]: Running function ustc_pvp:preset/five
+[07:10:39] [Server thread/INFO]: Running function ustc_pvp:mobility/profile_1
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS default spawn does not grant jump boost
+[07:10:39] [Server thread/INFO]: Removed CampusTest from any team
+[07:10:39] [Server thread/INFO]: Reset all scores for CampusTest
+[07:10:39] [Server thread/INFO]: [STDOUT]: PASS release starts without default mobility buffs
+[07:10:39] [Server thread/INFO]: [+]
+[07:10:39] [Server thread/INFO]: ========= 1 GAME TESTS COMPLETE IN 1.490 min ======================
+[07:10:39] [Server thread/INFO]: All 1 required tests passed :)
+[07:10:39] [Server thread/INFO]: ====================================================
+[07:10:39] [Server thread/INFO]: Stopping server
+[07:10:39] [Server thread/INFO]: Saving players
+[07:10:39] [Server thread/INFO]: Saving worlds
+[07:10:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[07:10:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/ustc_pvp:template
+[07:10:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[07:10:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[07:10:41] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[07:10:41] [Server thread/INFO]: ThreadedAnvilChunkStorage (template): All chunks are saved
+[07:10:41] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07:10:41] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07:10:41] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07:10:41] [Server thread/INFO]: Game test server shutting down

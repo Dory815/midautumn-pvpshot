@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:brick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 48
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "egg"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "鸡蛋冲锋枪",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "按住右键 · 约 6.7 发/秒 · 近距 4 HP / 远端 1 HP · 48 发",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:egg",
+                "minecraft:consumable": {
+                  "consume_seconds": 3600,
+                  "animation": "none",
+                  "has_consume_particles": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
