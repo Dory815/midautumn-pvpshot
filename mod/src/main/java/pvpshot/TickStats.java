@@ -16,7 +16,23 @@ public final class TickStats {
     private static long windowTicks;
     private static long windowTotalNanos;
 
+    /** 逐 tick 记录模式：> 0 时每个 tick 都单独写一行日志，供事后画曲线用。 */
+    private static int recordRemaining;
+    private static int recordIndex;
+
     private TickStats() {
+    }
+
+    /**
+     * 开始逐 tick 记录（压测用）。
+     *
+     * <p>每行日志形如 {@code [pvpshot][tickrec] 17 6.482}（序号 + 该 tick 的毫秒数），
+     * 结束后再写一行 {@code done}，直接 grep 就能出数据。
+     */
+    public static void record(int ticks) {
+        recordRemaining = Math.max(1, ticks);
+        recordIndex = 0;
+        PvpShotMod.LOGGER.info("[pvpshot] 开始逐 tick 采样：{} tick（日志前缀 [tickrec]）", recordRemaining);
     }
 
     public static void beginTick() {
@@ -29,6 +45,16 @@ public final class TickStats {
         }
         long elapsed = System.nanoTime() - tickStartNanos;
         tickStartNanos = 0L;
+
+        if (recordRemaining > 0) {
+            recordIndex++;
+            recordRemaining--;
+            PvpShotMod.LOGGER.info(String.format("[pvpshot][tickrec] %d %.3f",
+                    recordIndex, elapsed / 1_000_000.0));
+            if (recordRemaining == 0) {
+                PvpShotMod.LOGGER.info("[pvpshot][tickrec] done");
+            }
+        }
 
         ticks++;
         windowTicks++;

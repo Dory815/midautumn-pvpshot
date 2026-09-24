@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -135,6 +136,15 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
                 reply(context, "设施保护：已载入 " + ProtectionRegions.regionCount() + " 个区域", false);
                 return 1;
             }));
+            // /pvpshot tickrecord <tick 数>：逐 tick 记录 MSPT（压测用，日志前缀 [tickrec]）
+            root.then(Commands.literal("tickrecord")
+                    .then(Commands.argument("ticks", IntegerArgumentType.integer(1, 20000))
+                            .executes(context -> {
+                                int count = IntegerArgumentType.getInteger(context, "ticks");
+                                TickStats.record(count);
+                                reply(context, "已开始逐 tick 采样 " + count + " tick", true);
+                                return 1;
+                            })));
             root.then(matchCommand());
             dispatcher.register(root);
         });
