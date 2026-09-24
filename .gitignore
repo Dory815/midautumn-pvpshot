@@ -42,3 +42,8 @@ mod/build/
 mod/run/
 mod/.fabric/
 mod/logs/
+
+# ---- 6. 反编译的 Minecraft 源码（28 MB / 7000+ 文件，且属 Mojang 版权内容）----
+# 需要时按 docs/反编译说明.md 第 3 节重新生成，不要随仓库分发
+docs/minecraft-26.2-sources/
+docs/minecraft-26.2-sources.jar

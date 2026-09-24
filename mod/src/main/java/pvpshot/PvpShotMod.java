@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import pvpshot.protect.ProtectionRegions;
+import pvpshot.match.MatchEngine;
 import pvpshot.restore.ArenaRestore;
 
 /**
@@ -41,6 +42,7 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         });
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             ArenaRestore.tick(server);
+            MatchEngine.tick(server);
             TickStats.endTick();
         });
 
@@ -67,7 +69,47 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
                             context.getSource().sendSuccess(() -> Component.literal(
                                     "设施保护：已载入 " + ProtectionRegions.regionCount() + " 个区域"), false);
                             return 1;
-                        }))));
+                        }))
+                        .then(Commands.literal("match")
+                                .then(Commands.literal("on").executes(context -> {
+                                    String message = MatchEngine.setEnabled(true, context.getSource().getServer());
+                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                    return 1;
+                                }))
+                                .then(Commands.literal("off").executes(context -> {
+                                    String message = MatchEngine.setEnabled(false, context.getSource().getServer());
+                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                    return 1;
+                                }))
+                                .then(Commands.literal("status").executes(context -> {
+                                    context.getSource().sendSuccess(
+                                            () -> Component.literal(MatchEngine.statusText()), false);
+                                    return 1;
+                                }))
+                                .then(Commands.literal("restart").executes(context -> {
+                                    String message = MatchEngine.restart();
+                                    context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                    return 1;
+                                }))
+                                .then(Commands.literal("mode")
+                                        .then(Commands.literal("three").executes(context -> {
+                                            String message = MatchEngine.setMode(MatchEngine.Mode.THREE_POINT);
+                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                            return 1;
+                                        }))
+                                        .then(Commands.literal("five").executes(context -> {
+                                            String message = MatchEngine.setMode(MatchEngine.Mode.FIVE_POINT);
+                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                            return 1;
+                                        }))
+                                        .then(Commands.literal("tdm").executes(context -> {
+                                            String message = MatchEngine.setMode(MatchEngine.Mode.DEATHMATCH);
+                                            context.getSource().sendSuccess(() -> Component.literal(message), true);
+                                            return 1;
+                                        }))     // 关闭 executes 与 tdm 的 then
+                                )               // 关闭 mode 的 then
+                        )                       // 关闭 match 的 then
+                ));                             // 关闭 dispatcher.register 与事件注册
     }
 
     /** 从模组内置资源读入 181 个保护区域。 */
