@@ -1,0 +1,11 @@
+execute if score #mode pvpshot.cfg matches 1 if entity @e[tag=ustc.point.A,tag=pvpshot.point,scores={pvpshot.owner=2}] run tag @e[tag=ustc.spawn.A] add ustc.eligible
+execute if score #mode pvpshot.cfg matches 1 if entity @e[tag=ustc.point.B,tag=pvpshot.point,scores={pvpshot.owner=2}] run tag @e[tag=ustc.spawn.B] add ustc.eligible
+execute if score #mode pvpshot.cfg matches 1 if entity @e[tag=ustc.point.C,tag=pvpshot.point,scores={pvpshot.owner=2}] run tag @e[tag=ustc.spawn.C] add ustc.eligible
+execute if score #mode pvpshot.cfg matches 1 if entity @e[tag=ustc.point.D,tag=pvpshot.point,scores={pvpshot.owner=2}] run tag @e[tag=ustc.spawn.D] add ustc.eligible
+execute if score #mode pvpshot.cfg matches 1 if entity @e[tag=ustc.point.E,tag=pvpshot.point,scores={pvpshot.owner=2}] run tag @e[tag=ustc.spawn.E] add ustc.eligible
+# 团队死斗（#mode=0）用基地固定重生点：不再把 C/D 前线点列为候选（作者要求，2026-09-25）
+execute as @e[tag=ustc.eligible] at @s if entity @a[team=pvpshot.red,gamemode=!spectator,nbt=!{Health:0.0f},distance=..24] run tag @s remove ustc.eligible
+execute as @e[tag=ustc.eligible] at @s unless block ~ ~ ~ air run tag @s remove ustc.eligible
+execute as @e[tag=ustc.eligible] at @s unless block ~ ~1 ~ air run tag @s remove ustc.eligible
+execute as @e[tag=ustc.eligible] at @s if block ~ ~-1 ~ #pvpshot:blast_passable run tag @s remove ustc.eligible
+execute unless entity @e[tag=ustc.eligible] run tag @e[tag=pvpshot.spawn.blue] add ustc.eligible

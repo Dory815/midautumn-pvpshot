@@ -151,20 +151,25 @@ public final class PointVisuals {
         int preset = readPreset(level);
         return switch (preset) {
             case 3 -> MatchEngine.Mode.THREE_POINT;
-            case 1 -> MatchEngine.Mode.DEATHMATCH;
+            // 校园数据包（ustc_pvp:preset/*）写的是：0 = 团队死斗、3 = 三点、5 = 五点。
+            // 老版本用过 1 表示死斗，这里一起认。团队死斗下所有点位都不参与，
+            // 定位条只显示玩家（作者要求）。
+            case 0, 1 -> MatchEngine.Mode.DEATHMATCH;
+            case 5 -> MatchEngine.Mode.FIVE_POINT;
             default -> MatchEngine.Mode.FIVE_POINT;
         };
     }
 
+    /** 读数据包的 {@code #preset}；记分项或分数不存在时返回 -1（按默认五点处理）。 */
     private static int readPreset(ServerLevel level) {
         Scoreboard board = level.getScoreboard();
         Objective clockObjective = board.getObjective("ustc.clock");
         if (clockObjective == null) {
-            return 0;
+            return -1;
         }
         ReadOnlyScoreInfo info =
                 board.getPlayerScoreInfo(ScoreHolder.forNameOnly("#preset"), clockObjective);
-        return info == null ? 0 : info.value();
+        return info == null ? -1 : info.value();
     }
 
     public static void tick(MinecraftServer server) {
