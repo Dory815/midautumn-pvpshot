@@ -47,3 +47,20 @@ mod/logs/
 # 需要时按 docs/反编译说明.md 第 3 节重新生成，不要随仓库分发
 docs/minecraft-26.2-sources/
 docs/minecraft-26.2-sources.jar
+
+# ---- 7. 测试服务端的运行数据（世界 380 MB + 模组 jar 体积大）----
+# 保留 server.properties / start.bat / README.md 入库，便于复现环境
+server/world/
+server/mods/
+server/libraries/
+server/versions/
+server/logs/
+server/crash-reports/
+server/.fabric/
+server/*.jar
+server/eula.txt
+server/banned-*.json
+server/ops.json
+server/whitelist.json
+server/usercache.json
+server/session.lock
