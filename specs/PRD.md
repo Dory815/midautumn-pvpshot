@@ -341,6 +341,11 @@
 > 补充（2026-09-25）：**终端乱码已由作者确认修复**。确认可用的启动参数组合是
 > `chcp 65001` + `-Dfile.encoding=UTF-8` + `-Dstdout.encoding=UTF-8` + `-Dstderr.encoding=UTF-8`
 > （即 `server/start.bat` 现有写法）；根因仍是 log4j 固定输出 UTF-8，控制台代码页必须与之一致。
+>
+> 另外（同一批）：新增面向玩家的 **`docs/更新日志.md`**（重点写"现在这一版与数据包版的区别"），
+> 以及**发行包**：`tools/package-release.ps1` 会把模组 jar、服务器资源包、数据包补丁、
+> 全部说明文档与更新日志一起汇总到 `docs/发行包-<版本>/` 并打成同名 zip。
+> 发行包内是二进制产物，按既有规则不入 git（文本源在 `tools/release/`、`tools/datapack-patches/`、`docs/`、`specs/`）。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|
