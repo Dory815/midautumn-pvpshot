@@ -71,12 +71,16 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         var players = server.getPlayerList().getPlayers();
         for (int i = 0; i < players.size(); i++) {
             var player = players.get(i);
+            // 物品栏同步：原版只在玩家点击/捡物品时同步，而数据包用 loot give 返还部署物品
+            // 走不到那些路径，客户端就会看到"东西没回来"。broadcastChanges() 只在真有变化时才发包，
+            // 所以每 tick 调用是安全的（作者要求"返还后同步一次"）。
+            player.inventoryMenu.broadcastChanges();
             EquipmentSystems.tickCooking(player);
             EquipmentSystems.tickPlane(player);
             EquipmentSystems.tickLaunchMotion(player);
             WeaponSystems.tickSmg(player);
-            // 弩的负重惩罚：按作者要求降到每 80 tick 检查一次，避免频繁扫背包
-            if (((player.tickCount + player.getId()) % 80) == 0) {
+            // 弩的负重惩罚：每 20 tick 检查一次（作者要求）
+            if (((player.tickCount + player.getId()) % 20) == 0) {
                 EquipmentSystems.applyCrossbowWeight(player);
             }
             // 数据包用这两个 trigger 分数请求开火，模组消费后清零

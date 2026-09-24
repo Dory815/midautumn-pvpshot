@@ -20,8 +20,10 @@ import net.minecraft.world.entity.monster.cubemob.Slime;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.scores.Objective;
 import net.minecraft.world.scores.PlayerTeam;
@@ -162,6 +164,10 @@ public final class PointVisuals {
         if (points.isEmpty()) {
             return;
         }
+        if (!legacyCleaned) {
+            legacyCleaned = true;
+            cleanLegacyMarkers(level);
+        }
         MatchEngine.Mode mode = resolveMode(level);
         clock++;
         boolean drawParticles = clock % PARTICLE_INTERVAL_TICKS == 0;
@@ -172,6 +178,10 @@ public final class PointVisuals {
             TeamColor color = active ? colorFor(point.owner()) : TeamColor.GRAY;
             // 航点实体：埋在地下、基岩包裹、发光轮廓跟随归属（作者方案）
             ensureWaypoint(level, point, color, active);
+            // 信标光柱：换掉信标上方的染色玻璃，光柱颜色就跟着队伍走（原版机制）
+            if (active) {
+                updateBeaconBeam(level, point, point.owner());
+            }
             if (active && drawParticles && hasPlayerNearby(level, point)) {
                 drawRangeRings(level, point, color);
             }
@@ -190,6 +200,28 @@ public final class PointVisuals {
         }
     }
 
+    /** 旧版本用过盔甲架和方块显示实体当标记，这里一次性清掉，避免玩家看到残留的方块。 */
+    private static boolean legacyCleaned;
+
+    private static void cleanLegacyMarkers(ServerLevel level) {
+        int removed = 0;
+        for (Entity entity : level.getEntities(EntityTypes.BLOCK_DISPLAY,
+                candidate -> candidate.entityTags().stream()
+                        .anyMatch(tag -> tag.startsWith("pvpshot.mark.")))) {
+            entity.discard();
+            removed++;
+        }
+        for (Entity entity : level.getEntities(EntityTypes.ARMOR_STAND,
+                candidate -> candidate.entityTags().stream()
+                        .anyMatch(tag -> tag.startsWith("pvpshot.mark.")))) {
+            entity.discard();
+            removed++;
+        }
+        if (removed > 0) {
+            PvpShotMod.LOGGER.info("[pvpshot] 清理了 {} 个旧版点位标记实体", removed);
+        }
+    }
+
     /**
      * 保证点位有一个"航点载体"。
      *
@@ -202,7 +234,11 @@ public final class PointVisuals {
                                        boolean active) {
         String tag = BEACON_TAG_PREFIX + point.id();
         Slime beacon = BEACONS.get(point.id());
-        if (beacon == null || !beacon.isAlive() || beacon.isRemoved()) {
+        if (beacon == null || beacon.isRemoved()) {
+            // 先同步加载区块再扫描：getEntities 只返回已加载区块里的实体，
+            // 不先加载的话会"找不到已有航点"→ 又建一个（这正是之前重复创建的原因）
+            BlockPos anchor = BlockPos.containing(point.x(), point.y(), point.z());
+            level.getChunk(anchor.getX() >> 4, anchor.getZ() >> 4);
             beacon = findExistingBeacon(level, tag);
             if (beacon == null) {
                 beacon = createBeacon(level, point, tag);
@@ -212,6 +248,9 @@ public final class PointVisuals {
             }
             BEACONS.put(point.id(), beacon);
         }
+        // 让航点所在区块常加载：否则区块一卸载，实体就被卸载，
+        // 航点从定位条消失、下一 tick 还会重复创建一个新的（之前 589 个就是这么来的）
+        keepChunkLoaded(level, beacon.blockPosition());
         // 发光轮廓：颜色由队伍决定，所以直接给实体打开发光即可（未启用则关掉）
         beacon.setGlowingTag(active);
         applyTeam(level, point, beacon, color, active);
@@ -235,6 +274,18 @@ public final class PointVisuals {
         }
         if (active) {
             applyWaypointStyle(level, tag, point);
+        }
+    }
+
+    /** 已申请强制加载的区块，避免重复申请。 */
+    private static final java.util.Set<Long> FORCED_CHUNKS = new java.util.HashSet<>();
+
+    private static void keepChunkLoaded(ServerLevel level, BlockPos pos) {
+        long key = ((long) pos.getX() >> 4) << 32 ^ ((pos.getZ() >> 4) & 0xFFFFFFFFL);
+        if (FORCED_CHUNKS.add(key)) {
+            level.setChunkForced(pos.getX() >> 4, pos.getZ() >> 4, true);
+            PvpShotMod.LOGGER.info("[pvpshot] 已让航点所在区块常加载：{}, {}",
+                    pos.getX() >> 4, pos.getZ() >> 4);
         }
     }
 
@@ -352,6 +403,34 @@ public final class PointVisuals {
             case 2 -> TeamColor.BLUE;
             default -> TeamColor.WHITE;
         };
+    }
+
+    /**
+     * 让信标光柱显示队伍颜色。
+     *
+     * <p>原版信标的机制是：**光柱颜色 = 信标正上方那块染色玻璃的颜色**（玻璃不存在则用默认白色）。
+     * 地图上每个据点本来就是"铁块 + 信标 + 白色玻璃"的结构，所以这里只要把玻璃换成队伍颜色即可，
+     * 不需要任何自定义渲染 —— 信标方块每隔一段时间会自己重新计算光柱颜色。
+     */
+    private static void updateBeaconBeam(ServerLevel level, CapturePoint point, int owner) {
+        BlockState wanted = switch (owner) {
+            case 1 -> Blocks.STAINED_GLASS.pick(DyeColor.RED).defaultBlockState();
+            case 2 -> Blocks.STAINED_GLASS.pick(DyeColor.BLUE).defaultBlockState();
+            default -> Blocks.STAINED_GLASS.pick(DyeColor.WHITE).defaultBlockState();
+        };
+        // 点位中心下方 1~3 格里找信标（地图结构是铁块底座 + 信标 + 玻璃）
+        BlockPos center = BlockPos.containing(point.x(), point.y(), point.z());
+        for (int dy = 1; dy <= 3; dy++) {
+            BlockPos beaconPos = center.below(dy);
+            if (!level.getBlockState(beaconPos).is(Blocks.BEACON)) {
+                continue;
+            }
+            BlockPos glassPos = beaconPos.above();
+            if (level.getBlockState(glassPos) != wanted) {
+                level.setBlock(glassPos, wanted, Block.UPDATE_CLIENTS);
+            }
+            return;
+        }
     }
 
     private static boolean hasPlayerNearby(ServerLevel level, CapturePoint point) {
