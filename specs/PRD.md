@@ -359,6 +359,15 @@
 > 首轮结果（1300 发齐射，140 tick）：平均 36.75 ms、P95 22.27 ms、最大 2127.14 ms（第 2 tick，
 > 召唤洪峰）、最小 4.55 ms；稳态约 6~13 ms/tick；第 60 tick 的 TNT 爆炸批 136.4 ms。
 > 报告与附件见 `docs/压测/`。
+>
+> **服务器崩溃与处理（2026-09-25 02:09）**：测试服在压测后约 6 分钟整体退出，`latest.log`
+> 无异常栈。现场在 `hs_err_pid9792.log`：JVM 内部错误 `g1HeapRegionManager.cpp:55`
+> “master free list MT safety protocol at a safepoint”，发生在 GC 线程（WatcherThread），
+> 栈里只有 `jvm.dll` 帧、无任何模组或原版方法帧，堆也没满（已用约 0.48G / 上限 3G）。
+> 结论：**JDK 25.0.2 的 G1 GC 内部竞态，不是本项目代码问题**。
+> 处理：启动参数由 G1 换成 **ZGC**，并用 `jcmd VM.flags` 复核（`-XX:+UseZGC` 生效）；
+> 崩溃文件今后统一写到 `logs/hs_err_pid<PID>.log`。完整记录见
+> `docs/崩溃记录-2026-09-25-G1内部错误.md`；线上（OpenJDK 25.0.4.1）建议确认补丁版本或同样改用 ZGC。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|

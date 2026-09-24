@@ -12,6 +12,12 @@
 | 视距 / 模拟距离 | **10 / 8** | 作者要求（测试用，比线上的 8 / 6 更高） |
 | 其它 | `sync-chunk-writes=false`、`max-tick-time=60000` | 降低磁盘等待，贴近线上表现 |
 
+> **GC 选择（2026-09-25 变更）**：启动参数从 G1 换成 **ZGC**（`-XX:+UseZGC`）。
+> 原因是 JDK 25.0.2 的 G1 出现内部崩溃（`g1HeapRegionManager.cpp:55`，
+> "master free list MT safety protocol at a safepoint"，栈里只有 jvm.dll 帧），
+> 详见 `docs/崩溃记录-2026-09-25-G1内部错误.md`。同时加了
+> `-XX:ErrorFile=logs\hs_err_pid%p.log`，以后崩溃现场统一落在 `logs/`。
+
 ## 装的模组（`mods/`）
 
 | 模组 | 用途 |
