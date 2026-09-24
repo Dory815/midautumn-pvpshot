@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pvpshot",
+  "version": "${version}",
+  "name": "PVP Shot",
+  "description": "科大中区 PVP 枪战小游戏 · 服务端玩法模组（M1 骨架）",
+  "authors": [
+    "Dory815"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "server",
+  "entrypoints": {
+    "server": [
+      "pvpshot.PvpShotMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

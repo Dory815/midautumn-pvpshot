@@ -35,6 +35,8 @@ __MACOSX/
 .vscode/
 
 # ---- 5. 模组工程的构建产物（M1 之后会用到）----
+.gradle-home/
+.tools/
 mod/.gradle/
 mod/build/
 mod/run/

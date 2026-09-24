@@ -1,0 +1,58 @@
+plugins {
+    // 26.x 起 Minecraft jar 已是官方命名，不再需要 mappings/remap。
+    // 已发布的 1.17.20 / 1.17.21 / 1.18.2 都还强制要求 mappings
+    // （报 "Configuration 'mappings' has no dependencies"）；
+    // Fabric 官方示例模组使用的是滚动快照 1.17-SNAPSHOT，它支持这种"无映射"模式。
+    // 该版本由 Gradle 9.7.0 系列构建，本工程配套 Gradle 9.7.1。
+    id 'net.fabricmc.fabric-loom' version '1.17-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    // 26.x 起 Minecraft 的 jar 本身就是官方命名（已核实：client/server jar 内是
+    // net/minecraft/server/level/ServerPlayer 这样的名字），官方 version json 里不再
+    // 提供 client_mappings，Yarn 也没有 26.x 版本。
+    // 因此：不写 mappings 行，依赖用普通 implementation（不需要 remap）。
+    // 这与 Fabric 官方示例模组的写法一致（fabric-example-mod 的 build.gradle 中
+    // 既没有 mappings 也没有 modImplementation）。
+    // 好处：现有 server_protection 代码用的官方类名可以原样复用。
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+    it.options.encoding = "UTF-8"
+}
+
+java {
+    // 不生成 sources jar：26.x 的恒等映射下，Loom 重映射依赖 sources 会失败
+    // （Failed to remap sources for ...fabric-api-...-sources.jar）。
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
