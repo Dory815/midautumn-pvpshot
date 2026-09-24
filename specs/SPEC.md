@@ -354,15 +354,36 @@ record VirtualProjectile(
 - **第二步**：若耗时仍高，改成直接读写区块方块数据（更快，但要自己处理方块实体、光照与实体）；
 - **始终保留**：玩家在大厅等待 + 顶部进度条（沿用现有交互设计，不改变玩家习惯）。
 
-### 5.8 设施保护方案
+### 5.8 设施保护方案（M2a 已实现）
 
-直接移植现有思路（`ProtectionRules` 已经用区块索引，方向是对的）：
+已按下列方案实现，见 `mod/src/main/java/pvpshot/protect/ProtectionRegions.java` 与 `pvpshot/mixin/*.java`：
 
-1. 启动时从配置 JSON 读区域，按区块建立 `Map<ChunkPos, List<Region>>` 索引；
-2. 在 `Level#setBlock` / `destroyBlock` / 爆炸 / 活塞 / 命令放置 的 Mixin 里做一次 O(1)~O(小) 查询；
-3. 命中保护区域则拒绝并给玩家反馈（提示与现状一致）。
+1. 模组初始化时从内置资源 `pvpshot/regions.tsv` 读入 181 个区域，按区块建立
+   `Map<Long, List<Region>>` 索引（区块坐标编码为 long 键）；
+2. 保护总开关**每 tick 刷新一次**（读记分板 `ustc.clock` 上的 `#protection.active`、
+   `#protection.edit`、`#reset.active`），Mixin 里只读内存标志位，不查记分板；
+3. 六个拦截点（与旧插桩一一对应）：`Level#setBlock`、`Level#destroyBlock`、
+   `ServerPlayerGameMode#destroyBlock`、`BlockBehaviour$BlockStateBase#onExplosionHit`、
+   `PistonBaseBlock#isPushable`、`BlockInput#place`；
+4. **只拒绝"换成另一种方块"**：按钮、箱盖、门、红石等同一方块的属性变化必须放行，
+   否则设施失去交互能力（这一条是从旧实现继承的关键细节）。
 
 与现状的差别：**不再需要硬编码 jar 的 SHA-1、不再需要"挂钩数量校验"**，升级版本时只需重新编译。
+尚未验证：Mixin 在真实服务端上的应用情况与运行表现（作者指示暂缓开服/EULA 相关步骤）。
+
+### 5.8.1 编码原则：优先复用原版实现
+
+作者明确要求：能用原版代码的地方就不要再自创一套。已确认可复用的方向：
+
+| 需求 | 原版可复用之处 | 位置 |
+|---|---|---|
+| 常规投射物（枪械弹丸） | 风弹 `AbstractWindCharge` / `WindCharge` 的直线运动与命中处理 | `net/minecraft/world/entity/projectile/hurtingprojectile/windcharge/` |
+| 与玩家的碰撞检测 | 箭矢 `AbstractArrow`（含扫掠式线段判定，避免高速穿透）与末影珍珠 `ThrownEnderpearl` | `.../projectile/arrow/AbstractArrow.java`、`.../throwableitemprojectile/ThrownEnderpearl.java` |
+| 区域方块复制（地形复原） | `/clone` 命令的实现：先读源区域状态到内存，再逐格写入，并用 BARRIER 遮蔽源避免复制期间被干扰 | `net/minecraft/server/commands/CloneCommands.java` |
+| 结构放置 | `StructureTemplate` / `StructureTemplateManager` | `.../levelgen/structure/templatesystem/` |
+
+工作方式：`.\build.ps1 genSources` 生成 26.2 反编译源码，本项目已解压到
+`D:\Programs\.tmp\mmg\mcsrc`，可直接检索原版实现后再动手写。
 
 ### 5.9 档 C：客户端可选增强的协议（先设计，后实现）
 
@@ -463,3 +484,4 @@ record VirtualProjectile(
 | 2026-09-24 | v0.1 | 建立 SPEC：核实现状事实（版本、796 个函数、694 行 Java、瓶颈逐条取证）、判定纯服务端可行性逐项对照、原版客户端能力边界、技术选型（Fabric + 官方 mappings + 事件/Mixin 分工）、模块与目录设计、弹体/复原/保护方案、性能目标与测量纪律、分阶段迁移与回滚策略、待核实清单 | 把"能不能用纯服务端模组重构"从感觉变成可复查的结论，并给出可执行路线 | `specs/SPEC.md`（重写）、`specs/PRD.md`（同批） |
 | 2026-09-24 | v0.2 | 同步作者已确认的三条决策：A 档优先（玩家零安装）、C 档仅预留接口不实现、地图与全部点位/出生点/保护区/复原范围保持不变、git 排除规则认可；并记录环境写入权限的变更 | 与 PRD 保持同步，作为后续 M1 的输入 | `specs/SPEC.md`、`specs/PRD.md` |
 | 2026-09-24 | v0.3 | 把第 9 节从"待核实清单"改为"技术核实清单"：记录 M1 实测得到的七条结论（Fabric 支持情况、**26.2 不再混淆因而不需要映射**、Yarn 无 26.x、intermediary 为空、现有 Java 代码可零改动复用、工具链版本组合、骨架实际加载成功），并保留六项待后续里程碑确认的问题 | 26.x 的映射机制与旧版本差异极大，是本次重构最重要的技术前提，必须留档以免后续误配构建脚本 | `specs/SPEC.md` |
+| 2026-09-24 | v0.4 | 第 5.8 节从"方案"改写为"已实现"（181 区域 + 区块索引 + 每 tick 刷新总开关 + 六个 Mixin 拦截点 + 同种方块状态放行的细节），并标明运行时验证尚未进行；新增 5.8.1 节确立"优先复用原版实现"的编码原则，列出四处可直接复用的原版代码（风弹 / 箭矢与末影珍珠 / `/clone` 命令 / `StructureTemplate`）及其源码位置，同时记录 26.2 反编译源码的就位位置 | 作者要求尽可能复用原版实现，避免自创一套运动与碰撞逻辑；这一原则需要写进设计文档并在后续里程碑（M2b 复原、M4 武器）中执行 | `specs/SPEC.md`、`specs/PRD.md`、`mod/src/main/java/pvpshot/protect/ProtectionRegions.java`、`mod/src/main/java/pvpshot/mixin/*.java` |

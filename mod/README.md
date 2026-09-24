@@ -48,6 +48,38 @@
   `Loading 44 mods`（Fabric API 全模块 + `pvpshot 1.0.0-m1`），模组初始化与事件注册日志均正常。
 - 完整开服停在 EULA 确认处（`run\eula.txt`），需作者自行改为 `true`。
 
+## M2a 设施保护（已实现，待运行时验证）
+
+把旧插桩模块的 181 个保护区域搬进了模组：
+
+- 区域数据：`src/main/resources/pvpshot/regions.tsv`（从 before 的 `protection/regions.tsv` 原样复制）。
+- 判定逻辑：`pvpshot.protect.ProtectionRegions` —— 按区块分桶做 O(1) 查找；
+  保护总开关每 tick 刷新一次（读记分板 `ustc.clock` 上的 `#protection.active` 等三项），
+  避免每次方块更新都查询记分板。
+- 拦截点（与旧插桩一一对应，改成了标准 Mixin）：
+
+| Mixin | 目标方法 | 作用 |
+|---|---|---|
+| `LevelMixin` | `Level#setBlock(...II)Z` | 所有方块写入的总闸口 |
+| `LevelMixin` | `Level#destroyBlock(...)Z` | 所有方块破坏的总闸口 |
+| `ServerPlayerGameModeMixin` | `ServerPlayerGameMode#destroyBlock(BlockPos)Z` | 玩家挖掘（避免耐久/统计照走） |
+| `BlockStateBaseMixin` | `BlockBehaviour$BlockStateBase#onExplosionHit(...)` | 爆炸对方块的影响（对玩家的爆炸伤害保留） |
+| `PistonBaseBlockMixin` | `PistonBaseBlock#isPushable(...)` | 活塞推动 |
+| `BlockInputMixin` | `BlockInput#place(ServerLevel, BlockPos, int)` | 命令放置（`/setblock`、`/fill`） |
+
+沿用旧实现的关键细节：**只有"换成另一种方块"才拒绝**；按钮、箱盖、门、红石的
+同种方块状态更新照常放行，否则设施会失去交互能力。
+
+> 说明：Mixins 的目标签名已逐个用 `javap` 与 26.2 反编译源码核对；
+> 运行时行为（Mixin 是否成功应用）需要在能开服时再验证一次。
+
+## 读源码的方式（后续复用原版逻辑用）
+
+`.\build.ps1 genSources` 会生成 Minecraft 26.2 的反编译源码（Vineflower），
+产物在 `mod\.gradle\loom-cache\minecraftMaven\net\minecraft\minecraft-merged-*-sources.jar`。
+本项目已把它解压到 `D:\Programs\.tmp\mmg\mcsrc`，可以直接用文本搜索查原版实现
+（例如投射物运动、碰撞检测、指令复制方块的实现）。
+
 ## 设计约束（务必遵守）
 
 - **`environment: server`**：模组只装在服务端，玩家端零安装（原版客户端可直接连）。

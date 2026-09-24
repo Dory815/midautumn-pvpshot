@@ -1,10 +1,14 @@
 package pvpshot;
 
+import java.io.InputStream;
+
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import pvpshot.protect.ProtectionRegions;
 
 /**
  * PVP Shot —— 枪战小游戏的服务端模组。
@@ -20,12 +24,31 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
     public void onInitializeServer() {
         LOGGER.info("[pvpshot] 模组初始化：Minecraft 26.2 服务端专用（M1 骨架）");
 
+        loadProtectionRegions();
+
         ServerLifecycleEvents.SERVER_STARTING.register(server ->
                 LOGGER.info("[pvpshot] 服务端正在启动，模组已就绪"));
 
-        ServerTickEvents.START_SERVER_TICK.register(server -> TickStats.beginTick());
+        ServerTickEvents.START_SERVER_TICK.register(server -> {
+            TickStats.beginTick();
+            // 保护总开关每 tick 刷新一次：记分板是全局状态，读主世界即可。
+            ProtectionRegions.refreshActiveState(server.overworld());
+        });
         ServerTickEvents.END_SERVER_TICK.register(server -> TickStats.endTick());
 
         LOGGER.info("[pvpshot] 事件注册完成（生命周期 + tick 采样）");
+    }
+
+    /** 从模组内置资源读入 181 个保护区域。 */
+    private static void loadProtectionRegions() {
+        try (InputStream in = PvpShotMod.class.getResourceAsStream("/pvpshot/regions.tsv")) {
+            if (in == null) {
+                LOGGER.error("[pvpshot] 找不到内置的 regions.tsv，设施保护将不可用");
+                return;
+            }
+            ProtectionRegions.load(in);
+        } catch (Exception failure) {
+            LOGGER.error("[pvpshot] 载入设施保护区域失败", failure);
+        }
     }
 }

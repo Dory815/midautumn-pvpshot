@@ -12,6 +12,9 @@ $env:JAVA_HOME = 'C:\Users\Lenovo\AppData\Local\Programs\Microsoft\jdk-25.0.2.10
 $gradleBin     = 'D:\MC\MidAutumnMiniGame\.tools\gradle-9.7.1\bin\gradle.bat'
 $gradleHome    = 'D:\MC\MidAutumnMiniGame\.gradle-home'
 
+# 切到脚本所在目录（模组工程根），否则 Gradle 会在当前目录找不到工程
+Set-Location -LiteralPath $PSScriptRoot
+
 if (-not (Test-Path -LiteralPath $gradleBin)) {
     throw "找不到 Gradle：$gradleBin（应解压在 .tools\gradle-9.7.1）"
 }
@@ -19,7 +22,8 @@ if (-not (Test-Path -LiteralPath "$env:JAVA_HOME\bin\java.exe")) {
     throw "找不到 JDK 25：$env:JAVA_HOME"
 }
 
-$task = if ($args.Count -gt 0) { $args } else { @('build') }
+[string[]]$task = $args
+if ($task.Length -eq 0) { $task = @('build') }
 Write-Output "[build.ps1] 任务：$($task -join ' ')"
-& $gradleBin -g $gradleHome --console=plain @task
+& $gradleBin -g $gradleHome --console=plain $task
 exit $LASTEXITCODE
