@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -66,6 +67,9 @@ public final class PointVisuals {
     /** 最多画几层（避免高塔上刷太多粒子）。 */
     private static final int RING_MAX_LAYERS = 7;
 
+    /** 方位指示的刷新间隔（tick）：60 tick = 3 秒。 */
+    private static final int COMPASS_INTERVAL_TICKS = 60;
+
     /** 玩家离点位多远之内才需要画粒子（避免远处白刷）。 */
     private static final double PARTICLE_NEARBY_RANGE = 64.0;
 
@@ -75,11 +79,22 @@ public final class PointVisuals {
     private static boolean enabled = true;
     private static int clock;
 
+    /** 方位指示：每 60 tick（3 秒）给每个玩家发一条 actionbar，列出各点的方向、距离与归属。 */
+    private static boolean compassEnabled = true;
+    private static int compassClock;
+
     private PointVisuals() {
     }
 
     public static boolean isEnabled() {
         return enabled;
+    }
+
+    public static String setCompassEnabled(boolean value) {
+        compassEnabled = value;
+        return value
+                ? "方位指示已开启（每 3 秒在物品栏上方显示各点方向）"
+                : "方位指示已关闭";
     }
 
     public static String setEnabled(boolean value, ServerLevel level) {
@@ -147,6 +162,53 @@ public final class PointVisuals {
                 drawRangeRings(level, point, color);
             }
         }
+
+        // 方位指示：跟实体/粒子不同，走 UI，不受视距限制
+        if (compassEnabled && ++compassClock >= COMPASS_INTERVAL_TICKS) {
+            compassClock = 0;
+            sendCompass(server, points, mode);
+        }
+    }
+
+    /**
+     * 给每个玩家单独算一份"点位罗盘"。
+     *
+     * <p>为什么不用 Bossbar：Bossbar 的名称是全体共用的，而方位是相对每个玩家的，
+     * 只有 actionbar / title 这类 per-player 的 UI 才能做到"各自看到各自的方向"。
+     */
+    private static void sendCompass(MinecraftServer server, List<CapturePoint> points,
+                                    MatchEngine.Mode mode) {
+        for (ServerPlayer player : server.getPlayerList().getPlayers()) {
+            StringBuilder line = new StringBuilder();
+            for (int i = 0; i < points.size(); i++) {
+                CapturePoint point = points.get(i);
+                if (!point.activeIn(mode)) {
+                    continue;
+                }
+                double dx = point.x() - player.getX();
+                double dz = point.z() - player.getZ();
+                int distance = (int) Math.round(Math.sqrt(dx * dx + dz * dz));
+                if (line.length() > 0) {
+                    line.append("  ");
+                }
+                line.append(point.id()).append(point.ownerLabel())
+                        .append(arrowFor(dx, dz)).append(distance);
+            }
+            if (line.length() > 0) {
+                // 第二个参数 true = 显示在物品栏上方（actionbar）
+                player.sendSystemMessage(Component.literal(line.toString()), true);
+            }
+        }
+    }
+
+    /** 八方向箭头：0=北，顺时针。 */
+    private static final String[] ARROWS = {"↑", "↗", "→", "↘", "↓", "↙", "←", "↖"};
+
+    private static String arrowFor(double dx, double dz) {
+        // atan2(dx, -dz)：正北为 0°，顺时针增大
+        double degrees = Math.toDegrees(Math.atan2(dx, -dz));
+        int index = (int) Math.round(degrees / 45.0) & 7;
+        return ARROWS[index];
     }
 
     /**

@@ -126,6 +126,15 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
             reply(context, PointVisuals.statusText(context.getSource().getServer()), false);
             return 1;
         }));
+        visualize.then(Commands.literal("compass")
+                .then(Commands.literal("on").executes(context -> {
+                    reply(context, PointVisuals.setCompassEnabled(true), true);
+                    return 1;
+                }))
+                .then(Commands.literal("off").executes(context -> {
+                    reply(context, PointVisuals.setCompassEnabled(false), true);
+                    return 1;
+                })));
         match.then(visualize);
         return match;
     }

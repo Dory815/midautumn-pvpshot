@@ -22,6 +22,8 @@ echo Starting PVP Shot test server ... port 25566, online-mode=true
 "%JAVA_HOME%\bin\java.exe" -Xms1G -Xmx3G ^
   -XX:+UseG1GC -XX:MaxGCPauseMillis=200 ^
   -Dfile.encoding=UTF-8 ^
+  -Dstdout.encoding=UTF-8 ^
+  -Dstderr.encoding=UTF-8 ^
   -Djava.awt.headless=true ^
   -jar fabric-server-launch.jar nogui
 
