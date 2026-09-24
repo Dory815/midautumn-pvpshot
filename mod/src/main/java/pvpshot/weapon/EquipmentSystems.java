@@ -314,31 +314,44 @@ public final class EquipmentSystems {
 
     // -------------------------------------------------------- 楼顶弹射器
 
+    /** 单把已装填弩的负重等级（三级缓慢 ≈ 移速 -45%）。 */
+    private static final int WEIGHT_LEVEL_PER_CROSSBOW = 3;
+
+    /** 负重效果持续时间（tick）：略长于检测间隔，保证连续生效、又不会残留太久。 */
+    private static final int WEIGHT_DURATION = 100;
+
     /**
-     * 单弩限制（每 16 tick 检查一次）。
+     * 弩的负重惩罚（作者方案，替代原来的"单弩限制"）。
      *
-     * <p>规则：只能留一把弩 —— 优先保留手上的，其次副手，其余从背包里移除（丢在地上），
-     * 防止玩家靠多把弩跳过装填时间。开着的箱子界面也算在内，避免用快捷操作换弹。
+     * <p>不再强行移除多余的弩，而是：**每带一把已经装填好的弩，就叠三级的沉重效果**
+     * （原版 {@code SLOWNESS} 每级 -15% 移速，三级约 -45%，接近作者要求的 -40%）。
+     * 这样"背着一排上膛的弩"在机动性上就有代价，而不是被系统直接没收。
+     *
+     * <p>只统计**已装填**的弩：空弩背着不重，想享受多弩火力就必须先付出装填时间。
      */
-    public static void enforceSingleCrossbow(ServerPlayer player) {
-        ItemStack keep = player.getMainHandItem().is(net.minecraft.world.item.Items.CROSSBOW)
-                ? player.getMainHandItem()
-                : player.getOffhandItem().is(net.minecraft.world.item.Items.CROSSBOW)
-                        ? player.getOffhandItem()
-                        : null;
+    public static void applyCrossbowWeight(ServerPlayer player) {
+        int charged = 0;
         var inventory = player.getInventory();
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             ItemStack stack = inventory.getItem(i);
             if (!stack.is(net.minecraft.world.item.Items.CROSSBOW)) {
                 continue;
             }
-            if (stack == keep && !stack.isEmpty()) {
-                // 这一把保留，之后见到的都清掉
-                inventory.setItem(i, stack);
-                keep = null;
-                continue;
+            var loaded = stack.getOrDefault(
+                    net.minecraft.core.component.DataComponents.CHARGED_PROJECTILES,
+                    net.minecraft.world.item.component.ChargedProjectiles.EMPTY);
+            if (!loaded.isEmpty()) {
+                charged++;
             }
-            inventory.setItem(i, ItemStack.EMPTY);
+        }
+        if (charged > 0) {
+            player.addEffect(new MobEffectInstance(
+                    MobEffects.SLOWNESS,
+                    WEIGHT_DURATION,
+                    charged * WEIGHT_LEVEL_PER_CROSSBOW - 1,
+                    false,   // 环境效果（不产生额外粒子）
+                    false,   // 不显示药水粒子
+                    true));  // 但要在 HUD 上显示图标，让玩家知道为什么变慢
         }
     }
 

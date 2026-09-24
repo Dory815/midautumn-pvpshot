@@ -75,9 +75,9 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
             EquipmentSystems.tickPlane(player);
             EquipmentSystems.tickLaunchMotion(player);
             WeaponSystems.tickSmg(player);
-            // 每 16 tick 检查一次"只能带一把弩"（与原实现同频）
-            if (((player.tickCount + player.getId()) & 15) == 0) {
-                EquipmentSystems.enforceSingleCrossbow(player);
+            // 弩的负重惩罚：按作者要求降到每 80 tick 检查一次，避免频繁扫背包
+            if (((player.tickCount + player.getId()) % 80) == 0) {
+                EquipmentSystems.applyCrossbowWeight(player);
             }
             // 数据包用这两个 trigger 分数请求开火，模组消费后清零
             int shotgun = pvpshot.weapon.CombatUtil.score(player, "pvpshot.shotgun");
