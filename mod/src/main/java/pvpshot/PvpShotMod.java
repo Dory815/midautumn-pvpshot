@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
@@ -19,6 +20,8 @@ import pvpshot.protect.ProtectionRegions;
 import pvpshot.match.MatchEngine;
 import pvpshot.match.PointVisuals;
 import pvpshot.restore.ArenaRestore;
+import pvpshot.weapon.EquipmentSystems;
+import pvpshot.weapon.WeaponSystems;
 
 /**
  * PVP Shot —— 枪战小游戏的服务端模组。
@@ -47,11 +50,65 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             ArenaRestore.tick(server);
             MatchEngine.tick(server);
+            tickWeapons(server);
             TickStats.endTick();
         });
 
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) ->
+                onPlayerDisconnect(handler.getPlayer()));
+
         registerCommands();
         LOGGER.info("[pvpshot] 事件注册完成（生命周期 + tick 采样 + 保护 + 复原 + 命令）");
+    }
+
+    /**
+     * 每 tick 的武器/装备维护。
+     *
+     * <p>用 tick 事件遍历玩家，而不是 Mixin 到 {@code ServerPlayer#doTick}：
+     * 逻辑一样，但不用改原版方法，升级时少一个可能出问题的注入点。
+     */
+    private static void tickWeapons(net.minecraft.server.MinecraftServer server) {
+        var players = server.getPlayerList().getPlayers();
+        for (int i = 0; i < players.size(); i++) {
+            var player = players.get(i);
+            EquipmentSystems.tickCooking(player);
+            EquipmentSystems.tickPlane(player);
+            EquipmentSystems.tickLaunchMotion(player);
+            WeaponSystems.tickSmg(player);
+            // 每 16 tick 检查一次"只能带一把弩"（与原实现同频）
+            if (((player.tickCount + player.getId()) & 15) == 0) {
+                EquipmentSystems.enforceSingleCrossbow(player);
+            }
+            // 数据包用这两个 trigger 分数请求开火，模组消费后清零
+            int shotgun = pvpshot.weapon.CombatUtil.score(player, "pvpshot.shotgun");
+            if (shotgun > 0) {
+                pvpshot.weapon.CombatUtil.setScore(player, "pvpshot.shotgun", 0);
+                if (player.isAlive()) {
+                    WeaponSystems.fireShotgun(player);
+                }
+            }
+            int heavy = pvpshot.weapon.CombatUtil.score(player, "pvpshot.heavy");
+            if (heavy > 0) {
+                pvpshot.weapon.CombatUtil.setScore(player, "pvpshot.heavy", 0);
+                if (player.isAlive()) {
+                    WeaponSystems.fireHeavy(player, heavy);
+                }
+            }
+        }
+        // 世界级：重武器打击推进 + 楼顶弹射器
+        for (var level : server.getAllLevels()) {
+            WeaponSystems.tickWorld(level);
+            EquipmentSystems.tickLaunchPads(level);
+        }
+    }
+
+    private static void onPlayerDisconnect(net.minecraft.server.level.ServerPlayer player) {
+        try {
+            EquipmentSystems.onLogout(player);
+            WeaponSystems.forget(player);
+        } catch (Exception failure) {
+            LOGGER.warn("[pvpshot] 玩家离开时的清理失败：{}", failure.toString());
+        }
     }
 
     private static void registerCommands() {

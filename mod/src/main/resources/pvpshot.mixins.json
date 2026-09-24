@@ -3,10 +3,12 @@
   "minVersion": "0.8",
   "package": "pvpshot.mixin",
   "mixins": [
+    "AbstractArrowMixin",
     "BlockInputMixin",
     "BlockStateBaseMixin",
     "LevelMixin",
     "PistonBaseBlockMixin",
+    "ServerLevelMixin",
     "ServerPlayerGameModeMixin"
   ],
   "injectors": {
