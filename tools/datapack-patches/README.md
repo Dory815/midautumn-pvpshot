@@ -77,22 +77,53 @@ Copy-Item 'D:\MC\MidAutumnMiniGame\tools\datapack-patches\ustc_pvp\respawn\*.mcf
 
 同一批还改了 `pvpshot:loot_table/item/egg.json` 的描述文字（近距 4 HP → 2 HP），两处必须同步改。
 
-### 7. `ustc_pvp:function/protection/repair.mcfunction` —— 删掉两个基地的 base_menu 命令方块（2026-09-25）
+### 7. `ustc_pvp:function/build.mcfunction` + `ustc_pvp:function/protection/repair.mcfunction` —— 删掉两个基地的 base_menu 命令方块（2026-09-25，两轮才改对）
 
 **问题（作者反馈）**：基地（队伍出生点）上那个 `base_menu` 命令方块要删掉；作者已手动删了蓝方的，
 红方 `-2115 3 -1495` 还在。
 
-**为什么要动这个文件**：`protection/repair.mcfunction` 是**保护区重建脚本**，里面用 `setblock`
-逐块摆回大厅按钮墙、红/蓝基地等设施——也就是说"只用手删"会被它在下一次重建时刷回来。
-（同理，复原机制会把 `ustc_pvp:template` 里的旧内容抄回主世界，所以模板维度也要一起改。）
+**第一次只改了 repair，结果还是每局结束就冒出来**（作者反馈"那个命令方块还是在"）。真正的原因是
+**复位流程的收尾会调用设施重建脚本**：
 
-**改法**（四处一起）：
+```
+ustc_pvp:reset/finish_ready  →  …（拷贝复原模板 → 主世界）…  →  function ustc_pvp:build   （第 210 行）
+```
 
-1. 主世界 `setblock -2115 3 -1495 minecraft:air`（命令方块）、`-2115 3 -1494`（按钮，命令方块被拆后它会自己掉）；
-2. `ustc_pvp:template` 同样两处（先 `forceload` 再改，改完撤掉常加载）；
-3. `ustc_pvp:template` 里 **蓝方** 的 `-1585 3 -1530` / `-1585 3 -1529` 也一并清掉，
-   否则作者手删的蓝方那个会在下一次"重置战场"时复活；
-4. 本文件里删掉这 4 行 `setblock`，换成一行注释说明。
+`build.mcfunction` 才是"把大厅按钮墙、红/蓝基地、据点、补给箱整套重摆一遍"的主脚本，
+里面同样有这两个 base_menu 命令方块（红 `-2115 3 -1495`、蓝 `-1585 3 -1530`）以及它们的按钮、
+底座（`polished_deepslate`）和"补给 / 返回大厅"浮空文字。所以每次复位都会把它们放回来。
+`protection/repair.mcfunction` 是另一套（按需触发的）保护区重建脚本，里面也有一份，两处都要改。
+
+**改法**（关键点：写成"主动清空"而不是"删掉 setblock"）：
+
+> 复位是"先把复原模板抄回主世界、再调用 build"，所以只要别处（例如模板维度）还残留命令方块，
+> 只把 setblock 注释掉是没用的；必须在 build/repair 里显式 `setblock … air` 把它抹掉。
+>
+> 另一个坑：**保护区拦截**。模组每 tick 只刷新一次保护状态（`#protection.active==1 && #protection.edit!=1
+> && #reset.active!=1` 时保护生效），而 `build` 第 1 行才把 `#protection.edit` 置 1 ——
+> 单独手跑 `function ustc_pvp:build` 时同一 tick 内这些编辑会被保护拦下（真实复位流程里 `#reset.active=1`，
+> 保护本来就关着，所以正常）。
+
+实际改动（每处 4 条）：
+
+```mcfunction
+setblock -2115 3 -1495 minecraft:air      # 命令方块
+setblock -2115 3 -1494 minecraft:air      # 按钮
+setblock -2115 2 -1495 minecraft:air      # 底座
+kill @e[type=text_display,tag=ustc.control,x=-2114.5,y=5,z=-1494.5,distance=..2]   # "补给 / 返回大厅"
+```
+
+蓝队基地（`-1585 3 -1530` / `-1585 3 -1529` / `-1585 2 -1530` / 对应文字）同理。
+上述改动同步到了：**主世界 `world-ustc`**、`ustc_pvp:template` 维度（先 forceload 再改、改完撤掉）、
+以及 `before/` 里所有模板副本（`发布/正式服代码`、`发布/测试服务端/world/datapacks`、
+`ustc_pvp/` 代码目录、4 个 `测试存档`），并且把生成器 `tools/ustc_world/make_pack.py` 里
+"基地补给按钮"的生成语句删掉（`发布/manifest.json` 的 `files_sha256` 已同步重算）。
+
+**验证**：跑一遍真实复位（`function ustc_pvp:reset/start`，176 批、约 90 秒）后
+`data get block -2115 3 -1495 Command` 返回"不是方块实体"、位置是空气，
+浮空文字消失，大厅按钮墙、据点信标（E 点 `Levels=1`）与清树结果都保持正常。
+注意：**不要用超大半径的选择器**（例如 `@e[...,distance=..1000000]`）做验证 —— 见
+`docs/更新日志.md` 的"已知环境问题"：ECO 会在这条路径上把主线程卡死。
 
 `ustc_pvp:base_menu` 函数本身保留（它只是 `kit` + 一条 `/trigger pvp_kit` 提示），
 删掉命令方块后该函数暂时没有调用者；玩家补装备仍可走 `/trigger pvp_kit`（大厅装备按钮同理）。

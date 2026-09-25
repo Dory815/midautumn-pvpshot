@@ -77,7 +77,7 @@ def make_pack(path,test_controls=1):
   for dz in [-8,8]:
    for a,b in [(-8,-3),(3,8)]:build.append(fill(x+a,y,z+dz,x+b,y+2,z+dz,'stone_bricks'))
   for dz in [-2,0,2]:build.append(marker(x+.5,y,z+dz+.5,['ustc.marker','pvpshot.spawn.'+team]))
-  build += [label(x+.5,y+6,z+.5,name+'基地','ustc.base.'+team,team),*button(x-front*5,y,z-5,'补给 / 返回大厅','base_menu',team)]
+  build += [label(x+.5,y+6,z+.5,name+'基地','ustc.base.'+team,team)]  # 2026-09-25 起不再生成基地 base_menu 按钮（作者要求）
  point_build=[]
  for key,(x,y,z,name) in POINTS.items():
   point_build += [fill(x-1,y,z-1,x+1,y+1,z+1,'air'),fill(x-1,y-2,z-1,x+1,y-2,z+1,'iron_block'),block(x,y-1,z,'beacon'),block(x,y,z,'white_stained_glass'),marker(x+.5,y,z+.5,['ustc.marker','ustc.point','ustc.point.'+key],{'label':key+' · '+name}),label(x+.5,y+6,z+.5,key+' · '+name,'ustc.label.'+key)]

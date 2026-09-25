@@ -43,8 +43,13 @@ fill -2107 2 -1498 -2102 4 -1498 minecraft:stone_bricks
 fill -2118 2 -1482 -2113 4 -1482 minecraft:stone_bricks
 fill -2107 2 -1482 -2102 4 -1482 minecraft:stone_bricks
 setblock -2115 2 -1495 minecraft:polished_deepslate
-# 2026-09-25 作者要求：红方基地出生点的 base_menu 命令方块连同按钮一并删除，重建时不要再放回来
-# （蓝方基地 -1585 3 -1530 的那个已由作者自己删掉，这里同步去掉，避免重建/复原又冒出来）
+# 2026-09-25 作者要求：红队基地出生点的 base_menu 命令方块删除（含按钮、说明文字与底座）。
+# 这里写成"主动清空"而不是"不再放置"：本函数会被复位流程调用，主动清空能顺带把
+# 复原模板里残留的同名方块抹掉。蓝队基地（-1585 3 -1530）同理，作者此前已自行删除。
+setblock -2115 3 -1495 minecraft:air
+setblock -2115 3 -1494 minecraft:air
+setblock -2115 2 -1495 minecraft:air
+kill @e[type=text_display,tag=ustc.control,x=-2114.5,y=5,z=-1494.5,distance=..2]
 fill -1598 1 -1533 -1582 1 -1517 minecraft:blue_terracotta
 fill -1598 2 -1533 -1582 6 -1517 minecraft:air
 fill -1582 2 -1533 -1582 4 -1517 minecraft:stone_bricks
@@ -53,6 +58,10 @@ fill -1587 2 -1533 -1582 4 -1533 minecraft:stone_bricks
 fill -1598 2 -1517 -1593 4 -1517 minecraft:stone_bricks
 fill -1587 2 -1517 -1582 4 -1517 minecraft:stone_bricks
 setblock -1585 2 -1530 minecraft:polished_deepslate
+setblock -1585 3 -1530 minecraft:air
+setblock -1585 3 -1529 minecraft:air
+setblock -1585 2 -1530 minecraft:air
+kill @e[type=text_display,tag=ustc.control,x=-1584.5,y=5,z=-1529.5,distance=..2]
 fill -1931 1 -1311 -1929 1 -1309 minecraft:smooth_stone
 execute positioned -1930 2 -1310 unless block ~ ~ ~ minecraft:trapped_chest run function ustc_pvp:protection/cache
 fill -1866 1 -1301 -1864 1 -1299 minecraft:smooth_stone
