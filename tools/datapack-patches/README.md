@@ -58,3 +58,17 @@ Copy-Item 'D:\MC\MidAutumnMiniGame\tools\datapack-patches\ustc_pvp\respawn\*.mcf
 | `ustc_pvp:advanced/one`（南北独立高级箱） | 2 发 | **3 发** |
 
 （破拆火箭的投放是"定量插入"，没有随机概率，所以 ×1.5 落在数量上。）
+
+### 6. `pvpshot:function/shot/tick.mcfunction` —— 鸡蛋冲锋枪近距离伤害 4 → 2（2026-09-25）
+
+作者对比了鸡蛋冲锋枪与基础火焰弹的实测数值后决定削弱鸡蛋：飞行**前 9 tick** 的伤害由 4 HP 改成
+**2 HP**（9 tick 之后仍是 1 HP），弹药/射速/近距窗口都不动。
+
+| | 改前 | 改后 |
+|---|---|---|
+| 近距单发 | 4 HP | **2 HP** |
+| 远端单发 | 1 HP | 1 HP |
+| 近距 DPS（6.7 发/秒） | 26.7 | **13.3** |
+| 一梭 48 发潜在总伤（全近距） | 192 HP | **96 HP** |
+
+同一批还改了 `pvpshot:loot_table/item/egg.json` 的描述文字（近距 4 HP → 2 HP），两处必须同步改。
