@@ -12,6 +12,9 @@
 # ---- 1. 分发产物与世界快照（体积最大，且文档已写明「不应作为长期修改入口」）----
 before/PVP射击小游戏/发布/
 before/PVP射击小游戏/测试存档/
+# 朋友发来的新校园地图存档（418 MB；`*.mca` 本来就被忽略，但 voxy/journeymap 等
+# 模组数据文件不在忽略列表里，所以整个目录一起排除，避免把存档塞进仓库）
+before/USTC_project/
 # 发行包（docs/发行包-<版本>/）由 tools/package-release.ps1 生成，
 # 里面是模组 jar、资源包 zip 等二进制，按规则不入库；对应的文本源都在 tools/release/ 与 docs/ 里
 docs/发行包-*/
@@ -54,6 +57,8 @@ docs/minecraft-26.2-sources.jar
 # ---- 7. 测试服务端的运行数据（世界 380 MB + 模组 jar 体积大）----
 # 保留 server.properties / start.bat / README.md 入库，便于复现环境
 server/world/
+# 移植新地图后的第二个世界（同样不入库；注意 .gitignore 不支持行尾注释）
+server/world-*/
 server/mods/
 server/libraries/
 server/versions/

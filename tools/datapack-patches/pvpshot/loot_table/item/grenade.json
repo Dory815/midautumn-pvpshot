@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:slime_ball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "grenade"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "手雷",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "按下右键点火 · 引信 3 秒 · 松开右键扔出（按住不放就在手里炸）",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "minecraft:consumable": {
+                  "consume_seconds": 3.0,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "pvpshot:grenade"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

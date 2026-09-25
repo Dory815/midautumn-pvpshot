@@ -31,8 +31,13 @@ import net.minecraft.world.phys.Vec3;
  */
 public final class EquipmentSystems {
 
-    /** 温雷引信（tick）。 */
-    private static final int FUSE_TICKS = 40;
+    /**
+     * 手雷/温雷引信（tick）。**3 秒 = 60 tick**。
+     *
+     * <p>作者 2026-09-25 定稿：按下右键点火、引信 3 秒、松开右键扔出；
+     * 按住不放超过 3 秒则在手里炸。
+     */
+    private static final int FUSE_TICKS = 60;
 
     /** 正在温雷的玩家 → 已点燃的物品与起始时刻。 */
     private static final Map<ServerPlayer, Cooking> COOKING = new WeakHashMap<>();
@@ -49,6 +54,11 @@ public final class EquipmentSystems {
     // ---------------------------------------------------------------- 温雷
 
     private record Cooking(ItemStack stack, int started, net.minecraft.world.InteractionHand hand) {
+    }
+
+    /** 可以"点火—松开投掷"的投掷物：手雷本体与旧的温雷（现在两者行为一致）。 */
+    private static boolean isCookable(String weapon) {
+        return weapon.equals("grenade") || weapon.equals("cooked_grenade");
     }
 
     /** 投出（或原地炸掉）手里的温雷。 */
@@ -96,8 +106,8 @@ public final class EquipmentSystems {
             }
             CombatUtil.setScore(player, "pvp_cook", 0);
             CombatUtil.message(player, enable
-                    ? "温雷已开启：按住右键，松开投出；2 秒后在手中爆炸"
-                    : "温雷关闭：右键直接投掷，2 秒引信");
+                    ? "温雷标记已开启（手雷现在本来就是这套机制：右键点火 · 引信 3 秒 · 松开扔出）"
+                    : "温雷标记已关闭（手雷机制不变：右键点火 · 引信 3 秒 · 松开扔出）");
         }
 
         boolean cookingMode = player.entityTags().contains("pvpshot.cook");
@@ -116,16 +126,24 @@ public final class EquipmentSystems {
 
         Cooking armed = COOKING.get(player);
         if (armed != null) {
-            if (!player.isAlive() || player.tickCount - armed.started() >= FUSE_TICKS) {
+            int elapsed = player.tickCount - armed.started();
+            // "-1" 是给原版消耗留的 1 tick 容差：引信刚好走完时原版可能已经先把物品吃掉，
+            // 这时必须判定成"在手里炸"，而不是误判成松手投掷。
+            if (!player.isAlive() || elapsed >= FUSE_TICKS - 1) {
                 throwCooked(player, armed, true);
             } else if (!player.isUsingItem() || player.getUseItem() != armed.stack()) {
                 throwCooked(player, armed, false);
+            } else if (elapsed % 5 == 0) {
+                // 屏幕提示（actionbar）：剩余引信 + 松手投掷
+                CombatUtil.message(player, String.format("引信 %.1f 秒 · 松开右键扔出",
+                        Math.max(0, FUSE_TICKS - elapsed) / 20.0));
             }
         } else if (player.isAlive() && player.isUsingItem()
-                && WeaponIds.of(player.getUseItem()).equals("cooked_grenade")) {
+                && isCookable(WeaponIds.of(player.getUseItem()))) {
             CombatUtil.command(player, "function pvpshot:regen/in_combat");
             COOKING.put(player, new Cooking(player.getUseItem(), player.tickCount,
                     player.getUsedItemHand()));
+            CombatUtil.message(player, "已点火 · 引信 3 秒 · 松开右键扔出");
         }
     }
 

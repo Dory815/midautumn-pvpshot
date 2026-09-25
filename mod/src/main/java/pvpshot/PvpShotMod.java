@@ -148,6 +148,22 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
                 reply(context, ArenaRestore.start(context.getSource().getServer()), true);
                 return 1;
             }));
+            // /pvpshot restore speed <每 tick 段数>：调复原速度（默认 1 段/tick，最稳）
+            root.then(Commands.literal("restore").then(Commands.literal("speed")
+                    .then(Commands.argument("segments", IntegerArgumentType.integer(1, 64))
+                            .executes(context -> {
+                                int slices = IntegerArgumentType.getInteger(context, "segments");
+                                reply(context, ArenaRestore.setSlicesPerTick(slices), true);
+                                return 1;
+                            })
+                            // 可选第二参数：每多少 tick 搬一批（默认 3，越大越稳）
+                            .then(Commands.argument("interval", IntegerArgumentType.integer(1, 200))
+                                    .executes(context -> {
+                                        int slices = IntegerArgumentType.getInteger(context, "segments");
+                                        int interval = IntegerArgumentType.getInteger(context, "interval");
+                                        reply(context, ArenaRestore.setSpeed(slices, interval), true);
+                                        return 1;
+                                    })))));
             root.then(Commands.literal("restorestatus").executes(context -> {
                 reply(context, ArenaRestore.progressText(), false);
                 return 1;

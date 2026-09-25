@@ -1,0 +1,56 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "crossbow"
+                  }
+                },
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "pvpshot:crossbow_power": 1
+                },
+                "minecraft:item_name": {
+                  "text": "狙击重弩",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "直线弹道 · 装填 3 秒 · 20 格内 4 HP / 远距致命 · 每持有一把已装填的弩：缓慢 III",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 12
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
