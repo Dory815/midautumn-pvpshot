@@ -84,6 +84,9 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         // 战斗视觉：伤害数字（受击时）与尸体（死亡时）。全程服务端实现，原版客户端可见。
         ServerLivingEntityEvents.AFTER_DAMAGE.register((entity, source, baseDamage, damageTaken, blocked) ->
                 CombatVisuals.onDamage(entity, damageTaken));
+        // 手雷伤害减半：拦下我们手雷 TNT 造成的伤害，按一半重新结算。
+        ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) ->
+                EquipmentSystems.halveGrenadeDamage(entity, source, amount));
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
             if (entity instanceof net.minecraft.server.level.ServerPlayer player) {
                 CombatVisuals.onDeath(player);

@@ -61,6 +61,44 @@ public final class EquipmentSystems {
         return weapon.equals("grenade") || weapon.equals("cooked_grenade");
     }
 
+    /**
+     * 手雷爆炸伤害减半（作者 2026-09-25 要求：伤害太高）。
+     *
+     * <p>只减**对实体的伤害**，不改地形破坏与击退：命中判定在
+     * {@code ServerLivingEntityEvents.ALLOW_DAMAGE} 里，如果伤害来源是
+     * 我们生成的手雷 TNT（tag {@code pvpshot.grenade}），就取消这次伤害并按一半重新结算，
+     * 用的是同一个 {@code DamageSource}，所以击杀归属、死亡消息都不变。
+     *
+     * <p>重入保护：重新结算时会再次触发同一个事件，用 {@link #HALVING} 标记跳过一层。
+     */
+    private static final ThreadLocal<Boolean> HALVING = ThreadLocal.withInitial(() -> Boolean.FALSE);
+
+    public static boolean halveGrenadeDamage(net.minecraft.world.entity.LivingEntity victim,
+                                             net.minecraft.world.damagesource.DamageSource source,
+                                             float amount) {
+        if (HALVING.get() || amount <= 0.0F) {
+            return true;
+        }
+        net.minecraft.world.entity.Entity direct = source.getDirectEntity();
+        net.minecraft.world.entity.Entity causing = source.getEntity();
+        boolean ours = isGrenadeTnt(direct) || isGrenadeTnt(causing);
+        if (!ours) {
+            return true;
+        }
+        float half = amount * 0.5F;
+        HALVING.set(Boolean.TRUE);
+        try {
+            victim.hurtServer((net.minecraft.server.level.ServerLevel) victim.level(), source, half);
+        } finally {
+            HALVING.set(Boolean.FALSE);
+        }
+        return false;
+    }
+
+    private static boolean isGrenadeTnt(net.minecraft.world.entity.Entity entity) {
+        return entity instanceof PrimedTnt tnt && tnt.entityTags().contains("pvpshot.grenade");
+    }
+
     /** 投出（或原地炸掉）手里的温雷。 */
     private static void throwCooked(ServerPlayer player, Cooking cooking, boolean handBlast) {
         COOKING.remove(player);

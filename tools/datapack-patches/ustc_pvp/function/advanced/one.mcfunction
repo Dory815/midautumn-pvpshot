@@ -1,7 +1,6 @@
 data modify block ~ ~ ~ Items set value []
 loot insert ~ ~ ~ loot pvpshot:item/rocket
 loot insert ~ ~ ~ loot pvpshot:item/rocket
-loot insert ~ ~ ~ loot pvpshot:item/rocket
 loot insert ~ ~ ~ loot pvpshot:item/speed
 loot insert ~ ~ ~ loot pvpshot:item/jump
 loot insert ~ ~ ~ loot pvpshot:item/heal
