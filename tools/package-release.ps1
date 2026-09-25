@@ -32,12 +32,12 @@ New-Item -ItemType Directory -Force -Path $out | Out-Null
 Copy-One (Join-Path $root "mod\build\libs\pvpshot-$Version.jar") (Join-Path $out "模组\pvpshot-$Version.jar")
 Copy-One (Join-Path $root 'server\pvpshot-waypoints.zip') (Join-Path $out '资源包\pvpshot-waypoints.zip')
 
-# 2. 数据包补丁（含说明）
-Copy-One (Join-Path $root 'tools\datapack-patches\README.md') (Join-Path $out '数据包补丁\README.md')
-foreach ($f in 'red', 'blue') {
-    Copy-One (Join-Path $root "tools\datapack-patches\ustc_pvp\respawn\$f.mcfunction") `
-             (Join-Path $out "数据包补丁\ustc_pvp\respawn\$f.mcfunction")
-}
+# 2. 数据包补丁（含说明）：整个目录镜像过去，避免以后新增补丁漏带
+#    （2026-09-25：此前只带 respawn/red、respawn/blue 两个文件，漏掉了
+#      refill_one / refill_rich / advanced/one / protection/repair 等后来加的补丁）
+$patchOut = Join-Path $out '数据包补丁'
+New-Item -ItemType Directory -Force -Path $patchOut | Out-Null
+Copy-Item -Path (Join-Path $root 'tools\datapack-patches\*') -Destination $patchOut -Recurse -Force
 
 # 3. 文档
 Copy-One (Join-Path $root 'docs\更新日志.md') (Join-Path $out '文档\更新日志.md')
