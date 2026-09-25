@@ -51,8 +51,11 @@ dependencies {
     // 以下 5 个来自作者客户端的同版本模组（env=*，带服务端组件）：
     include "local:ferritecore:9.0.0"
     include "local:appleskin:3.0.10"
-    include "local:xaerominimap:26.5.1"
-    include "local:xaeroworldmap:1.46.1"
+    // 2026-09-25 作者要求：Xaero 小地图 / 世界地图**不再打进服务端一体化 jar**（纯客户端功能，
+    // 服务端装了也只是白占内存；客户端自己装的小地图照常工作）。
+    // 源 jar 仍留在 mod/libs/ 与本地 Maven 仓库里，需要时可把下面两行加回来：
+    // include "local:xaerominimap:26.5.1"
+    // include "local:xaeroworldmap:1.46.1"
     include "local:placeholderapi:3.1.0-beta.1"
 }
 
