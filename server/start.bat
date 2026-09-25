@@ -30,10 +30,7 @@ if not exist "%JAVA_HOME%\bin\java.exe" (
 )
 
 echo Starting PVP Shot test server ... port 25566, online-mode=true
-rem 2026-09-25: heap raised to 2G/6G while view-distance is temporarily 32
-rem   (a 32-chunk view keeps ~4k chunks loaded; revert to 1G/3G together with
-rem    view-distance back to 10).
-"%JAVA_HOME%\bin\java.exe" -Xms2G -Xmx6G ^
+"%JAVA_HOME%\bin\java.exe" -Xms1G -Xmx3G ^
   -XX:+UseZGC ^
   -XX:ErrorFile=logs\hs_err_pid%%p.log ^
   -javaagent:authlib-injector-1.2.8.jar=https://auth.lylighte.cc/skinapi ^

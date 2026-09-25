@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -21,6 +22,7 @@ import pvpshot.protect.ProtectionRegions;
 import pvpshot.match.MatchEngine;
 import pvpshot.match.PointVisuals;
 import pvpshot.restore.ArenaRestore;
+import pvpshot.visual.CombatVisuals;
 import pvpshot.weapon.EquipmentSystems;
 import pvpshot.weapon.WeaponSystems;
 
@@ -71,12 +73,22 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             ArenaRestore.tick(server);
             MatchEngine.tick(server);
+            CombatVisuals.tick(server);
             tickWeapons(server);
             TickStats.endTick();
         });
 
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) ->
                 onPlayerDisconnect(handler.getPlayer()));
+
+        // 战斗视觉：伤害数字（受击时）与尸体（死亡时）。全程服务端实现，原版客户端可见。
+        ServerLivingEntityEvents.AFTER_DAMAGE.register((entity, source, baseDamage, damageTaken, blocked) ->
+                CombatVisuals.onDamage(entity, damageTaken));
+        ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
+            if (entity instanceof net.minecraft.server.level.ServerPlayer player) {
+                CombatVisuals.onDeath(player);
+            }
+        });
 
         registerCommands();
         LOGGER.info("[pvpshot] 事件注册完成（生命周期 + tick 采样 + 保护 + 复原 + 命令）");
@@ -134,6 +146,7 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
             EquipmentSystems.onLogout(player);
             WeaponSystems.forget(player);
             pvpshot.weapon.DeployRefundWatch.forget(player);
+            CombatVisuals.forget(player);
         } catch (Exception failure) {
             LOGGER.warn("[pvpshot] 玩家离开时的清理失败：{}", failure.toString());
         }
@@ -198,6 +211,21 @@ public final class PvpShotMod implements DedicatedServerModInitializer {
                 return 1;
             }));
             root.then(logCommand);
+            // /pvpshot visual on|off|status：战斗视觉（伤害数字 / 头顶血条 / 尸体）
+            LiteralArgumentBuilder<CommandSourceStack> visual = Commands.literal("visual")
+                    .executes(context -> {
+                        reply(context, "战斗视觉：" + (CombatVisuals.isEnabled() ? "开" : "关"), false);
+                        return 1;
+                    });
+            visual.then(Commands.literal("on").executes(context -> {
+                reply(context, CombatVisuals.setEnabled(true), true);
+                return 1;
+            }));
+            visual.then(Commands.literal("off").executes(context -> {
+                reply(context, CombatVisuals.setEnabled(false), true);
+                return 1;
+            }));
+            root.then(visual);
             root.then(matchCommand());
             dispatcher.register(root);
         });

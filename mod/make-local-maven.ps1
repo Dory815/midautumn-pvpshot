@@ -16,7 +16,18 @@ $repo = Join-Path $libs 'repo'
 $map = @(
     @{ File = 'fabric-carpet-26.2+v260616.jar';                     Group = 'local'; Artifact = 'carpet'; Version = '26.2' },
     @{ File = 'spark-1.10.187-fabric.jar';                          Group = 'local'; Artifact = 'spark';  Version = '1.10.187' },
-    @{ File = 'entity_collision_optimizer-1.0.0-mc26.2-alpha.7.jar'; Group = 'local'; Artifact = 'eco';   Version = '1.0.0' }
+    @{ File = 'entity_collision_optimizer-1.0.0-mc26.2-alpha.7.jar'; Group = 'local'; Artifact = 'eco';   Version = '1.0.0' },
+    # 下面 5 个是从作者客户端 instances\中秋校园枪战小游戏\mods 里原样复制的同版本模组，
+    # 它们都是 env=* （带服务端组件），装到服务端才能让客户端那半边功能完整：
+    #   铁氧体磁芯   = 方块状态/模型内存优化（服务端同样受益，实测省内存）
+    #   苹果皮       = 饥饿/饱和度 HUD 的服务端数据同步
+    #   Xaero 小地图 / 世界地图 = 地图与航点共享的服务端支持
+    #   文本占位符 API = Xaero 在服务端侧用到的库
+    @{ File = 'ferritecore-9.0.0-fabric.jar';              Group = 'local'; Artifact = 'ferritecore';    Version = '9.0.0' },
+    @{ File = 'appleskin-fabric-mc26.2-3.0.10.jar';        Group = 'local'; Artifact = 'appleskin';      Version = '3.0.10' },
+    @{ File = 'xaerominimap-fabric-26.2-26.5.1.jar';       Group = 'local'; Artifact = 'xaerominimap';   Version = '26.5.1' },
+    @{ File = 'xaeroworldmap-fabric-26.2-1.46.1.jar';      Group = 'local'; Artifact = 'xaeroworldmap';  Version = '1.46.1' },
+    @{ File = 'placeholder-api-3.1.0-beta.1+26.2.jar';     Group = 'local'; Artifact = 'placeholderapi'; Version = '3.1.0-beta.1' }
 )
 
 foreach ($m in $map) {

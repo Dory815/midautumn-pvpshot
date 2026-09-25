@@ -48,6 +48,12 @@ dependencies {
     include "local:carpet:26.2"
     include "local:spark:1.10.187"
     include "local:eco:1.0.0"
+    // 以下 5 个来自作者客户端的同版本模组（env=*，带服务端组件）：
+    include "local:ferritecore:9.0.0"
+    include "local:appleskin:3.0.10"
+    include "local:xaerominimap:26.5.1"
+    include "local:xaeroworldmap:1.46.1"
+    include "local:placeholderapi:3.1.0-beta.1"
 }
 
 processResources {
