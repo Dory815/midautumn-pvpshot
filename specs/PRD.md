@@ -419,6 +419,27 @@
 > 峰值来自"打开新一批区块"的开销（区块加载 + 光照 + 方块实体），这部分与搬运方块数无关，
 > 所以平均 MSPT 能压到 25 ms 以内、但单个新区块峰值仍会短暂超过 50 ms；观测数据与曲线见
 > `docs/压测/复原-切片-4片每tick.*`。
+>
+> **一体化打包 + 外置认证 + 校园网开放（2026-09-25，作者要求"整合成一个然后开服"）**：
+> ① **单 jar 部署**：用 Fabric 的 jar-in-jar 把 Fabric API、Carpet、spark、
+> Entity Collision Optimizer 全部嵌进 `pvpshot-1.0.0-m1.jar`（7.96 MB），
+> `server/mods/` 里只放这一个文件；实测启动 `Loading 47 mods`，
+> 嵌套的 `carpet / spark / entity_collision_optimizer / fabric-api` 都正常加载，
+> `/eco check` 仍返回 `FFM initialized=true`。踩坑两条：Loom 的 `include` 只吃"有 capabilities
+> 的模块坐标"（`include files(...)` 会报 not a module component），而
+> **手工往 `META-INF/jars/` 塞 jar 是无效的** —— Fabric 只加载 `fabric.mod.json` 里 `jars`
+> 列表声明的嵌套 jar；所以三个本地模组先由 `mod/make-local-maven.ps1` 摆成本地 Maven 仓库
+> （`local:carpet:26.2` / `local:spark:1.10.187` / `local:eco:1.0.0`）再 `include`。
+> ② **认证改为 LyerSkin**：启动参数加
+> `-javaagent:authlib-injector-1.2.8.jar=https://auth.lylighte.cc/skinapi`，
+> 保持 `online-mode=true` + `enforce-secure-profile=true`（与旧正式服一致）；
+> 日志里 `Environment: Environment[sessionHost=http://127.0.0.1:<port>/...]` 即注入成功的证据。
+> 玩家侧需在 HMCL/PCL 添加外置登录 `https://auth.lylighte.cc/skinapi`。
+> ③ **校园网入口**：服务器监听 `0.0.0.0:25566`，对外地址 **<服务器IP>:25566**；
+> 资源包改由 `python -m http.server 8080` 提供，`resource-pack` 指向
+> `http://<服务器IP>:8080/pvpshot-waypoints.zip`（旧值里是上一轮的动态 IP，已更新）。
+> 防火墙无需改动：`java.exe` 与 `python.exe` 在 **Public** 配置文件上已有入站放行规则
+> （校园网被识别为公用网络），实测两条端口都在 `0.0.0.0` 上监听。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|

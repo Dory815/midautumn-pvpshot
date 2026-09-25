@@ -48,6 +48,9 @@ mod/build/
 mod/run/
 mod/.fabric/
 mod/logs/
+# 一体化打包用的第三方模组 jar（Fabric API 之外那三个；体积大且是别人的产物，不入库）
+# 需要时按 mod/README.md「一体化打包」一节的地址重新下载
+mod/libs/
 
 # ---- 6. 反编译的 Minecraft 源码（28 MB / 7000+ 文件，且属 Mojang 版权内容）----
 # 需要时按 docs/反编译说明.md 第 3 节重新生成，不要随仓库分发
@@ -68,6 +71,12 @@ server/.fabric/
 server/.mixin.out/
 server/*.zip
 server/*.jar
+# authlib-injector 运行时写的日志（开着服时文件被占用，不该进版本库）
+server/*.log
+# 一体化打包后单独下载的那几个模组 jar（备份留档，不入库）
+server/mods-standalone-backup/
+# 模组的运行时配置（spark 等自己写的）
+server/config/
 server/eula.txt
 server/banned-*.json
 server/ops.json

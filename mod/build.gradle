@@ -17,6 +17,9 @@ base {
 
 repositories {
     mavenCentral()
+    // 本地 Maven 仓库：由 make-local-maven.ps1 把 libs/ 里的第三方模组摆成
+    // local:carpet / local:spark / local:eco 三个坐标，供下面的 include 使用。
+    maven { url = uri("libs/repo") }
 }
 
 dependencies {
@@ -30,6 +33,21 @@ dependencies {
     // 好处：现有 server_protection 代码用的官方类名可以原样复用。
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // ---- 一体化打包（jar-in-jar）----
+    // 目的：部署时 mods/ 里只放 **一个** pvpshot jar。
+    // Fabric Loader 会在启动时把 jar 里的 META-INF/jars/*.jar 解出来单独加载。
+    //
+    // Fabric API 走 Loom 的 include（它是标准 Maven 坐标，Loom 能识别）。
+    // 另外三个来自本地 Maven 仓库（见 make-local-maven.ps1）：必须是"模块坐标"
+    // Loom 才认；直接 include files(...) 会报 not a module component。
+    //
+    // 注意：Fabric 只会加载 fabric.mod.json 的 jars 列表里声明的嵌套 jar，
+    // 手工往 META-INF/jars/ 塞文件是无效的（试过，Loader 直接忽略）。
+    include "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    include "local:carpet:26.2"
+    include "local:spark:1.10.187"
+    include "local:eco:1.0.0"
 }
 
 processResources {

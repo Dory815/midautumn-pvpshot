@@ -13,6 +13,11 @@ rem   "Internal Error (g1HeapRegionManager.cpp:55) guarantee(...) failed:
 rem    master free list MT safety protocol at a safepoint"
 rem Crash file: logs\hs_err_pid9792.log (stack is pure jvm.dll frames, no mod frames involved).
 rem ZGC never runs that G1 code path, and its low pauses suit a 20 TPS server.
+rem 2026-09-25: authentication switched from Mojang to the LyerSkin skin site
+rem   (https://auth.lylighte.cc/skinapi) via the official authlib-injector 1.2.8.
+rem   Keep online-mode=true: the injector makes the server verify sessions
+rem   against LyerSkin instead of Mojang. Players must add the same URL as an
+rem   external login in their launcher (HMCL / PCL) and log in there first.
 chcp 65001 >nul
 title PVP Shot Test Server (port 25566)
 cd /d "%~dp0"
@@ -28,6 +33,7 @@ echo Starting PVP Shot test server ... port 25566, online-mode=true
 "%JAVA_HOME%\bin\java.exe" -Xms1G -Xmx3G ^
   -XX:+UseZGC ^
   -XX:ErrorFile=logs\hs_err_pid%%p.log ^
+  -javaagent:authlib-injector-1.2.8.jar=https://auth.lylighte.cc/skinapi ^
   -Dfile.encoding=UTF-8 ^
   -Dstdout.encoding=UTF-8 ^
   -Dstderr.encoding=UTF-8 ^

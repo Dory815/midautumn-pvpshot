@@ -22,11 +22,50 @@
 
 | 模组 | 用途 |
 |---|---|
-| `pvpshot-<版本>.jar` | 本项目模组（保护 / 复原 / 比赛引擎 / 点位可视化） |
-| `fabric-api-0.161.0+26.2.jar` | Fabric API（模组依赖） |
-| `fabric-carpet-26.2+v260616.jar` | Carpet：`/tick` 冻结与步进、性能相关诊断 |
-| `spark-1.10.187-fabric.jar` | spark：火焰图、tick 统计、内存与 GC 诊断（`/spark` 命令） |
-| `entity_collision_optimizer-1.0.0-mc26.2-alpha.7.jar` | 朋友写的**实体碰撞优化**模组（作者 water2004，MIT，[仓库](https://github.com/water2004/EntityCollisionOptimizer)）：用 FFM 原生后端加速原版实体碰撞，jar 里自带 windows-x64 / linux-x64 / macos-x64 三个平台的库，不需要额外下载。装好后用 `/eco check` 看 `FFM initialized=true`。 |
+| `pvpshot-<版本>.jar` | **一体化 jar**：本项目模组 + 嵌套的 Fabric API / Carpet / spark / Entity Collision Optimizer。部署时 `mods/` 只放这一个文件即可。 |
+
+> 一体化用 Fabric 的 jar-in-jar（`META-INF/jars/` + `fabric.mod.json` 的 `jars` 列表）。
+> 构建方式见 `mod/build.gradle`：Fabric API 用官方坐标 `include`，另外三个先在
+> `mod/make-local-maven.ps1` 里摆成本地 Maven 仓库再 `include local:<名>:<版本>`。
+> 想拆开某一个模组：删掉 build.gradle 里对应那行 `include` 重新 build 即可。
+> 单独下载的四个 jar 备份在 `mods-standalone-backup/`（不再被加载）。
+
+嵌套进来的三个第三方组件：
+
+| 组件 | 用途 |
+|---|---|
+| Fabric API 0.161.0+26.2 | 模组依赖（必须） |
+| Carpet 26.2+v260616 | `/tick` 冻结与步进、性能诊断 |
+| spark 1.10.187 | 火焰图、tick/内存/GC 诊断（`/spark`） |
+| Entity Collision Optimizer 1.0.0-mc26.2-alpha.7 | 朋友的实体碰撞优化模组（作者 water2004，MIT，[仓库](https://github.com/water2004/EntityCollisionOptimizer)）：FFM 原生后端，自带三平台原生库；`/eco check` 显示 `FFM initialized=true` |
+
+## 认证：LyerSkin 外置登录
+
+服务器保持 `online-mode=true`，认证由 **authlib-injector 1.2.8** 转到 LyerSkin 皮肤站：
+
+```
+-javaagent:authlib-injector-1.2.8.jar=https://auth.lylighte.cc/skinapi
+```
+
+玩家侧（HMCL / PCL 等）：先在 <https://auth.lylighte.cc/> 注册并创建角色，
+再在启动器里"添加外置登录"填 `https://auth.lylighte.cc/skinapi`，登录后选该角色启动 26.2。
+离线（盗版）昵称无法进入。启动日志里 `Environment: Environment[sessionHost=http://127.0.0.1:<端口>/...]`
+就是 authlib-injector 生效的标志。
+
+## 对外入口与防火墙
+
+| 用途 | 地址 | 说明 |
+|---|---|---|
+| 游戏 | `<服务器IP>:25566` | 本机校园网（eduroam / 以太网）地址；换网或重启后 IP 可能变，用 `ipconfig` 核对 |
+| 资源包 | `http://<服务器IP>:8080/pvpshot-waypoints.zip` | 由 `python -m http.server 8080` 提供（工作目录 `server/`）；仅用于定位条 A~E 图标，下载失败也能进服 |
+
+防火墙：`java.exe`（游戏）与 `python.exe`（资源包）在 **Public** 配置文件上已有入站放行规则
+（校园网被 Windows 识别为"公用网络"），因此无需再加规则。若以后换机器或换 JDK 路径需要手加：
+
+```powershell
+New-NetFirewallRule -DisplayName "PVP Shot Test Server 25566" -Direction Inbound `
+  -Protocol TCP -LocalPort 25566 -Action Allow -Profile Any
+```
 
 > 说明：ECO 是**第三方模组**，本项目只是把它装到测试服上做性能对照；它的 jar 与 release 校验和
 > （`SHA256SUMS.txt`）都来自官方仓库的 release 页，下载后已核对 SHA-256 一致。
