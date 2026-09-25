@@ -468,6 +468,23 @@
 > 且因为战斗视觉走原版实体，ta 也能看到伤害数字 / 血条 / 尸体；资源包同样是可选的。
 > ④ 清理：删除出生点旁压测用的命令方块（含按钮/告示牌）与大厅里一个遗留命令方块，
 > 并清掉历史 probe marker；视距按作者要求从临时的 32 改回 **10**，堆内存同时回到 1G/3G。
+>
+> **客户端整合包（2026-09-25，作者要求"导出时要带上多人列表、各模组配置、小地图与 Voxy 数据"）**：
+> 新增 `tools/package-client-pack.ps1` + `tools/client-pack/README-安装说明.md`，
+> 把作者客户端实例（`…\versions\中秋校园枪战小游戏`）打成开箱即用的整合包，输出到
+> `dist\中秋校园枪战小游戏-客户端整合包.zip`（75.5 MB / 解压 89.6 MB / 236 个条目）。
+> 打包内容：`mods`（16 个客户端模组：钠 / Iris / ImmediatelyFast / ModMenu / IMBlocker / MouseTweaks /
+> Xaero 小地图与世界地图 / 聊天头像 / 更多聊天记录 / FerriteCore / AppleSkin / Voxy / Replay 等）、
+> `config`（各模组配置）、`xaero`（小地图与地图缓存，按服务器地址分目录）、
+> `.voxy`（LOD 数据，同样按 `<服务器IP>_25566` 分目录）、`shaderpacks`、`resourcepacks`、
+> `options.txt`、**`servers.dat`（多人列表，已含 `<服务器IP>:25566`）**、
+> 版本清单 `中秋校园枪战小游戏.json` 与一份安装说明。
+> 刻意**排除**：客户端主程序 jar（37 MB，启动器自会下载）、`natives`、`.fabric` 重映射缓存、
+> `logs` / `.mixin.out` / `downloads` / `saves` / `usercache.json` 等运行产物，以及 `PCL/`
+> （启动器私有配置，避免把账号相关文件带出去）。
+> 踩坑记录：`Compress-Archive` 用通配符时会**跳过隐藏项**（`.voxy` 正好是隐藏目录），
+> 所以改用 .NET 的 `ZipFile::CreateFromDirectory`；打包后用 Python 复核过 zip 内部是正斜杠路径、
+> 隐藏目录与 `servers.dat` 都在。
 
 | 日期 | 版本 | 改动内容 | 原因 | 涉及文件 |
 |---|---|---|---|---|
