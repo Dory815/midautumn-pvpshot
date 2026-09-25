@@ -358,9 +358,18 @@ public final class PointVisuals {
         BlockPos center = beacon.blockPosition();
         for (BlockPos pos : BlockPos.betweenClosed(center.offset(-1, -1, -1),
                 center.offset(1, 1, 1))) {
-            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) {
-                level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), Block.UPDATE_CLIENTS);
+            BlockState current = level.getBlockState(pos);
+            if (current.is(Blocks.BEDROCK)) {
+                continue;
             }
+            // 关键：航点埋在点位中心下方 2 格，外壳最上面一层正好压在
+            // "铁块底座 / 信标"那一层上。曾经把 E 点的信标覆盖成了基岩
+            // （复原期间保护被 bypass，外壳写入没被拦住），所以这里必须让路：
+            // 信标与铁块是点位结构的一部分，不能拿基岩去盖。
+            if (current.is(Blocks.BEACON) || current.is(Blocks.IRON_BLOCK)) {
+                continue;
+            }
+            level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), Block.UPDATE_CLIENTS);
         }
     }
 
