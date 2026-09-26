@@ -1,3 +1,5 @@
+# pvpshot 服务端配置模板（脱敏）—— 复制成 server.properties 再用；
+# 与线上测试服的区别：RCON 默认关闭、资源包地址留空（换成你自己的）。
 #Minecraft server properties
 #Fri Sep 25 19:26:02 CST 2026
 accepts-transfers=false
@@ -13,7 +15,7 @@ enable-code-of-conduct=false
 enable-command-block=true
 enable-jmx-monitoring=false
 enable-query=false
-enable-rcon=true
+enable-rcon=false
 enable-status=true
 enforce-secure-profile=true
 enforce-whitelist=false
@@ -53,14 +55,14 @@ prevent-proxy-connections=false
 pvp=true
 query.port=25565
 rate-limit=0
-rcon.password=***REDACTED-RCON***
+rcon.password=
 rcon.port=25576
 region-file-compression=deflate
 require-resource-pack=false
-resource-pack=http\://<服务器IP>\:8080/pvpshot-waypoints.zip
+resource-pack=
 resource-pack-id=
 resource-pack-prompt={"text"\:"PVP Shot 点位图标资源包（很小，仅 5 个字母图标）","color"\:"yellow"}
-resource-pack-sha1=e37d44ce8a4bde81910fcfddf879680783ce178b
+resource-pack-sha1=
 server-ip=
 server-port=25566
 simulation-distance=8

@@ -60,7 +60,9 @@ docs/minecraft-26.2-sources/
 docs/minecraft-26.2-sources.jar
 
 # ---- 7. 测试服务端的运行数据（世界 380 MB + 模组 jar 体积大）----
-# 保留 server.properties / start.bat / README.md 入库，便于复现环境
+# 保留 start.bat / README.md / server.properties.example 入库，便于复现环境
+# （server.properties 本身带 RCON 密码等凭据，2026-09-26 起不入库）
+server/server.properties
 server/world/
 # 移植新地图后的第二个世界（同样不入库；注意 .gitignore 不支持行尾注释）
 server/world-*/
