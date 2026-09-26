@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:orange_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "deploy": "turret"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "Turret",
+                  "italic": false
+                },
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 3,
+                  "cooldown_group": "pvpshot:turret"
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "18 轮 × 3 箭 · 单箭 7 HP · 自动连射 18 秒",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

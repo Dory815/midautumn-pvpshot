@@ -69,7 +69,7 @@
 自检方法（不需要启动游戏）：
 
 ```powershell
-python tools\server-status.py <服务器IP> 25566
+python tools\server-status.py <???IP> 25566
 ```
 
 输出里 `版本: 26.2 protocol 776`、`服务端上报的模组信息: 无` 就说明服务器对客户端**没有任何模组要求**，
@@ -92,8 +92,8 @@ python tools\server-status.py <服务器IP> 25566
 
 | 用途 | 地址 | 说明 |
 |---|---|---|
-| 游戏 | `<服务器IP>:25566` | 本机校园网（eduroam / 以太网）地址；换网或重启后 IP 可能变，用 `ipconfig` 核对 |
-| 资源包 | `http://<服务器IP>:8080/pvpshot-waypoints.zip` | 由 `python -m http.server 8080` 提供（工作目录 `server/`）；仅用于定位条 A~E 图标，下载失败也能进服 |
+| 游戏 | `<???IP>:25566` | 本机校园网（eduroam / 以太网）地址；换网或重启后 IP 可能变，用 `ipconfig` 核对 |
+| 资源包 | `http://<???IP>:8080/pvpshot-waypoints.zip` | 由 `python -m http.server 8080` 提供（工作目录 `server/`）；仅用于定位条 A~E 图标，下载失败也能进服 |
 
 防火墙：`java.exe`（游戏）与 `python.exe`（资源包）在 **Public** 配置文件上已有入站放行规则
 （校园网被 Windows 识别为"公用网络"），因此无需再加规则。若以后换机器或换 JDK 路径需要手加：

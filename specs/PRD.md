@@ -435,9 +435,9 @@
 > 保持 `online-mode=true` + `enforce-secure-profile=true`（与旧正式服一致）；
 > 日志里 `Environment: Environment[sessionHost=http://127.0.0.1:<port>/...]` 即注入成功的证据。
 > 玩家侧需在 HMCL/PCL 添加外置登录 `https://auth.lylighte.cc/skinapi`。
-> ③ **校园网入口**：服务器监听 `0.0.0.0:25566`，对外地址 **<服务器IP>:25566**；
+> ③ **校园网入口**：服务器监听 `0.0.0.0:25566`，对外地址 **<???IP>:25566**；
 > 资源包改由 `python -m http.server 8080` 提供，`resource-pack` 指向
-> `http://<服务器IP>:8080/pvpshot-waypoints.zip`（旧值里是上一轮的动态 IP，已更新）。
+> `http://<???IP>:8080/pvpshot-waypoints.zip`（旧值里是上一轮的动态 IP，已更新）。
 > 防火墙无需改动：`java.exe` 与 `python.exe` 在 **Public** 配置文件上已有入站放行规则
 > （校园网被识别为公用网络），实测两条端口都在 `0.0.0.0` 上监听。
 >
@@ -476,8 +476,8 @@
 > 打包内容：`mods`（16 个客户端模组：钠 / Iris / ImmediatelyFast / ModMenu / IMBlocker / MouseTweaks /
 > Xaero 小地图与世界地图 / 聊天头像 / 更多聊天记录 / FerriteCore / AppleSkin / Voxy / Replay 等）、
 > `config`（各模组配置）、`xaero`（小地图与地图缓存，按服务器地址分目录）、
-> `.voxy`（LOD 数据，同样按 `<服务器IP>_25566` 分目录）、`shaderpacks`、`resourcepacks`、
-> `options.txt`、**`servers.dat`（多人列表，已含 `<服务器IP>:25566`）**、
+> `.voxy`（LOD 数据，同样按 `<???IP>_25566` 分目录）、`shaderpacks`、`resourcepacks`、
+> `options.txt`、**`servers.dat`（多人列表，已含 `<???IP>:25566`）**、
 > 版本清单 `中秋校园枪战小游戏.json` 与一份安装说明。
 > 刻意**排除**：客户端主程序 jar（37 MB，启动器自会下载）、`natives`、`.fabric` 重映射缓存、
 > `logs` / `.mixin.out` / `downloads` / `saves` / `usercache.json` 等运行产物，以及 `PCL/`

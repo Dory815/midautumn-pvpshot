@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "eagle500"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "飞鹰 500 炸弹",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "一次性 · 瞄准位置标记 · 4 秒后投下一枚大型炸弹",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:nether_star",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "pvpshot:eagle500"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

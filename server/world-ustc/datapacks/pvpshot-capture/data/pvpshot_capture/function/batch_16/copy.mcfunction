@@ -1,0 +1,16 @@
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1600 -2081 55 -1585 to ustc_pvp:template -2096 -16 -1600 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1600 -2081 127 -1585 to ustc_pvp:template -2096 56 -1600 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1584 -2081 55 -1569 to ustc_pvp:template -2096 -16 -1584 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1584 -2081 127 -1569 to ustc_pvp:template -2096 56 -1584 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1568 -2081 55 -1553 to ustc_pvp:template -2096 -16 -1568 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1568 -2081 127 -1553 to ustc_pvp:template -2096 56 -1568 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1552 -2081 55 -1537 to ustc_pvp:template -2096 -16 -1552 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1552 -2081 127 -1537 to ustc_pvp:template -2096 56 -1552 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1536 -2081 55 -1521 to ustc_pvp:template -2096 -16 -1536 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1536 -2081 127 -1521 to ustc_pvp:template -2096 56 -1536 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1520 -2081 55 -1505 to ustc_pvp:template -2096 -16 -1520 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1520 -2081 127 -1505 to ustc_pvp:template -2096 56 -1520 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1504 -2081 55 -1489 to ustc_pvp:template -2096 -16 -1504 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1504 -2081 127 -1489 to ustc_pvp:template -2096 56 -1504 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 -16 -1488 -2081 55 -1473 to ustc_pvp:template -2096 -16 -1488 replace force
+execute store success score #copied ustc.clock run clone from minecraft:overworld -2096 56 -1488 -2081 127 -1473 to ustc_pvp:template -2096 56 -1488 replace force

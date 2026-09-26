@@ -1,0 +1,216 @@
+scoreboard players set #anchors.ready ustc.clock 1
+execute unless loaded -2160 0 -1824 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2160 0 -1808 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2160 0 -1792 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2144 0 -1824 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2144 0 -1808 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2144 0 -1792 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1824 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1808 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1792 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1504 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2128 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2112 0 -1824 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2112 0 -1808 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2112 0 -1792 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2112 0 -1504 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2112 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2096 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2096 0 -1456 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2096 0 -1392 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2096 0 -1376 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1392 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1376 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1344 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2080 0 -1296 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1392 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1344 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1328 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1312 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2064 0 -1296 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2048 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2048 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2048 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2048 0 -1328 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2048 0 -1312 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2032 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2032 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2032 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2016 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2016 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2016 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2016 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -2000 0 -1376 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1984 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1984 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1984 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1984 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1344 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1968 0 -1264 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1344 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1216 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1952 0 -1200 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1312 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1264 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1216 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1936 0 -1200 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1920 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1920 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1920 0 -1200 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1888 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1888 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1888 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1888 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1872 0 -1312 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1856 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1840 0 -1184 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1824 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1808 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1808 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1792 0 -1680 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1792 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1792 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1792 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1792 0 -1312 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1776 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1776 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1776 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1776 0 -1264 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1776 0 -1200 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1760 0 -1264 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1760 0 -1200 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1744 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1632 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1728 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1712 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1712 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1712 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1712 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1712 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1680 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1584 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1696 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1680 0 -1680 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1680 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1680 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1680 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1696 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1680 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1440 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1664 0 -1424 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1648 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1632 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1568 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1616 0 -1408 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1664 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1648 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1600 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1552 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1600 0 -1488 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1584 0 -1536 run scoreboard players set #anchors.ready ustc.clock 0
+execute unless loaded -1584 0 -1520 run scoreboard players set #anchors.ready ustc.clock 0
+execute if score #anchors.ready ustc.clock matches 0 run return run schedule function ustc_pvp:reset/finish_ready 2t replace
+scoreboard players operation #restore.preset ustc.clock = #preset ustc.clock
+kill @e[tag=pvpshot.shot]
+function pvpshot:field/clear
+kill @e[type=minecraft:tnt,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:arrow,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:snowball,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:egg,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:fireball,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:small_fireball,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:item,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+kill @e[type=minecraft:area_effect_cloud,x=-2144,y=-16,z=-1776,dx=575,dy=272,dz=623]
+function ustc_pvp:build
+scoreboard players operation #preset ustc.clock = #restore.preset ustc.clock
+function ustc_pvp:apply_preset
+function ustc_pvp:refill
+scoreboard players set #reset.cooldown ustc.clock 15
+execute if score #reset.errors ustc.clock matches 1.. run tellraw @a {text:"部分区域恢复失败，请查看服务端日志。",color:"red"}
+execute if score #reset.errors ustc.clock matches 0 run tellraw @a {text:"中区战场已恢复：建筑、道路、据点、基地及补给箱已复原，新局开始。",color:"green"}

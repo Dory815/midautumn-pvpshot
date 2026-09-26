@@ -1,0 +1,14 @@
+setblock -2024 2 -1430 minecraft:light_gray_concrete
+setblock -2024 3 -1430 minecraft:light_gray_concrete
+setblock -2023 2 -1430 minecraft:light_gray_concrete
+setblock -2023 3 -1430 minecraft:light_gray_concrete
+setblock -2022 2 -1430 minecraft:light_gray_concrete
+setblock -2022 3 -1430 minecraft:light_gray_concrete
+setblock -2021 2 -1430 minecraft:light_gray_concrete
+setblock -2021 3 -1430 minecraft:light_gray_concrete
+setblock -2020 2 -1430 minecraft:light_gray_concrete
+setblock -2020 2 -1429 minecraft:light_gray_concrete
+setblock -2020 2 -1428 minecraft:light_gray_concrete
+setblock -2020 3 -1430 minecraft:light_gray_concrete
+setblock -2020 3 -1429 minecraft:light_gray_concrete
+setblock -2020 3 -1428 minecraft:light_gray_concrete

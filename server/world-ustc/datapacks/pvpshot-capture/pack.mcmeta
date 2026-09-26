@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "PVP Shot：把当前竞技场灌进 ustc_pvp:template（移植用，跑一次即可）",
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": 107
+  }
+}

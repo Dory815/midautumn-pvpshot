@@ -1,0 +1,14 @@
+setblock -1968 2 -1374 minecraft:bricks
+setblock -1968 3 -1374 minecraft:bricks
+setblock -1967 2 -1374 minecraft:bricks
+setblock -1967 3 -1374 minecraft:bricks
+setblock -1966 2 -1374 minecraft:bricks
+setblock -1966 3 -1374 minecraft:bricks
+setblock -1965 2 -1374 minecraft:bricks
+setblock -1965 3 -1374 minecraft:bricks
+setblock -1964 2 -1374 minecraft:bricks
+setblock -1964 2 -1373 minecraft:bricks
+setblock -1964 2 -1372 minecraft:bricks
+setblock -1964 3 -1374 minecraft:bricks
+setblock -1964 3 -1373 minecraft:bricks
+setblock -1964 3 -1372 minecraft:bricks

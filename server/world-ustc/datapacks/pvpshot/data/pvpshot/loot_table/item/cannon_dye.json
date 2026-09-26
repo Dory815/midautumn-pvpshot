@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "deploy": "cannon"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "TNT Cannon",
+                  "italic": false
+                },
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 5,
+                  "cooldown_group": "pvpshot:cannon"
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "自动连射 9 发原版 TNT · 1 秒间隔 · 自行承担近距爆炸风险",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

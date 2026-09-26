@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "点位附近清树（一次性工具，可留档）",
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": 107
+  }
+}

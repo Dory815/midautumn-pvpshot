@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 12
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "plane_boost"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "战斗机助推",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "飞行中使用 · 限 12 发",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:fireworks": {
+                  "flight_duration": 1,
+                  "explosions": []
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:gray_dye",
+          "predicates": {
+            "minecraft:custom_data": {
+              "pvpshot": {
+                "weapon": "bunker"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:v7/use_bunker"
+  }
+}

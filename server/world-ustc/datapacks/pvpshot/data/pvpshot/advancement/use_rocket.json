@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:firework_star",
+          "predicates": {
+            "minecraft:custom_data": {
+              "pvpshot": {
+                "weapon": "rocket"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:rocket/launch"
+  }
+}

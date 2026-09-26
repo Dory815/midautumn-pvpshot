@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:echo_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "orbital380"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "轨道 380 打击",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "一次性 · 瞄准地面标记 · 3 秒警告后 12 发区域炮击",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:echo_shard",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "pvpshot:orbital380"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

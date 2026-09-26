@@ -1,0 +1,30 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:custom_data": {
+      "pvpshot": {
+        "weapon": "grenade"
+      }
+    },
+    "minecraft:item_name": {
+      "text": "手雷",
+      "italic": false
+    },
+    "minecraft:lore": [
+      {
+        "text": "右键投掷 · 2 秒引信；/trigger pvp_cook 切换温雷",
+        "italic": false,
+        "color": "gray"
+      }
+    ],
+    "minecraft:consumable": {
+      "consume_seconds": 0.05,
+      "animation": "none",
+      "has_consume_particles": false
+    },
+    "minecraft:use_cooldown": {
+      "seconds": 2,
+      "cooldown_group": "pvpshot:grenade"
+    }
+  }
+}

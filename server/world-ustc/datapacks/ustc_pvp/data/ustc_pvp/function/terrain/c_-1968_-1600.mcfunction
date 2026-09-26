@@ -1,0 +1,14 @@
+setblock -1968 2 -1598 minecraft:light_gray_concrete
+setblock -1968 3 -1598 minecraft:light_gray_concrete
+setblock -1967 2 -1598 minecraft:light_gray_concrete
+setblock -1967 3 -1598 minecraft:light_gray_concrete
+setblock -1966 2 -1598 minecraft:light_gray_concrete
+setblock -1966 3 -1598 minecraft:light_gray_concrete
+setblock -1965 2 -1598 minecraft:light_gray_concrete
+setblock -1965 3 -1598 minecraft:light_gray_concrete
+setblock -1964 2 -1598 minecraft:light_gray_concrete
+setblock -1964 2 -1597 minecraft:light_gray_concrete
+setblock -1964 2 -1596 minecraft:light_gray_concrete
+setblock -1964 3 -1598 minecraft:light_gray_concrete
+setblock -1964 3 -1597 minecraft:light_gray_concrete
+setblock -1964 3 -1596 minecraft:light_gray_concrete

@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:bow",
+            "minecraft:crossbow",
+            "minecraft:trident"
+          ]
+        }
+      }
+    },
+    "crossbow": {
+      "trigger": "minecraft:shot_crossbow"
+    }
+  },
+  "requirements": [
+    [
+      "using",
+      "crossbow"
+    ]
+  ],
+  "rewards": {
+    "function": "pvpshot:regen/aim"
+  }
+}

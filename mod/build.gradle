@@ -45,8 +45,14 @@ dependencies {
     // 注意：Fabric 只会加载 fabric.mod.json 的 jars 列表里声明的嵌套 jar，
     // 手工往 META-INF/jars/ 塞文件是无效的（试过，Loader 直接忽略）。
     include "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    include "local:carpet:26.2"
-    include "local:spark:1.10.187"
+    // 2026-09-26 作者要求：发布给别人的包里**不要带测试用模组**（MSPT/性能分析、假人、测试控制台）。
+    // 所以 carpet（假人 + 测试命令）与 spark（火焰图/MSPT 诊断）默认**不打包**，
+    // 只有本机测试服需要时才用 `-PwithTestMods` 构建：
+    //     gradle build -PwithTestMods        （或 powershell -File mod\build.ps1 build -PwithTestMods）
+    if (project.hasProperty("withTestMods")) {
+        include "local:carpet:26.2"
+        include "local:spark:1.10.187"
+    }
     include "local:eco:1.0.0"
     // 以下 5 个来自作者客户端的同版本模组（env=*，带服务端组件）：
     include "local:ferritecore:9.0.0"

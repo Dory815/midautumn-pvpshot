@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:magma_cream",
+          "predicates": {
+            "minecraft:custom_data": {
+              "pvpshot": {
+                "weapon": "plane_bomb"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pvpshot:v7/use_plane_bomb"
+  }
+}

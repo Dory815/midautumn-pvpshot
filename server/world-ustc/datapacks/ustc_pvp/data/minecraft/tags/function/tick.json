@@ -1,0 +1,7 @@
+{
+  "replace": true,
+  "values": [
+    "pvpshot:tick",
+    "ustc_pvp:tick"
+  ]
+}

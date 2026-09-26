@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "bow"
+                  }
+                },
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {},
+                "minecraft:item_name": {
+                  "text": "近炸弓",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "原版弹道 · 20 格后近炸 · 直击最高 24 HP / 范围 12–6 HP",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

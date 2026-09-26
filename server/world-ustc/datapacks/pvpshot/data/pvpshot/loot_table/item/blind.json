@@ -1,0 +1,56 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "blind"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "致盲压制",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "投掷药水 · 效果受命中位置及原版持续时间缩放",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 5580659,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:blindness",
+                      "amplifier": 0,
+                      "duration": 160
+                    },
+                    {
+                      "id": "minecraft:weakness",
+                      "amplifier": 1,
+                      "duration": 240
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

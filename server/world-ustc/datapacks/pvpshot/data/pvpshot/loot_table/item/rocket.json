@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_star",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "rocket"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "破拆火箭",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "远程破拆半径 6 格 · 爆点附近最多 2 伤害 · 不点燃",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 3,
+                  "cooldown_group": "pvpshot:rocket"
+                },
+                "minecraft:item_model": "minecraft:firework_rocket"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

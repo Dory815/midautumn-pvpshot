@@ -1,0 +1,7 @@
+{
+  "replace": true,
+  "values": [
+    "pvpshot:load",
+    "ustc_pvp:load"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "jump"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "跳跃 V · 45 秒",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "奖励药水 · 出生不再自带移动效果",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 8453888,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:jump_boost",
+                      "amplifier": 4,
+                      "duration": 900
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

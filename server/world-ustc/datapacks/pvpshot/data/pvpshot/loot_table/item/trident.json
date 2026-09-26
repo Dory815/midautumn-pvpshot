@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:trident",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {"pvpshot": {"weapon": "trident"}},
+                "minecraft:unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

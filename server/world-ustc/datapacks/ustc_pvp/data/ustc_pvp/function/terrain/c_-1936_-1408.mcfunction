@@ -1,0 +1,14 @@
+setblock -1926 2 -1402 minecraft:bricks
+setblock -1926 3 -1402 minecraft:bricks
+setblock -1925 2 -1402 minecraft:bricks
+setblock -1925 3 -1402 minecraft:bricks
+setblock -1924 2 -1402 minecraft:bricks
+setblock -1924 3 -1402 minecraft:bricks
+setblock -1923 2 -1402 minecraft:bricks
+setblock -1923 3 -1402 minecraft:bricks
+setblock -1922 2 -1402 minecraft:bricks
+setblock -1922 2 -1401 minecraft:bricks
+setblock -1922 2 -1400 minecraft:bricks
+setblock -1922 3 -1402 minecraft:bricks
+setblock -1922 3 -1401 minecraft:bricks
+setblock -1922 3 -1400 minecraft:bricks

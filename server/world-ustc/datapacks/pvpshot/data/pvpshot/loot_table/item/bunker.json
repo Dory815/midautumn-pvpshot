@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gray_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "pvpshot": {
+                    "weapon": "bunker"
+                  }
+                },
+                "minecraft:item_name": {
+                  "text": "大型掩体生成器",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "11 × 5 × 9 多方块掩体 · 双层墙体 / 射击孔 / 两侧入口",
+                    "italic": false,
+                    "color": "gray"
+                  }
+                ],
+                "minecraft:item_model": "minecraft:gray_dye",
+                "minecraft:consumable": {
+                  "consume_seconds": 0.05,
+                  "animation": "none",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "pvpshot:bunker"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

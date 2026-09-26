@@ -87,3 +87,17 @@ server/ops.json
 server/whitelist.json
 server/usercache.json
 server/session.lock
+
+# ---- 8. 2026-09-26 起：发布需要，把"地图 + 一体化 jar"也纳入版本控制 ----
+# 上面 server/world-*/ 与 server/mods/ 是整体忽略的，这里把要发布的部分重新放进来；
+# 仍然排除玩家数据、客户端地图缓存（voxy）、其它模组数据目录、以及测试用数据包。
+!server/world-ustc/
+!server/world-ustc/**
+server/world-ustc/players/
+server/world-ustc/voxy/
+server/world-ustc/syncmatica/
+server/world-ustc/serenitea_pot/
+server/world-ustc/session.lock
+server/world-ustc/datapacks/pvpshot-stress/
+!server/mods/
+server/mods/*-with-testmods.jar
