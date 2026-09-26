@@ -99,5 +99,6 @@ server/world-ustc/syncmatica/
 server/world-ustc/serenitea_pot/
 server/world-ustc/session.lock
 server/world-ustc/datapacks/pvpshot-stress/
+server/world-ustc/data/journeymap/
 !server/mods/
 server/mods/*-with-testmods.jar
